@@ -19,3 +19,7 @@
   margin-bottom: 0%;
   margin-left: 1%;
 }
+
+.redText {
+  -webkit-text-stroke: 0.5px white;
+}
