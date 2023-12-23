@@ -1,0 +1,12 @@
+.centered {
+  text-align: center;
+}
+
+.colored {
+  background-color: darkorange;
+}
+
+.unforgivable {
+  background-color: red;
+  color: white;
+}
