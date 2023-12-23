@@ -27,49 +27,22 @@ body { font-size: 1em;}
 }
 
 .firstColumn{
-    width: 30%;
+    width: 20%;
     background-color:rgb(0, 255, 255);
     flex: 30%;
 }
 
 .secondcolumn {
-    flex: 40%;
+    flex: 60%;
     width: 40%;
     background-color:white;
 }
 
 .tirthcolumn {
-    flex: 30%;
+    flex: 20%;
     background-color:rgb(0, 255, 255);
 }
 
 .centeredIMG{
         margin-left: 20%;
-}
-
-.Bibletext{
-    text-align: center;
-    font-size: 20px;
-}
-
-.meaning{
-    text-align: center;
-    font-size: 16px;
-}
-
-.warning{
-    text-align: center;
-    font-size: 23px;
-    color: crimson;
-}
-
-.warningText{
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 17px;
-}
-
-.bibleVerse{
-    font-size: 20px;
-    color:darkgreen;
 }
