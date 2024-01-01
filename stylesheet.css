@@ -41,21 +41,25 @@ body {
 
 .firstColumn {
   width: 20%;
-  background-color: rgb(0, 255, 255);
   flex: 30%;
+  background: url("cross.jpg");
+  background-size: 20%;
+  background-repeat: repeat-x repeat-y;
+  margin-right: 3%;
 }
 
 .secondcolumn {
   flex: 60%;
   width: 40%;
   background-color: white;
-    margin-left: 3%;
-    margin-right: 3%;
 }
 
 .tirthcolumn {
-  flex: 20%;
-  background-color: rgb(0, 255, 255);
+  flex: 30%;
+  background: url("cross.jpg");
+  background-size: 20%;
+  background-repeat: repeat-x repeat-y;
+  margin-left: 3%;
 }
 
 .centeredIMG {
