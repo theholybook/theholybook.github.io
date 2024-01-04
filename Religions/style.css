@@ -1,0 +1,43 @@
+.row {
+  width: 100%;
+  display: flex;
+
+}
+
+.firstColumn {
+  flex: 40%;
+  width: 40%;
+  background-color: yellow;
+  float: left;
+}
+
+.secondcolumn {
+  flex: 40%;
+  width: 40%;
+  background-color: green;
+  float: left;
+}
+
+.catholic {
+  flex: 40%;
+  width: 40%;
+  background-color: cyan;
+  float: left;
+}
+
+.protestant {
+  flex: 40%;
+  width: 40%;
+  background-color: green;
+  float: left;
+}
+
+.denoms {
+  background-color: cyan;
+}
+
+.Gospels {}
+
+.religions {
+  background-color: yellow;
+}
