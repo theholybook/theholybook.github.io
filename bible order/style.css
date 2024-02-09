@@ -1,0 +1,33 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.starter {
+  background-color: darkgray;
+  border: 2px solid white;
+  font-size: 1em;
+  margin: 20%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.boxes {
+  border: 2px solid white;
+  padding: 3%;
+  font-size: 1em;
+  margin: 15%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.textbox {
+  background-color: white;
+  padding: 3%;
+  font-size: 2.45vh;
+  margin: 26%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
