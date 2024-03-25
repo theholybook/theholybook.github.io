@@ -65,10 +65,3 @@ body {
 .centeredIMG {
   margin-left: 20%;
 }
-
-.follow {
-  position: fixed;
-  background-color: lightgray;
-  text-align: center;
-
-}
