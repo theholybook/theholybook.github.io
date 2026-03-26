@@ -1810,6 +1810,67 @@ h2:hover .anchor-link,
   opacity: 1;
 }
 
+/* --- Bible Guide Page --- */
+.bible-category {
+  margin-top: var(--space-2xl);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.bible-category strong {
+  font-weight: 700;
+}
+
+.bible-book-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0;
+}
+
+.bible-book-title:first-child {
+  margin-top: 0;
+}
+
+.bible-guide-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.bible-guide-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.bible-guide-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0 0;
+}
+
+.bible-guide-intro li {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
 /* --- Print --- */
 @media print {
   .site-nav, .site-footer, .nav-toggle { display: none; }
