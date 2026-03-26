@@ -63,10 +63,10 @@
 
   <!-- Two-lane layout: Left = without God, Right = with God -->
   <div class="content-wide">
-    <div class="two-lanes">
+    <div class="two-lanes reveal">
       <!-- LEFT LANE: Without God -->
       <div class="lane lane-dark">
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="living-as-non-believer">Living as Non-Believer <a href="#living-as-non-believer" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
           <p>Living without God</p>
           <p>People without God usually live without purpose of life and forget we have morals.</p>
@@ -90,7 +90,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="sheol">Sheol <a href="#sheol" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
           <p>Also called Hades in Greek and Sheol in Hebrew</p>
           <p>Sheol will one day at the day of judgement emptied into hell as in <a
@@ -121,7 +121,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="unforgivable-card">
+        <div class="unforgivable-card reveal">
           <h2 id="hell">Hell <a href="#hell" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
           <p>Also called Tartarus in Greek and Gehenna in Hebrew. In scriptures also called "Bottomless pit", "Abyss" and "Lake of fire"</p>
           <p><a href="https://www.biblegateway.com/passage/?search=Mark%209%3A44-48&version=NKJV" title="44 where Their worm does not die And the fire is not quenched. 45 And if your foot causes you to sin, cut it off. It is better for you to enter life lame, rather than having two feet, to be cast into hell, into the fire that shall never be quenched">Mark 9:44-48</a> tells us that Hell is the WORST place ever you can end up</p>
@@ -136,7 +136,7 @@
 
       <!-- RIGHT LANE: With God -->
       <div class="lane lane-light">
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="reborn-as-christian">Reborn as Christian <a href="#reborn-as-christian" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
           <p>Jesus told us that we have to be born again</p>
           <p><a href="https://www.biblegateway.com/passage/?search=John+3%3A3-5&version=MEV"
@@ -160,7 +160,7 @@
 
         <div class="lane-arrow" style="color: #166534;">&#x2193;</div>
 
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="heaven">Heaven <a href="#heaven" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
           <p>Also called ouranos in Greek and Shamayim in Hebrew</p>
           <p>Heaven will have no more hunger, thirst, suffering, tiredness or sadness as in <a
@@ -197,7 +197,7 @@
 
   <!-- Notes -->
   <div class="content">
-    <div class="notes-section">
+    <div class="notes-section reveal">
       <h3>Notes</h3>
       <p>King James version (KJV) does not recognise sheol/hades instead writes hell everywhere</p>
       <p>The New King James Version (NKJV), the Modern English Version (MEV) and the English Standard Version (ESV) don't
@@ -218,7 +218,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Related Topics</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../sins/index.html" class="related-card">
         <strong>Sins</strong>
         <p>What are sins and why am I guilty?</p>
@@ -300,6 +300,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

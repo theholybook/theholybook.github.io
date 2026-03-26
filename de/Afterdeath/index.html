@@ -63,10 +63,10 @@
 
   <!-- Two-lane layout -->
   <div class="content-wide">
-    <div class="two-lanes">
+    <div class="two-lanes reveal">
       <!-- LEFT LANE: Without God -->
       <div class="lane lane-dark">
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="living-as-non-believer">Leben als Ungl&auml;ubiger <a href="#living-as-non-believer" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
           <p>Leben ohne Gott</p>
           <p>Menschen ohne Gott leben meistens ohne Lebenszweck und vergessen, dass wir Moral haben.</p>
@@ -90,7 +90,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="sheol">Scheol <a href="#sheol" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
           <p>Auch Hades auf Griechisch und Scheol auf Hebr&auml;isch genannt</p>
           <p>Scheol wird eines Tages am Tag des Gerichts in die H&ouml;lle entleert werden, wie in <a
@@ -121,7 +121,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="unforgivable-card">
+        <div class="unforgivable-card reveal">
           <h2 id="hell">H&ouml;lle <a href="#hell" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
           <p>Auch Tartarus auf Griechisch und Gehenna auf Hebr&auml;isch genannt. In der Schrift auch &bdquo;Bodenloser Abgrund&ldquo;, &bdquo;Abgrund&ldquo; und &bdquo;Feuersee&ldquo; genannt</p>
           <p><a href="https://www.biblegateway.com/passage/?search=Markus+9%3A44-48&version=SCH2000" title="44 wo ihr Wurm nicht stirbt und das Feuer nicht erlischt. 45 Und wenn dein Fu&szlig; dir Anlass zur S&uuml;nde gibt, so haue ihn ab! Es ist besser f&uuml;r dich, lahm ins Leben einzugehen, als mit zwei F&uuml;&szlig;en in die H&ouml;lle geworfen zu werden, in das unausl&ouml;schliche Feuer">Markus 9:44-48</a> sagt uns, dass die H&ouml;lle der SCHLIMMSTE Ort ist, an dem man enden kann</p>
@@ -136,7 +136,7 @@
 
       <!-- RIGHT LANE: With God -->
       <div class="lane lane-light">
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="reborn-as-christian">Wiedergeboren als Christ <a href="#reborn-as-christian" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
           <p>Jesus hat uns gesagt, dass wir von Neuem geboren werden m&uuml;ssen</p>
           <p><a href="https://www.biblegateway.com/passage/?search=Johannes+3%3A3-5&version=SCH2000"
@@ -160,7 +160,7 @@
 
         <div class="lane-arrow" style="color: #166534;">&#x2193;</div>
 
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="heaven">Himmel <a href="#heaven" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
           <p>Auch Ouranos auf Griechisch und Schamajim auf Hebr&auml;isch genannt</p>
           <p>Im Himmel wird es keinen Hunger, Durst, kein Leid, keine M&uuml;digkeit oder Traurigkeit mehr geben, wie in <a
@@ -197,7 +197,7 @@
 
   <!-- Notes -->
   <div class="content">
-    <div class="notes-section">
+    <div class="notes-section reveal">
       <h3>Anmerkungen</h3>
       <p>Die King-James-Version (KJV) erkennt Scheol/Hades nicht an und schreibt stattdessen &uuml;berall H&ouml;lle</p>
       <p>Die New King James Version (NKJV), die Modern English Version (MEV) und die English Standard Version (ESV) haben
@@ -216,7 +216,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Verwandte Themen</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../sins/index.html" class="related-card">
         <strong>S&uuml;nden</strong>
         <p>Was sind S&uuml;nden und warum bin ich schuldig?</p>
@@ -298,6 +298,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

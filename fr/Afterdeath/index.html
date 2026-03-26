@@ -63,10 +63,10 @@
 
   <!-- Two-lane layout: Left = without God, Right = with God -->
   <div class="content-wide">
-    <div class="two-lanes">
+    <div class="two-lanes reveal">
       <!-- LEFT LANE: Without God -->
       <div class="lane lane-dark">
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="living-as-non-believer">Vivre en tant que non-croyant <a href="#living-as-non-believer" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
           <p>Vivre sans Dieu</p>
           <p>Les personnes sans Dieu vivent generalement sans but dans la vie et oublient que nous avons une morale.</p>
@@ -90,7 +90,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="comparison-card highlight-amber">
+        <div class="comparison-card reveal highlight-amber">
           <h2 id="sheol">Sejour des morts <a href="#sheol" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
           <p>Aussi appele Hades en grec et Sheol en hebreu</p>
           <p>Le Sejour des morts sera un jour, au jour du jugement, vide dans l'enfer comme dans <a
@@ -121,7 +121,7 @@
 
         <div class="lane-arrow">&#x2193;</div>
 
-        <div class="unforgivable-card">
+        <div class="unforgivable-card reveal">
           <h2 id="hell">L'Enfer <a href="#hell" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
           <p>Aussi appele Tartare en grec et Gehenne en hebreu. Dans les Ecritures aussi appele "Puits sans fond", "Abime" et "Etang de feu"</p>
           <p><a href="https://www.biblegateway.com/passage/?search=Mark%209%3A44-48&version=LSG" title="44 ou leur ver ne meurt point, et ou le feu ne s'eteint point. 45 Si ton pied est pour toi une occasion de chute, coupe-le ; mieux vaut pour toi entrer boiteux dans la vie, que d'avoir les deux pieds et d'etre jete dans la gehenne, dans le feu qui ne s'eteint point">Marc 9:44-48</a> nous dit que l'Enfer est le PIRE endroit ou tu puisses te retrouver</p>
@@ -136,7 +136,7 @@
 
       <!-- RIGHT LANE: With God -->
       <div class="lane lane-light">
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="reborn-as-christian">Ne de nouveau en tant que chretien <a href="#reborn-as-christian" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
           <p>Jesus nous a dit que nous devons naitre de nouveau</p>
           <p><a href="https://www.biblegateway.com/passage/?search=John+3%3A3-5&version=LSG"
@@ -160,7 +160,7 @@
 
         <div class="lane-arrow" style="color: #166534;">&#x2193;</div>
 
-        <div class="comparison-card highlight-positive">
+        <div class="comparison-card reveal highlight-positive">
           <h2 id="heaven">Le Ciel <a href="#heaven" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
           <p>Aussi appele ouranos en grec et Shamayim en hebreu</p>
           <p>Au Ciel il n'y aura plus de faim, de soif, de souffrance, de fatigue ou de tristesse comme dans <a
@@ -197,7 +197,7 @@
 
   <!-- Notes -->
   <div class="content">
-    <div class="notes-section">
+    <div class="notes-section reveal">
       <h3>Notes</h3>
       <p>La version King James (KJV) ne reconnait pas sheol/hades et ecrit "enfer" partout</p>
       <p>La New King James Version (NKJV), la Modern English Version (MEV) et l'English Standard Version (ESV) n'ont
@@ -218,7 +218,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Sujets Connexes</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../sins/index.html" class="related-card">
         <strong>Peches</strong>
         <p>Que sont les peches et pourquoi suis-je coupable ?</p>
@@ -300,6 +300,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 
