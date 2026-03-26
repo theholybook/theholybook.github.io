@@ -1,12 +1,2 @@
-.centered {
-  text-align: center;
-}
-
-.colored {
-  background-color: darkorange;
-}
-
-.unforgivable {
-  background-color: red;
-  color: white;
-}
+/* This page now uses the shared stylesheet.css */
+/* Kept for backwards compatibility - all styles are in ../stylesheet.css */

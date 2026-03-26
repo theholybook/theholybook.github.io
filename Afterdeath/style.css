@@ -1,21 +1,2 @@
-.row {
-  width: 100%;
-  display: flex;
-
-}
-
-.firstColumn {
-  flex: 50%;
-  width: 50%;
-  position: relative;
-  margin-bottom: 0%;
-}
-
-.secondcolumn {
-  flex: 50%;
-  width: 50%;
-  background-color: green;
-  position: relative;
-  margin-bottom: 0%;
-  margin-left: 1%;
-}
+/* This page now uses the shared stylesheet.css */
+/* Kept for backwards compatibility - all styles are in ../stylesheet.css */

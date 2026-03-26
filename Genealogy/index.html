@@ -1,1196 +1,947 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+  <title>The Genealogy of Jesus Christ - From Adam to Jesus</title>
+  <meta name="description" content="A complete, scripture-based genealogy from Adam to Jesus Christ, tracing both the royal line through Joseph (Matthew 1) and the biological line through Mary (Luke 3).">
 </head>
 
 <body>
-  <center>
-    <h1>Bible Generations</h1>
-    <p>This is a biblical generation list</p>
 
-      <strong>Still being worked on!!!</strong>
-      
-    <p>Content from verses:</p>
-    <ul>
-      <li><a href="https://www.biblegateway.com/passage/?search=Genesis+5&version=MEV">Genesis 5</a></li>
-      <li><a href="https://www.biblegateway.com/passage/?search=genesis+10&version=MEV">Genesis 10</a></li>
-      <li><a href="https://www.biblegateway.com/passage/?search=genesis%2046&version=mev">Genesis 46</a></li>
-      <li><a href="https://www.biblegateway.com/passage/?search=ruth%204&version=mev">Ruth 4</a></li>
-      <small>Luke 3 Shows different names than Genesis and Ruth</small>
-      <li><a href="https://www.biblegateway.com/passage/?search=Luke+3&version=MEV">Luke 3</a></li>
-
-    </ul>
-  </center>
-
-  <div class="generations">
-    <ol>
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Adam</strong></p>
-          <p>Lived 930 years</p>
-          <p>Became the father of Seth at age 130</p>
-          <p>First man ever</p>
-        </li>
-        <li>
-          <p><strong>Eve</strong></p>
-          <p>First woman ever <br><small>Note, There was never a Lilith in the bible</small></p>
-          <p>Made by a rib of Adam</p>
-        </li>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">The Holy Book</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../trinity/index.html">Trinity</a></li>
+        <li><a href="../apocalypse/index.html">End Times</a></li>
+        <li><a href="../Afterdeath/index.html">After Death</a></li>
+        <li><a href="../sins/index.html">Sins</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="../bible%20order/index.html">Bible Guide</a></li>
+        <li><a href="index.html" class="active">Genealogy</a></li>
       </ul>
-      <hr>
+    </div>
+  </nav>
 
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Reference verses: <a href="https://www.biblegateway.com/passage/?search=genesis+4%3A1&version=MEV">Genesis
-            4:1</a>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Kane</strong></p>
-        </li>
-        <li>
-          <p><strong>Able</strong></p>
-          <p>Killed by Kane because of jealousy <a
-              href="https://www.biblegateway.com/passage/?search=genesis+4%3A4-8&version=MEV">Genesis 4:4-8</a></p>
-        </li>
-        <li>
-          <p><strong>Seth</strong></p>
-          <p>Lived 912 years</p>
-          <p>Became the father of Enosh at age 105</p>
-        </li>
+  <header class="page-header">
+    <h1>The Genealogy of Jesus Christ</h1>
+    <p class="subtitle">Tracing the direct line from Adam to Jesus through 77 generations of scripture, spanning over 4,000 years of biblical history.</p>
+  </header>
+
+  <!-- Color Legend -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="color-legend">
+      <h4>Era Color Key</h4>
+      <div class="legend-items">
+        <span class="legend-item"><span class="legend-dot" style="background:#0d9488"></span> Pre-Flood</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span> Post-Flood</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#059669"></span> Patriarchs</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#64748b"></span> Judah to David</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span> United Kingdom</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span> Divided Kingdom / Exile</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#6b7280"></span> Intertestamental</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ca8a04"></span> Jesus</span>
+      </div>
+    </div>
+
+    <!-- Scripture References -->
+    <div class="card" style="margin-bottom:var(--space-xl)">
+      <h4 style="margin-top:0">Scripture Sources</h4>
+      <p style="margin-bottom:var(--space-sm); font-size:0.9rem; color:var(--color-text-secondary)">This genealogy is compiled from the following key passages (MEV):</p>
+      <ul style="font-size:0.9rem; margin-bottom:0">
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+5&version=MEV">Genesis 5</a> &mdash; Adam to Noah (Pre-Flood patriarchs)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+11&version=MEV">Genesis 11</a> &mdash; Shem to Abram (Post-Flood patriarchs)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Ruth+4%3A18-22&version=MEV">Ruth 4:18-22</a> &mdash; Perez to David</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Matthew+1&version=MEV">Matthew 1</a> &mdash; Abraham to Jesus through Joseph (royal/legal line)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=MEV">Luke 3:23-38</a> &mdash; Jesus to Adam through Mary (biological line)</li>
       </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Enosh</strong></p>
-          <p>Lived 905 years</p>
-          <p>Became the father of Kenan at age 90</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Kenan(Cainan)</strong></p>
-          <p>Lived 910 years</p>
-          <p>Became the father of Mahalalel at age 70</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Mahalalel</strong></p>
-          <p>Lived 895 years</p>
-          <p>Became the father of Jared at age 65</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jared</strong></p>
-          <p>Lived 962 years</p>
-          <p>Became the father of Enoch at age 162</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Enoch</strong></p>
-          <p>Lived 365 years</p>
-          <p>Became the father of Methuselah at age 65</p>
-          <p>God took him</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Methuselah</strong></p>
-          <p>Lived 782 years</p>
-          <p>Became the father of Lamech at age 187</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Lamech</strong></p>
-          <p>Lived 777 years</p>
-          <small>Note: also 182 + 595 = 777</small>
-          <p>Became the father of Noah at age 182</p>
-          <small>He also had other sons and dauthers</small>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Noah</strong></p>
-          <p>Lived 950 years</p>
-          <p>Became the father of Shem, Ham and Japheth at age 500<a
-              href="https://www.biblegateway.com/passage/?search=genesis+5%3A32&version=MEV">Genesis 5:32</a></p>
-          <p>The great flood happened when Noah was 600 years old</p>
-          <small>Note: The flood lasted 150 days.<br>Noah lived 600 years until the flood happened and after the flood
-            Noah lived 350 years more (600 + 350 = 950)<br><a
-              href="https://www.biblegateway.com/passage/?search=genesis+7%3A24&version=MEV">Genesis 7:24</a>
-            and <a href="https://www.biblegateway.com/passage/?search=genesis+9%3A28-29&version=MEV">Genesis
-              9:28-29</a></small>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Shem</strong></p>
-          <p>Became the father of Arphaxad at age 202</p>
-          <small>Note: shem was born 50 years into the flood so: 150 - 50 + 102 = 202</small>
-          <p>Lived 702 years</p>
-          <small>Note: Shem lived 500 more years after the birth of Arphaxad: 202 + 500 = 702</small>
-          <p>Father of Elam, Ashur, Arphaxad, Lud, and Aram.</p>
-
-        </li>
-        <li>
-          <p><strong>Ham</strong></p>
-          <p>Father of Cush, Egypt, Put, and Canaan.</p>
-        </li>
-        <li>
-          <p><strong>Japheth</strong></p>
-          <p>Father of Gomer, Magog, Madai, Javan, Tubal, Meshek, and Tiras.</p>
-        </li>
-      </ul>
-
-      <hr>
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Gomer</strong></p>
-          <p>Father of Ashkenaz, Riphath, and Togarmah.</p>
-        </li>
-        <li>
-          <p><strong>Javan</strong></p>
-          <p>Father of Elishah and Tarshish</p>
-          <p>Founder of the Kittites and the Rodanites</p>
-        </li>
-        <li>
-          <p><strong>Cush</strong></p>
-          <p>Father of Seba, Havilah, Sabtah, Raamah, Sabteka and Nimrod</p>
-        </li>
-        <li>
-          <p><strong>Egypt</strong></p>
-          <p>Founder of the Ludites, Anamites, Lehabites, Naphtuhites, Pathrusites, Kasluhites(Philistines) and
-            Caphtorites </p>
-        </li>
-        <li>
-          <p><strong>Canaan</strong></p>
-          <p>Father of Sidon(firstborn) and Heth</p>
-          <p>Founder of the Jebusites, Amorites, Girgashites, Hivites, Arkites, Sinites, Arvadites, Zemarites, and the
-            Hamathites.</p>
-        </li>
-        <li>
-          <p><strong>Aram</strong></p>
-          <p>Father of Uz, Hul, Gether, and Meshek</p>
-
-        </li>
-        <li>
-          <p><strong>Arphaxad</strong></p>
-          <p>Became the father of Shelah at age 35</p>
-          <p>Lived 438 years</p>
-          <small>Note: Arphaxad lived 403 years after the birth of Eber: 35 + 403 = 438</small>
-          <p>Father of Shelah</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Raamah</strong></p>
-          <p>Father of Sheba and Dedan</p>
-        </li>
-        <li>
-          <p><strong>Nimrod</strong></p>
-          <p>Mighty king of babel, Uruk, Akkad, and Kalneh in the land of Shinar, also king of Nineveh, the city
-            Rehoboth Ir ,Calah and Resen in the land of Assyria </p>
-
-        </li>
-        <li>
-          <p><strong>Shelah</strong></p>
-          <p>Became the father of Eber at age 30</p>
-          <p>Lived 433 years</p>
-          <small>Note: Shelah lived 403 years after the birth of Shelah: 30 + 403 = 433</small>
-          <p>Father of Eber</p>
-          <small>Note, the "Cainan" was a translation issue (skip this one) </small>
-        </li>
-      </ul>
-      <hr>
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Raamah</strong></p>
-          <p>Father of Sheba and Dedan</p>
-        </li>
-        <li>
-          <p><strong>Eber</strong></p>
-          <p>Became the father of Peleg at age 34</p>
-          <p>Lived 433 years</p>
-          <small>Note: Eber lived 433 years after the birth of Peleg: 34 + 433 = 467</small>
-          <p>Father of Peleg and Joktan</p>
-        </li>
-      </ul>
-      <hr>
-
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Joktan</strong></p>
-          <p>Father of Almodad, Sheleph, Hazarmaveth, Jerah, Hadoram, Uzal, Diklah, Obal, Abimael, Sheba, Ophir,
-            Havilah, and Jobab</p>
-        </li>
-        <li>
-          <p><strong>Peleg</strong></p>
-          <p>Became the father of Reu at age 30</p>
-          <p>Lived 239 years</p>
-          <small>Note: Peleg lived 209 years after the birth of Reu: 30 + 209 = 239</small>
-          <p>Father of Reu</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Reu</strong></p>
-          <p>Became the father of Serug at age 32</p>
-          <p>Lived 239 years</p>
-          <small>Note: Peleg lived 209 years after the birth of Serug: 32 + 207 = 239</small>
-          <p>Father of Serug</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-
-        <li>
-          <p><strong>Serug</strong></p>
-          <p>Became the father of Nahor at age 30</p>
-          <p>Lived 230 years</p>
-          <small>Note: Serug lived 200 years after the birth of Nahor: 30 + 200 = 230</small>
-          <p>Father of Nahor</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Nahor</strong></p>
-          <p>Became the father of Terah at age 29</p>
-          <p>Lived 148 years</p>
-          <small>Note: Nahor lived 119 years after the birth of Terah : 29 + 119 = 148</small>
-          <p>Father of Terah and Laban</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Terah</strong></p>
-          <p>Lived 205 years</p>
-          <p>Became the father of Abram, Nahor, and Haran at age 70.</p>
-          <p>Father of Abram, Nahor, and Haran.</p>
-        </li>
-        <li>
-          <p><strong>Laban</strong></p>
-          <p>Father of Rachel and Leah</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Abram</strong></p>
-          <p>Became the father of Isaac at age 100</p>
-          <p>Lived 175 years</p>
-          <p>Changed name to Abraham</p>
-          <p>Father of Terah</p>
-        </li>
-        <li>
-          <p><strong>Sarai</strong></p>
-          <p>Infertile but God made her bear a son</p>
-          <p>Lived 127 years</p>
-          <p>Changed name to Sarah</p>
-          <p>Mother of Isaac</p>
-        </li>
-        <li>
-          <p><strong>Hagar</strong></p>
-          <p>Mother of Ismael</p>
-        </li>
-        <li>
-          <p><strong>Bilhah</strong></p>
-          <p>Mother of Dan and Naphtali.</p>
-          <p>Maid servant of Rachel</p>
-        </li>
-        <li>
-          <p><strong>Rachel</strong></p>
-          <p>Mother of Joseph and Benjamin.</p>
-        </li>
-        <li>
-          <p><strong>Zilpah</strong></p>
-          <p>Mother of Gad and Asher.</p>
-          <p>Maid servant of Leah</p>
-        </li>
-        <li>
-          <p><strong>Leah</strong></p>
-          <p>Mother of Reuben, Simeon, Levi, Judah, Issachar and Zebulun</p>
-        </li>
-        <li>
-          <p><strong>Seir</strong></p>
-          <p>Chief of the Horites</p>
-          <p>Father of Lotan, Shobal, Zibeon, Anah, Dishon, Ezer, Dishan. </p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Lot</strong></p>
-        </li>
-        <li>
-          <p><strong>Ismael</strong></p>
-          <p>Father of Nebaioth(firstborn), Kedar, Adbeel, Mibsam, Mishma, Dumah, Massa, Hadad, Tema, Jetur,
-            Naphish, and Kedemah</p>
-          <p>Lived 137 years</p>
-        </li>
-        <li>
-          <p><strong>Isaac</strong></p>
-          <p>Became the father of Esau and Jacob at age 60</p>
-          <p>Lived 180 years</p>
-          <p>Father of Esau and Jacob</p>
-        </li>
-        <li>
-          <p><strong>Rebekah</strong></p>
-        </li>
-        <li>
-          <p><strong>Timna</strong></p>
-          <p>Sister of Lotan</p>
-        </li>
-        <li>
-          <p><strong>Lotan</strong></p>
-          <p>Father of Hori and Homam</p>
-        </li>
-        <li>
-          <p><strong>Shobal</strong></p>
-          <p>Father of Alvan, Manahath, Ebal, Shepho, and Onam.</p>
-        </li>
-        <li>
-          <p><strong>Zibeon</strong></p>
-          <p>Father of Aiah and Anah.</p>
-        </li>
-        <li><strong>Anah</strong>
-          <p>Mother of Dishon and Oholibamah</p>
-        </li>
-        <li>
-          <p><strong>Dishon</strong></p>
-          <p>Father of Hemdan, Eshban, Ithran, and Keran.</p>
-        </li>
-        <li>
-          <p><strong>Ezer</strong></p>
-          <p>Father of Bilhan, Zaavan, and Akan</p>
-        </li>
-        <li>
-          <p><strong>Dishan</strong></p>
-          <p>Father of Uz and Aran</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Esau</strong></p>
-          <p>Father of Eliphaz, Reuel, </p>
-        </li>
-        <li>
-          <p><strong>Jacob</strong></p>
-          <p>became father of Judah at age 84</p>
-          <small>Jacob was 130 when he was before the pharaoh and saw his son Joseph again and Joseph was sold to egypt
-            at age 17 and the bible states also that for these 2 years (probably the years of josephs captivity) there
-            was a famine: 130 - 2 - 17 = 84 presuming Judah was born the same year as Joseph</small>
-          <p>Lived 147 years</p>
-          <p>Father of Reuben, Simeon, Levi, Judah, Dan, Naphtali, Gad, Asher, Issachar, Zebulun, Benjamin and Dinah</p>
-          <p>Wrestled with God in person and was renamed to <strong>Israel</strong></p>
-          <small>Note: Israel means who wrestled with God</small>
-        </li>
-        <li>
-          <p><strong>Adah</strong></p>
-          <p>wife of Esau</p>
-          <p>Mother of Eliphaz and Timna</p>
-        </li>
-        <li>
-          <p><strong>Basemath</strong></p>
-          <p>wife of Esau</p>
-          <p>Mother of Reuel</p>
-        </li>
-        <li>
-          <p><strong>Oholibamah</strong></p>
-          <p>wife of Esau</p>
-          <p>Mother of Jeush, Jalam, and Korah.</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Eliphaz</strong></p>
-          <p>Full name is Eliphaz Amalek</p>
-          <p>was a chief</p>
-          <p>Father of Teman, Omar, Zepho, Gatam, Kenaz and Timna.</p>
-        </li>
-        <li>
-          <p><strong>Joseph</strong></p>
-          <p>Sold to Egypt by Reuben, Simeon, Levi, Judah, Dan, Naphtali, Gad, Asher, Issachar, Zebulun, benjamin and
-            Dinah</p>
-          <img src="Tribes.webp" width="50%">
-        </li>
-        <p><strong>Reuben</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Simeon</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Levi</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Judah</strong></p>
-        <p>Brother of Joseph</p>
-        <p>The age when he became father is unknown, it is said tho to be around 40-50 ish</p>
-        <p>Father of Er, Onan, Shelah, Perez and Zerah</p>
-        <li>
-        </li>
-        <p><strong>Dan</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Naphtali</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Gad</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Asher</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Issachar</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Zebulun</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Benjamin</strong></p>
-        <p>Brother of Joseph</p>
-        <li>
-        </li>
-        <p><strong>Dinah</strong></p>
-        <p>Sister of Joseph</p>
-        <li>
-          <p><strong>Reuel</strong></p>
-          <p>Father of Nahath, Zerah, Shammah, and Mizzah</p>
-        </li>
-        <li>
-          <p><strong>Korah</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Timnah</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Teman</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Omar</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Zepho</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Kenaz</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Gatam</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Nahath</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Zerah</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Shammah</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Mizzah</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Jeush</strong></p>
-          <p>Was a chief</p>
-        </li>
-        <li>
-          <p><strong>Jalam</strong></p>
-          <p>Was a chief</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <strong>Moses</strong>
-          <p>Moses was the man who brought the Israelites out of Egypt</p>
-          <img src="moses.jpg" width="50%">
-        </li>
-        <li>
-          <strong>Er</strong>
-          <p>Firstborn of Judah</p>
-          <p>Wicked and killed by God</p>
-        </li>
-        <li>
-          <p><strong>Perez</strong></p>
-          <p>The age when he became father is unknown, it is said tho to be around 40-50 ish</p>
-          <p>Father of Hezron</p>
-        </li>
-
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Hezron</strong></p>
-          <p>The age of Hezron is also unknown when he became father of ram</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>ram</strong></p>
-          <p>The age of ram is also unknown when he became father of Amminadab</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Amminadab</strong></p>
-          <p>The age of Amminadab is also unknown when he became father of Nahshon</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Nahshon</strong></p>
-          <p>The age of Nahshon is also unknown when he became father of Salmon</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Salmon</strong></p>
-          <p>The age of Salmon is also unknown when he became father of Boaz</p>
-        </li>
-        <li>
-          <p><strong>Rahab</strong></p>
-          <p>Mother of Boaz</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Boaz</strong></p>
-          <p>The age of Boaz is also unknown when he became father of Obed </p>
-        </li>
-        <li>
-          <p><strong>Ruth</strong></p>
-          <p>Mother of Obed</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Obed</strong></p>
-          <p>The age of Obed is also unknown when he became father of Jesse</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jesse</strong></p>
-          <p>The age of Jesse is also unknown when he became father of David</p>
-          <p>Humbled by God and came back to God</p>
-        </li>
-        <li>
-          <p><strong>Eliam</strong></p>
-          <p>Father of Bathsheba</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Uriah</strong></p>
-          <p>Soldier of the Israelites</p>
-          <p>Part of the hittites</p>
-        </li>
-        <li>
-          <p><strong>David</strong></p>
-          <p>David was a mighty king</p>
-          <p>The age of David is also unknown when he became father of Shammuah, Shobab, Solomon and Nathan</p>
-        </li>
-        <li>
-          <p><strong>Bathsheba</strong></p>
-          <p>Wife of Uriah</p>
-          <p>Got taken away by David</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Solomon</strong></p>
-          <p>Solomon was a mighty king</p>
-          <p>Solomon was the wisest man alive</p>
-          <p>The age of Solomon is also unknown when he became father of Rehoboam</p>
-        </li>
-        <li>
-          <p><strong>Nathan</strong></p>
-          <p>Was a prophet</p>
-          <p>Told David what he did and David had to eat grass in the wilderness</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Rehoboam</strong></p>
-          <p>The age of Rehoboam is also unknown when he became father of Abijah</p>
-        </li>
-        <li>
-          <strong>Mattatha</strong>
-          <p>Son of Nathan</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Abijah</strong></p>
-          <p>The age of Abijah is also unknown when he became father of Asa</p>
-        </li>
-        <li>
-          <p><strong>Menna</strong></p>
-          <p>son of Mattatha</p>
-          <p></p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Asa</strong></p>
-          <p>The age of Asa is also unknown when he became father of Jehoshaphat</p>
-        </li>
-        <li>
-          <p><strong>Melea</strong></p>
-          <p>Son of Menna</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jehoshaphat</strong></p>
-          <p>The age of Jehoshaphat is also unknown when he became father of Jehoram</p>
-        </li>
-        <li>
-          <p><strong>Eliakim</strong></p>
-          <p>Son of Melea</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jehoram</strong></p>
-          <p>The age of Jehoram is also unknown when he became father of Uzziah</p>
-        </li>
-        <li>
-          <p><strong>Jonan</strong></p>
-          <p>Son of Eliakim</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Uzziah</strong></p>
-          <p>The age of Uzziah is also unknown when he became father of Jotham</p>
-        </li>
-        <li>
-          <p><strong>Zerubbabel</strong></p>
-          <p>Son of Shealtiel</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jotham</strong></p>
-          <p>The age of Jotham is also unknown when he became father of Ahaz</p>
-        </li>
-        <li>
-          <p><strong>Rhesa</strong></p>
-          <p>Son of Zerubbabel</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Ahaz</strong></p>
-          <p>The age of Ahaz is also unknown when he became father of Hezekiah</p>
-        </li>
-        <li>
-          <p><strong>Joanan</strong></p>
-          <p>Son of Rhesa</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Hezekiah</strong></p>
-          <p>The age of Hezekiah is also unknown when he became father of Manasseh</p>
-        </li>
-        <li>
-          <p><strong>Joda</strong></p>
-          <p>Son of Joanan</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Manasseh</strong></p>
-          <p>The age of Manasseh is also unknown when he became father of Amon</p>
-        </li>
-        <li>
-          <p><strong>Josech</strong></p>
-          <p>Son of Joda</p>
-        </li>
-
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Amon</strong></p>
-          <p>The age of Amon is also unknown when he became father of Josiah</p>
-        </li>
-        <li>
-          <p><strong>Semein</strong></p>
-          <p>Son of Josech</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Josiah</strong></p>
-          <p>The age of Josiah is also unknown when he became father of Jeconiah</p>
-        </li>
-        <li>
-          <p><strong>Mattathias</strong></p>
-          <p>Son of Semein</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jeconiah</strong></p>
-          <p>The age of Jeconiah is also unknown when he became father of Shealtiel</p>
-        </li>
-        <li>
-          <p><strong>Maath</strong></p>
-          <p>Son of Mattathias</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Shealtiel</strong></p>
-          <p>The age of Shealtiel is also unknown when he became father of Zerubbabel</p>
-        </li>
-        <li>
-          <p><strong>Naggai</strong></p>
-          <p>Son of Maath</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Zerubbabel</strong></p>
-          <p>The age of Zerubbabel is also unknown when he became father of Abihud</p>
-        </li>
-        <li>
-          <p><strong>Esli</strong></p>
-          <p>Son of Naggai</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Abihud</strong></p>
-          <p>The age of Abihud is also unknown when he became father of Eliakim</p>
-        </li>
-        <li>
-          <p><strong>Nahum</strong></p>
-          <p>Son of Esli</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Eliakim</strong></p>
-          <p>The age of Eliakim is also unknown when he became father of Azor</p>
-        </li>
-        <li>
-          <p><strong>Amos</strong></p>
-          <p>Son of Nahum</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Azor</strong></p>
-          <p>The age of Azor is also unknown when he became father of Zadok</p>
-        </li>
-        <li>
-          <p><strong>Mattathias</strong></p>
-          <p>Son of Amos</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Zadok</strong></p>
-          <p>The age of Zadok is also unknown when he became father of Akim</p>
-        </li>
-        <li>
-          <p><strong>Joseph</strong></p>
-          <p>Son of Mattathias</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Akim</strong></p>
-          <p>The age of Akim is also unknown when he became father of Elihud</p>
-        </li>
-        <li>
-          <p><strong>Jannai</strong></p>
-          <p>Son of Joseph</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Elihud</strong></p>
-          <p>The age of Elihud is also unknown when he became father of Eleazar</p>
-        </li>
-        <li>
-          <p><strong>Melchi</strong></p>
-          <p>Son of Jannai</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Year 240BC</p>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Eleazar</strong></p>
-          <p>The age of Eleazar is also unknown when he became father of Matthan</p>
-        </li>
-        <li>
-          <p><strong>Levi</strong></p>
-          <p>son of Melchi</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Year 180BC</p>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Matthan</strong></p>
-          <p>The age of Matthan is also unknown when he became father of Jacob</p>
-        </li>
-        <li>
-          <p><strong>Matthat</strong></p>
-          <p>son of Levi</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Year 120BC</p>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jacob</strong></p>
-          <p>The age of Jacob is also unknown when he became father of Eleazar</p>
-        </li>
-        <li>
-          <p><strong>Eli (Heli)</strong></p>
-          <p>Legal father of Joseph (Father of Mary)</p>
-          <p>son of Matthat</p>
-          <img src="explaination.png" width="50%">
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Year 60BC</p>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Joseph</strong></p>
-          <p>Husband of Mary</p>
-        </li>
-        <li>
-          <p><strong>Mary</strong></p>
-          <p>Mother of Jesus</p>
-        </li>
-      </ul>
-      <hr>
-
-      <li>
-        <h3><strong>Generation</strong></h3>
-        <p>Year 0</p>
-      </li>
-      <ul>
-        <li>
-          <p><strong>Jesus</strong></p>
-          <p>Lord and Savior</p>
-          <img src="cross.jpg" width="50%">
-        </li>
-
-      </ul>
-      <hr>
-
-
-    </ol>
+    </div>
   </div>
+
+  <!-- ============================================================
+       TIMELINE: PRE-FLOOD (Genesis 5)
+       ============================================================ -->
+  <div class="gen-timeline">
+
+    <div class="tl-era">
+      <span class="tl-era-label bg-preflood">Pre-Flood Patriarchs &mdash; Genesis 5</span>
+    </div>
+
+    <!-- 1. Adam -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">1st Generation</div>
+        <h3>Adam</h3>
+        <div class="tl-lifespan">Lived 930 years</div>
+        <p class="tl-detail">The first man, created by God from the dust of the ground. Fathered Seth at age 130.</p>
+        <span class="tl-ref">Genesis 5:3-5</span>
+      </div>
+    </div>
+
+    <!-- 2. Seth -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">2nd Generation</div>
+        <h3>Seth</h3>
+        <div class="tl-lifespan">Lived 912 years</div>
+        <p class="tl-detail">Born to Adam and Eve after Abel's death. Fathered Enosh at age 105.</p>
+        <span class="tl-ref">Genesis 5:6-8</span>
+      </div>
+    </div>
+
+    <!-- 3. Enosh -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">3rd Generation</div>
+        <h3>Enosh</h3>
+        <div class="tl-lifespan">Lived 905 years</div>
+        <p class="tl-detail">In his time, people began to call upon the name of the Lord. Fathered Kenan at age 90.</p>
+        <span class="tl-ref">Genesis 5:9-11</span>
+      </div>
+    </div>
+
+    <!-- 4. Kenan -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">4th Generation</div>
+        <h3>Kenan</h3>
+        <div class="tl-lifespan">Lived 910 years</div>
+        <p class="tl-detail">Fathered Mahalalel at age 70.</p>
+        <span class="tl-ref">Genesis 5:12-14</span>
+      </div>
+    </div>
+
+    <!-- 5. Mahalalel -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">5th Generation</div>
+        <h3>Mahalalel</h3>
+        <div class="tl-lifespan">Lived 895 years</div>
+        <p class="tl-detail">Fathered Jared at age 65.</p>
+        <span class="tl-ref">Genesis 5:15-17</span>
+      </div>
+    </div>
+
+    <!-- 6. Jared -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">6th Generation</div>
+        <h3>Jared</h3>
+        <div class="tl-lifespan">Lived 962 years</div>
+        <p class="tl-detail">Fathered Enoch at age 162.</p>
+        <span class="tl-ref">Genesis 5:18-20</span>
+      </div>
+    </div>
+
+    <!-- 7. Enoch -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">7th Generation</div>
+        <h3>Enoch</h3>
+        <div class="tl-lifespan">Lived 365 years</div>
+        <p class="tl-detail">Walked faithfully with God, then God took him &mdash; he did not see death. Fathered Methuselah at age 65.</p>
+        <span class="tl-event-badge">Taken by God</span>
+        <br><span class="tl-ref">Genesis 5:21-24</span>
+      </div>
+    </div>
+
+    <!-- 8. Methuselah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">8th Generation</div>
+        <h3>Methuselah</h3>
+        <div class="tl-lifespan">Lived 969 years &mdash; longest-lived person in scripture</div>
+        <p class="tl-detail">Fathered Lamech at age 187. Died the year of the Great Flood.</p>
+        <span class="tl-ref">Genesis 5:25-27</span>
+      </div>
+    </div>
+
+    <!-- 9. Lamech -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">9th Generation</div>
+        <h3>Lamech</h3>
+        <div class="tl-lifespan">Lived 777 years</div>
+        <p class="tl-detail">Fathered Noah at age 182. Said of Noah: "This one will comfort us."</p>
+        <span class="tl-ref">Genesis 5:28-31</span>
+      </div>
+    </div>
+
+    <!-- 10. Noah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">10th Generation</div>
+        <h3>Noah</h3>
+        <div class="tl-lifespan">Lived 950 years</div>
+        <p class="tl-detail">Fathered Shem, Ham, and Japheth at age 500. Built the ark and survived the Great Flood at age 600.</p>
+        <span class="tl-event-badge">The Great Flood</span>
+        <br><span class="tl-ref">Genesis 5:32, 7:6, 9:29</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         POST-FLOOD PATRIARCHS (Genesis 11)
+         ============================================================ -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-postflood">Post-Flood Patriarchs &mdash; Genesis 11</span>
+    </div>
+
+    <!-- 11. Shem -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">11th Generation</div>
+        <h3>Shem</h3>
+        <div class="tl-lifespan">Lived 600 years</div>
+        <p class="tl-detail">Fathered Arphaxad at age 100 &mdash; two years after the Flood. Ancestor of all Semitic peoples.</p>
+        <span class="tl-ref">Genesis 11:10-11</span>
+      </div>
+    </div>
+
+    <!-- 12. Arphaxad -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">12th Generation</div>
+        <h3>Arphaxad</h3>
+        <div class="tl-lifespan">Lived 438 years</div>
+        <p class="tl-detail">Fathered Shelah at age 35.</p>
+        <span class="tl-ref">Genesis 11:12-13</span>
+      </div>
+    </div>
+
+    <!-- 13. Shelah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">13th Generation</div>
+        <h3>Shelah</h3>
+        <div class="tl-lifespan">Lived 433 years</div>
+        <p class="tl-detail">Fathered Eber at age 30.</p>
+        <span class="tl-ref">Genesis 11:14-15</span>
+      </div>
+    </div>
+
+    <!-- 14. Eber -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">14th Generation</div>
+        <h3>Eber</h3>
+        <div class="tl-lifespan">Lived 464 years</div>
+        <p class="tl-detail">Fathered Peleg at age 34. Root of the name "Hebrew."</p>
+        <span class="tl-ref">Genesis 11:16-17</span>
+      </div>
+    </div>
+
+    <!-- 15. Peleg -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">15th Generation</div>
+        <h3>Peleg</h3>
+        <div class="tl-lifespan">Lived 239 years</div>
+        <p class="tl-detail">Fathered Reu at age 30. "In his days the earth was divided."</p>
+        <span class="tl-event-badge">Tower of Babel / Earth Divided</span>
+        <br><span class="tl-ref">Genesis 10:25, 11:18-19</span>
+      </div>
+    </div>
+
+    <!-- 16. Reu -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">16th Generation</div>
+        <h3>Reu</h3>
+        <div class="tl-lifespan">Lived 239 years</div>
+        <p class="tl-detail">Fathered Serug at age 32.</p>
+        <span class="tl-ref">Genesis 11:20-21</span>
+      </div>
+    </div>
+
+    <!-- 17. Serug -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">17th Generation</div>
+        <h3>Serug</h3>
+        <div class="tl-lifespan">Lived 230 years</div>
+        <p class="tl-detail">Fathered Nahor at age 30.</p>
+        <span class="tl-ref">Genesis 11:22-23</span>
+      </div>
+    </div>
+
+    <!-- 18. Nahor -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">18th Generation</div>
+        <h3>Nahor</h3>
+        <div class="tl-lifespan">Lived 148 years</div>
+        <p class="tl-detail">Fathered Terah at age 29.</p>
+        <span class="tl-ref">Genesis 11:24-25</span>
+      </div>
+    </div>
+
+    <!-- 19. Terah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">19th Generation</div>
+        <h3>Terah</h3>
+        <div class="tl-lifespan">Lived 205 years</div>
+        <p class="tl-detail">Fathered Abram, Nahor, and Haran at age 70. Departed Ur of the Chaldeans.</p>
+        <span class="tl-ref">Genesis 11:26-32</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         THE PATRIARCHS
+         ============================================================ -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-patriarchs">The Patriarchs</span>
+    </div>
+
+    <!-- 20. Abraham -->
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">20th Generation</div>
+        <h3>Abraham</h3>
+        <div class="tl-lifespan">Lived 175 years</div>
+        <p class="tl-detail">Originally Abram. Called by God out of Ur. Father of many nations. Fathered Isaac at age 100 with his wife Sarah.</p>
+        <span class="tl-ref">Genesis 12:1-4, 21:5, 25:7</span>
+      </div>
+    </div>
+
+    <!-- 21. Isaac -->
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">21st Generation</div>
+        <h3>Isaac</h3>
+        <div class="tl-lifespan">Lived 180 years</div>
+        <p class="tl-detail">The child of promise. Fathered twins Jacob and Esau at age 60 with his wife Rebekah.</p>
+        <span class="tl-ref">Genesis 25:26, 35:28</span>
+      </div>
+    </div>
+
+    <!-- 22. Jacob/Israel -->
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">22nd Generation</div>
+        <h3>Jacob / Israel</h3>
+        <div class="tl-lifespan">Lived 147 years</div>
+        <p class="tl-detail">Wrestled with God and received the name Israel. Father of the 12 tribes. Wives: Leah and Rachel.</p>
+        <span class="tl-ref">Genesis 32:28, 47:28</span>
+      </div>
+    </div>
+
+  </div><!-- end .gen-timeline (single track) -->
+
+  <!-- ============================================================
+       THE 12 TRIBES OF ISRAEL
+       ============================================================ -->
+  <div class="tl-tribes-card">
+    <h3>The Twelve Tribes of Israel</h3>
+    <p class="tl-detail" style="max-width:100%; margin: 0 auto var(--space-md);">The sons of Jacob who became the twelve tribes. The line to Jesus continues through <strong>Judah</strong>.</p>
+    <div class="tribes-grid">
+      <span class="tribe-chip">Reuben</span>
+      <span class="tribe-chip">Simeon</span>
+      <span class="tribe-chip">Levi</span>
+      <span class="tribe-chip tribe-highlight">Judah</span>
+      <span class="tribe-chip">Dan</span>
+      <span class="tribe-chip">Naphtali</span>
+      <span class="tribe-chip">Gad</span>
+      <span class="tribe-chip">Asher</span>
+      <span class="tribe-chip">Issachar</span>
+      <span class="tribe-chip">Zebulun</span>
+      <span class="tribe-chip">Joseph</span>
+      <span class="tribe-chip">Benjamin</span>
+    </div>
+    <img src="Tribes.webp" alt="The Twelve Tribes of Israel" class="tribes-img">
+  </div>
+
+  <!-- ============================================================
+       JUDAH TO DAVID (Ruth 4, Matthew 1)
+       ============================================================ -->
+  <div class="gen-timeline">
+
+    <div class="tl-era">
+      <span class="tl-era-label bg-patriarchs">Judah &mdash; The Royal Tribe</span>
+    </div>
+
+    <!-- 23. Judah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">23rd Generation</div>
+        <h3>Judah</h3>
+        <p class="tl-detail">Son of Jacob and Leah. Father of Perez by Tamar. The tribe of kingship and of the Messiah.</p>
+        <span class="tl-ref">Genesis 38, 49:10</span>
+      </div>
+    </div>
+
+    <div class="tl-era">
+      <span class="tl-era-label bg-judges">Perez to David &mdash; Ruth 4:18-22</span>
+    </div>
+
+    <!-- 24. Perez -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">24th Generation</div>
+        <h3>Perez</h3>
+        <p class="tl-detail">Son of Judah and Tamar. Twin brother of Zerah.</p>
+        <span class="tl-ref">Genesis 38:29, Ruth 4:18</span>
+      </div>
+    </div>
+
+    <!-- 25. Hezron -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">25th Generation</div>
+        <h3>Hezron</h3>
+        <p class="tl-detail">Son of Perez.</p>
+        <span class="tl-ref">Ruth 4:18</span>
+      </div>
+    </div>
+
+    <!-- 26. Ram -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">26th Generation</div>
+        <h3>Ram</h3>
+        <p class="tl-detail">Son of Hezron.</p>
+        <span class="tl-ref">Ruth 4:19</span>
+      </div>
+    </div>
+
+    <!-- 27. Amminadab -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">27th Generation</div>
+        <h3>Amminadab</h3>
+        <p class="tl-detail">Son of Ram. Lived during the era of the Exodus from Egypt.</p>
+        <span class="tl-event-badge">Era of the Exodus</span>
+        <br><span class="tl-ref">Ruth 4:19, Numbers 1:7</span>
+      </div>
+    </div>
+
+    <!-- 28. Nahshon -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">28th Generation</div>
+        <h3>Nahshon</h3>
+        <p class="tl-detail">Son of Amminadab. Leader of the tribe of Judah during the wilderness wanderings.</p>
+        <span class="tl-ref">Ruth 4:20, Numbers 2:3</span>
+      </div>
+    </div>
+
+    <!-- 29. Salmon -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">29th Generation</div>
+        <h3>Salmon</h3>
+        <p class="tl-detail">Son of Nahshon. Married Rahab of Jericho.</p>
+        <span class="tl-ref">Ruth 4:20, Matthew 1:5</span>
+      </div>
+    </div>
+
+    <!-- 30. Boaz -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">30th Generation</div>
+        <h3>Boaz</h3>
+        <p class="tl-detail">Son of Salmon and Rahab. The kinsman-redeemer who married Ruth the Moabite.</p>
+        <span class="tl-ref">Ruth 4:21</span>
+      </div>
+    </div>
+
+    <!-- 31. Obed -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">31st Generation</div>
+        <h3>Obed</h3>
+        <p class="tl-detail">Son of Boaz and Ruth.</p>
+        <span class="tl-ref">Ruth 4:21</span>
+      </div>
+    </div>
+
+    <!-- 32. Jesse -->
+    <div class="tl-node">
+      <span class="tl-dot dot-judges"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges">
+        <div class="tl-number era-judges">32nd Generation</div>
+        <h3>Jesse</h3>
+        <p class="tl-detail">Son of Obed. Father of eight sons, the youngest being David.</p>
+        <span class="tl-ref">Ruth 4:22, 1 Samuel 16:10-11</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         THE KINGS
+         ============================================================ -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-kingdom">The United Kingdom</span>
+    </div>
+
+    <!-- 33. David -->
+    <div class="tl-node">
+      <span class="tl-dot dot-kingdom"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="kingdom">
+        <div class="tl-number era-kingdom">33rd Generation</div>
+        <h3>King David</h3>
+        <div class="tl-lifespan">Lived ~70 years &bull; Reigned 40 years</div>
+        <p class="tl-detail">Shepherd, warrior, psalmist, king of all Israel. God made an eternal covenant with his house. Father of Solomon by Bathsheba, and also father of Nathan.</p>
+        <span class="tl-ref">2 Samuel 5:4, 7:12-16</span>
+      </div>
+    </div>
+
+  </div><!-- end .gen-timeline (single track before split) -->
+
+  <!-- ============================================================
+       THE SPLIT: Two Genealogical Lines Diverge at David
+       ============================================================ -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="card" style="text-align:center; border-left:3px solid #7c3aed; border-right:3px solid #7c3aed; margin-bottom:var(--space-xl);">
+      <h3 style="margin-top:0; color:var(--color-accent);">The Line Divides After David</h3>
+      <p style="font-size:0.9rem; max-width:100%;">After King David, scripture records two genealogical lines to Jesus. <strong>Matthew&rsquo;s Gospel</strong> traces the <em>royal/legal</em> line through Solomon to Joseph, establishing Jesus as the legal heir to David's throne. <strong>Luke&rsquo;s Gospel</strong> traces the <em>biological</em> line through Nathan to Mary, establishing Jesus as a physical descendant of David.</p>
+    </div>
+  </div>
+
+  <div class="tl-split-section">
+
+    <div class="tl-split-header">
+      <div>
+        <h3 style="color:#7c3aed;">Matthew&rsquo;s Line</h3>
+        <small>Royal/Legal line through <strong>Solomon</strong> to <strong>Joseph</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A6-16&version=MEV">Matthew 1:6-16</a></small>
+      </div>
+      <div>
+        <h3 style="color:#dc2626;">Luke&rsquo;s Line</h3>
+        <small>Biological line through <strong>Nathan</strong> to <strong>Mary</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-31&version=MEV">Luke 3:23-38</a></small>
+      </div>
+    </div>
+
+    <div class="tl-dual-track">
+
+      <!-- LEFT TRACK: Matthew's Line (Solomon -> Joseph) -->
+      <div class="tl-track tl-track-left">
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #7c3aed;">
+            <strong>Solomon</strong>
+            <small>Son of David and Bathsheba. Wisest king. Built the Temple.</small>
+          </div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Rehoboam</strong>
+            <small>Kingdom divided under his reign</small></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Abijah</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Asa</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jehoshaphat</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joram</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Uzziah</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jotham</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Ahaz</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Hezekiah</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Manasseh</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Amon</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Josiah</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #dc2626;">
+            <strong>Jeconiah</strong>
+            <small>Carried away to Babylon</small>
+            <br><span class="tl-event-badge">Babylonian Exile</span>
+          </div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Shealtiel</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Zerubbabel</strong>
+            <small>Led return from exile; rebuilt the Temple</small></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Abiud</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Eliakim</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Azor</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Zadok</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Achim</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Eliud</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Eleazar</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Matthan</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jacob</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;">
+            <strong>Joseph</strong>
+            <small>Husband of Mary, legal father of Jesus</small>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT TRACK: Luke's Line (Nathan -> Mary) -->
+      <div class="tl-track tl-track-right">
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #dc2626;">
+            <strong>Nathan</strong>
+            <small>Son of David. Not the prophet &mdash; a different Nathan.</small>
+          </div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Mattatha</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Menna</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Melea</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Eliakim</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jonam</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joseph</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Judah</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Simeon</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Levi</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Matthat</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jorim</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Eliezer</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joshua</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Er</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Elmadam</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Cosam</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Addi</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Melchi</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Neri</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Shealtiel</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Zerubbabel</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Rhesa</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joanan</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joda</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Josech</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Semein</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Mattathias</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Maath</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Naggai</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Esli</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Nahum</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Amos</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Mattathias</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Joseph</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Jannai</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Melchi</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Levi</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card"><strong>Matthat</strong></div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;">
+            <strong>Heli (Eli)</strong>
+            <small>Father of Mary</small>
+          </div>
+        </div>
+
+        <div class="tl-track-node">
+          <div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;">
+            <strong>Mary</strong>
+            <small>Mother of Jesus, virgin birth</small>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- end .tl-dual-track -->
+
+  </div><!-- end .tl-split-section -->
+
+  <!-- ============================================================
+       CONVERGENCE: Jesus Christ
+       ============================================================ -->
+  <div class="tl-converge">
+    <div class="tl-converge-arrows">
+      &#9660; &#9660;
+    </div>
+    <div class="tl-jesus-card">
+      <h2>Jesus Christ</h2>
+      <p>"The Son of David, the Son of Abraham"</p>
+      <p style="font-size:0.85rem;">Born in Bethlehem of Judea. Legal heir to David's throne through Joseph. Biological descendant of David through Mary. The promised Messiah.</p>
+      <p><small><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A1&version=MEV">Matthew 1:1</a> &bull; <a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=MEV">Luke 3:23-38</a></small></p>
+      <img src="cross.jpg" alt="The Cross of Jesus Christ">
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EXPLANATION / NOTES
+       ============================================================ -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem var(--space-3xl);">
+
+    <div class="notes-section">
+      <h3>Why Two Different Genealogies?</h3>
+      <p style="max-width:100%">One of the most frequently asked questions about the Gospels is why Matthew and Luke record different genealogies for Jesus. The widely held explanation is that <strong>Matthew traces the legal/royal line through Joseph</strong>, establishing Jesus as the legal heir to the throne of David, while <strong>Luke traces the biological line through Mary</strong>, establishing Jesus as a physical descendant of David. In Jewish culture, a genealogy could be listed under the husband's name even when tracing the wife's lineage &mdash; Luke 3:23 carefully notes that Jesus was "the son, so it was thought, of Joseph."</p>
+      <p style="max-width:100%">Both lines converge at David and earlier at Abraham, confirming that Jesus fulfilled the messianic prophecies requiring the Messiah to be both a son of Abraham (Genesis 22:18) and a son of David (2 Samuel 7:12-16).</p>
+      <img src="explaination.png" alt="Diagram showing the two genealogical lines" style="max-width:100%; margin-top:var(--space-md); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);">
+    </div>
+
+    <blockquote class="scripture" style="margin-top:var(--space-xl);">
+      The book of the genealogy of Jesus Christ, the Son of David, the Son of Abraham.
+      <cite class="verse-ref">&mdash; Matthew 1:1 (MEV)</cite>
+    </blockquote>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">The Holy Book</span>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../trinity/index.html">Trinity</a></li>
+        <li><a href="../apocalypse/index.html">End Times</a></li>
+        <li><a href="../Afterdeath/index.html">After Death</a></li>
+        <li><a href="../sins/index.html">Sins</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="../bible%20order/index.html">Bible Guide</a></li>
+        <li><a href="index.html">Genealogy</a></li>
+      </ul>
+      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
