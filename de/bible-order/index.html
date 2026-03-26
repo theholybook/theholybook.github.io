@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="Ein kategorisierter Fuehrer zu allen 66 Buechern der Bibel, nach Genre geordnet -- Evangelien, Briefe, Prophetie, Geschichte und mehr.">
+  <meta property="og:title" content="Kategorisierter Fuehrer zu den Buechern der Bibel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="In welcher Reihenfolge solltest du die Bibel lesen? Ein kategorisierter Fuehrer zu allen 66 Buechern." />
+  <meta property="og:url" content="https://theholybook.github.io/de/bible-order/" />
+  <meta property="og:image"
+    content="https://theholybook.github.io/bible%20order/biblebook.jpg" />
+  <title>Kategorisierter F&uuml;hrer zu den B&uuml;chern der Bibel</title>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">Das Heilige Buch</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Navigation umschalten">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="../trinity/index.html">Dreifaltigkeit</a></li>
+        <li><a href="../apocalypse/index.html">Endzeit</a></li>
+        <li><a href="../Afterdeath/index.html">Nach dem Tod</a></li>
+        <li><a href="../sins/index.html">S&uuml;nden</a></li>
+        <li><a href="../Religions/index.html">Religionen</a></li>
+        <li><a href="index.html" class="active">Bibelf&uuml;hrer</a></li>
+        <li><a href="../Genealogy/index.html">Stammbaum</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <a href="../../bible order/index.html">EN</a>
+        <a href="index.html" class="active-lang">DE</a>
+        <a href="../../fr/bible-order/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dunkelmodus umschalten" title="Dunkelmodus umschalten">&#9728;&#65039;</button>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <h1>Kategorisierter F&uuml;hrer zu den B&uuml;chern der Bibel</h1>
+  </header>
+
+  <div class="content">
+    <div class="card">
+      <p>Was du gleich lesen wirst, ist ein Kategorisierungsf&uuml;hrer zu den B&uuml;chern der Bibel. Dies ist
+        keine Lesereihenfolge. Mit dieser Webseite beabsichtigen wir, den Nachfolgern des Herrn Jesus eine gute Ressource zu
+        geben, um zu sehen, wo alle B&uuml;cher in Bezug auf ihre Themen, Geschichte oder allgemeinen Botschaften hineinpassen.
+        Wir haben sie in 9 Kategorien unterteilt, die du unten sehen wirst. Sie sind farblich gekennzeichnet, und
+        ich habe Beschreibungen zu jedem Buch innerhalb der Kategorien geschrieben. Am Anfang jeder Kategorie gibt es
+        einen kurzen Absatz, der die Kategorie erkl&auml;rt.</p>
+      <ul class="bible-guide-intro">
+        <li style="color: darkgreen;">1 <strong>Sch&ouml;pfungsgeschichte/Der S&uuml;ndenfall</strong></li>
+        <li style="color: darkblue;">2-5 <strong>Die Evangelien</strong></li>
+        <li style="color: darkmagenta;">6 <strong>Die Apostelgeschichte</strong></li>
+        <li style="color: darkgoldenrod;">7-27 <strong>Briefe/Episteln</strong></li>
+        <li style="color: #333;">28-33 <strong>Poesie/Weisheitsb&uuml;cher</strong></li>
+        <li style="color: #b33c00;">34-49 <strong>Mosaisches Gesetz/Geschichte</strong></li>
+        <li style="color: #7a00cc;">50-53 <strong>Gro&szlig;e Propheten</strong></li>
+        <li style="color: #5c8a8a;">54-65 <strong>Kleine Propheten</strong></li>
+        <li style="color: darkred;">66 <strong>Apokalyptisch/Endgericht</strong></li>
+      </ul>
+    </div>
+
+    <div class="toc-card">
+      <h4>Schnellnavigation</h4>
+      <ul>
+        <li><a href="#creation-story">Sch&ouml;pfungsgeschichte/Der S&uuml;ndenfall</a></li>
+        <li><a href="#the-gospels">Die Evangelien</a></li>
+        <li><a href="#acts-of-apostles">Die Apostelgeschichte</a></li>
+        <li><a href="#letters-epistles">Briefe/Episteln</a></li>
+        <li><a href="#poetry-wisdom">Poesie/Weisheitsb&uuml;cher</a></li>
+        <li><a href="#mosaic-law">Mosaisches Gesetz/Geschichte</a></li>
+        <li><a href="#major-prophets">Gro&szlig;e Propheten</a></li>
+        <li><a href="#minor-prophets">Kleine Propheten</a></li>
+        <li><a href="#apocalyptic">Apokalyptisch/Endgericht</a></li>
+      </ul>
+    </div>
+
+    <h2 id="creation-story" class="bible-category" style="color: darkgreen;">1 <strong>Sch&ouml;pfungsgeschichte/Der S&uuml;ndenfall</strong> <a href="#creation-story" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">1. 1. Mose (Genesis)</h3>
+      <p><strong>Das 1. Buch Mose</strong> ist ein grundlegender Text sowohl f&uuml;r den christlichen Glauben als auch f&uuml;r die Theologie. Es spricht &uuml;ber die Urspr&uuml;nge der Welt und der Menschheit und die Beziehung zwischen Gott und seiner Sch&ouml;pfung. Es offenbart auch die verheerenden Folgen des S&uuml;ndenfalls der Menschheit und die Verhei&szlig;ung der Erl&ouml;sung durch das Kommen unseres Herrn Jesus Christus. Es ist ein reicher und komplexer Text, voller Symbolik und theologischer Wahrheiten, die uns weiterhin in unserem Verst&auml;ndnis von Gottes Heilsplan leiten.</p>
+    </div>
+
+    <h2 id="the-gospels" class="bible-category" style="color: darkblue;">2-5 <strong>Die Evangelien</strong> <a href="#the-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">2. Matth&auml;us</h3>
+      <p><strong>Das Evangelium nach Matth&auml;us</strong> ist ein wahrer Schatz unter den vier Evangelien, da es einen umfassenden Bericht &uuml;ber das Leben und die Lehren unseres Herrn Jesus Christus pr&auml;sentiert. Es beginnt mit dem Stammbaum Jesu, verfolgt seine Abstammung zur&uuml;ck bis Abraham, und folgt dann seiner wunderbaren Geburt und fr&uuml;hen Kindheit. Es vertieft sich in seine m&auml;chtigen Lehren, einschlie&szlig;lich der ber&uuml;hmten Bergpredigt, und endet mit seinem Tod und seiner Auferstehung.</p>
+      <h3 class="bible-book-title">3. Markus</h3>
+      <p><strong>Das Evangelium nach Markus</strong> ist ein Zeugnis f&uuml;r die Macht und Autorit&auml;t unseres Herrn Jesus Christus. Es ist das k&uuml;rzeste der vier Evangelien, enth&auml;lt aber einen kraftvollen Bericht &uuml;ber das Leben, den Dienst und die Wunder Jesu. Es beginnt mit Johannes dem T&auml;ufer und folgt dann Jesus, wie er predigt, Kranke heilt, D&auml;monen austreibt und sich letztendlich f&uuml;r unsere Erl&ouml;sung opfert.</p>
+      <h3 class="bible-book-title">4. Lukas</h3>
+      <p><strong>Das Evangelium nach Lukas</strong> ist ein einzigartiges Evangelium, bekannt f&uuml;r seine Betonung der Menschlichkeit Jesu und seines Dienstes an den Ausgegrenzten und Unterdr&uuml;ckten. Es beginnt mit der wunderbaren Geburt Jesu und folgt dann seinem Dienst, seinen Lehren und Wundern. Bemerkenswert ist, dass es mehrere Gleichnisse enth&auml;lt, darunter das ber&uuml;hmte Gleichnis vom verlorenen Sohn.</p>
+      <h3 class="bible-book-title">5. Johannes</h3>
+      <p><strong>Das Evangelium nach Johannes</strong> ist ein tiefgr&uuml;ndiger und mystischer Bericht &uuml;ber das Leben und den Dienst Jesu Christi. Es beginnt mit dem ber&uuml;hmten Prolog, der vom Wort spricht, das Fleisch wurde, und folgt dann Jesu Dienst, Lehren und Wundern. Dieses Evangelium betont auch die Rolle des Glaubens, der Liebe und des ewigen Lebens.</p>
+    </div>
+
+    <h2 id="acts-of-apostles" class="bible-category" style="color: darkmagenta;">6 <strong>Die Apostelgeschichte</strong> <a href="#acts-of-apostles" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">6. Die Apostelgeschichte</h3>
+      <p><strong>Die Apostelgeschichte</strong> ist ein historischer Bericht &uuml;ber die fr&uuml;he Kirche und die Verbreitung des Evangeliums nach dem Tod und der Auferstehung unseres Herrn Jesus Christus. Sie beginnt mit der Himmelfahrt Jesu und folgt dann dem Dienst der Apostel, einschlie&szlig;lich Petrus und Paulus, wie sie die gute Nachricht der Erl&ouml;sung allen Menschen verk&uuml;ndeten.</p>
+    </div>
+
+    <h2 id="letters-epistles" class="bible-category" style="color: darkgoldenrod;">7-27 <strong>Briefe/Episteln</strong> <a href="#letters-epistles" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">7. R&ouml;mer</h3>
+      <p><strong>Der Brief des Paulus an die R&ouml;mer</strong> ist eine m&auml;chtige theologische Abhandlung. Er vertieft sich in die Lehre der Erl&ouml;sung, der Rechtfertigung durch den Glauben und die Beziehung zwischen Glaube und Werken. Er betont auch die Einheit aller Gl&auml;ubigen in Christus.</p>
+      <h3 class="bible-book-title">8. 1. Korinther</h3>
+      <p><strong>Der erste Brief des Paulus an die Korinther</strong> ist ein Hirtenbrief an die Gemeinde in Korinth. Er behandelt verschiedene Probleme innerhalb der Gemeinde, darunter Spaltungen, Unmoral und Streitigkeiten. Er behandelt auch Themen wie geistliche Gaben, Liebe und die Auferstehung.</p>
+      <h3 class="bible-book-title">9. 2. Korinther</h3>
+      <p><strong>Der zweite Brief des Paulus an die Korinther</strong> behandelt Themen wie sein Apostelamt, das Geben von Almosen und seine eigenen Leiden. Er betont auch die Bedeutung von Vers&ouml;hnung und Vergebung innerhalb der Gemeinschaft.</p>
+      <h3 class="bible-book-title">10. Galater</h3>
+      <p><strong>Der Brief des Paulus an die Galater</strong> ist eine leidenschaftliche Verteidigung des Evangeliums der Gnade. Er behandelt das Problem des Legalismus und betont, dass die Erl&ouml;sung durch den Glauben an Jesus kommt, nicht durch Gesetzestreue.</p>
+      <h3 class="bible-book-title">11. Epheser</h3>
+      <p><strong>Der Brief des Paulus an die Epheser</strong> behandelt Themen wie die Einheit der Gl&auml;ubigen in Christus, die geistlichen Segnungen, die wir in ihm haben, und unsere Identit&auml;t als Kinder Gottes.</p>
+      <h3 class="bible-book-title">12. Philipper</h3>
+      <p><strong>Der Brief des Paulus an die Philipper</strong> betont die Freude und Zufriedenheit, die aus einer pers&ouml;nlichen Beziehung mit Christus kommen, unabh&auml;ngig von unseren Umst&auml;nden.</p>
+      <h3 class="bible-book-title">13. Kolosser</h3>
+      <p><strong>Der Brief des Paulus an die Kolosser</strong> betont die &Uuml;berlegenheit Christi und seine Rolle bei der Vers&ouml;hnung aller Dinge mit sich selbst.</p>
+      <h3 class="bible-book-title">14. 1. Thessalonicher</h3>
+      <p><strong>Der erste Brief des Paulus an die Thessalonicher</strong> lehrt &uuml;ber die Wiederkunft Christi und die Bedeutung eines gottgef&auml;lligen Lebens.</p>
+      <h3 class="bible-book-title">15. 2. Thessalonicher</h3>
+      <p><strong>Der zweite Brief des Paulus an die Thessalonicher</strong> setzt die Betonung der Wiederkunft Christi und die Notwendigkeit fort, in Bereitschaft f&uuml;r seine R&uuml;ckkehr zu leben.</p>
+      <h3 class="bible-book-title">16. 1. Timotheus</h3>
+      <p><strong>Der erste Brief des Paulus an Timotheus</strong> enth&auml;lt praktische Anweisungen zur Gemeindeleitung und zum richtigen Verhalten der Gl&auml;ubigen.</p>
+      <h3 class="bible-book-title">17. 2. Timotheus</h3>
+      <p><strong>Der zweite Brief des Paulus an Timotheus</strong> ist ein pers&ouml;nlicher Brief mit herzlicher Ermutigung und der Erinnerung an die Bedeutung des Ausharrens angesichts von Pr&uuml;fungen und Verfolgung.</p>
+      <h3 class="bible-book-title">18. Titus</h3>
+      <p><strong>Der Brief des Paulus an Titus</strong> enth&auml;lt Anweisungen zur Gemeindeorganisation und den Eigenschaften gottgef&auml;lliger Leiter.</p>
+      <h3 class="bible-book-title">19. Philemon</h3>
+      <p><strong>Der Brief des Paulus an Philemon</strong> ist ein pers&ouml;nlicher Brief, in dem Paulus seinen Freund Philemon bittet, seinen entlaufenen Sklaven Onesimus mit Liebe und Vergebung wieder aufzunehmen.</p>
+      <h3 class="bible-book-title">20. Hebr&auml;er</h3>
+      <p><strong>Der Hebr&auml;erbrief</strong> enth&auml;lt reiche Lehren &uuml;ber die &Uuml;berlegenheit Christi und den neuen Bund, den er eingef&uuml;hrt hat.</p>
+      <h3 class="bible-book-title">21. Jakobus</h3>
+      <p><strong>Der Brief des Jakobus</strong> enth&auml;lt praktische Lehren dar&uuml;ber, unseren Glauben in unseren Handlungen und Beziehungen auszuleben. Jakobus betont die Notwendigkeit, dass Werke unseren Glauben begleiten.</p>
+      <h3 class="bible-book-title">22. 1. Petrus</h3>
+      <p><strong>Der erste Brief des Petrus</strong> ermutigt Gl&auml;ubige, die Verfolgung und Pr&uuml;fungen durchmachten, und erinnert sie an ihre Identit&auml;t in Christus.</p>
+      <h3 class="bible-book-title">23. 2. Petrus</h3>
+      <p><strong>Der zweite Brief des Petrus</strong> warnt vor falschen Lehrern und ermutigt Gl&auml;ubige in ihrem Glauben.</p>
+      <h3 class="bible-book-title">24. 1. Johannes</h3>
+      <p><strong>Der erste Brief des Johannes</strong> ermutigt Gl&auml;ubige und warnt vor falschen Lehren, mit Betonung auf Liebe zu Gott und zueinander.</p>
+      <h3 class="bible-book-title">25. 2. Johannes</h3>
+      <p><strong>Der zweite Brief des Johannes</strong> warnt vor falschen Lehrern und ermutigt Gl&auml;ubige, standhaft in der Wahrheit des Evangeliums zu bleiben.</p>
+      <h3 class="bible-book-title">26. 3. Johannes</h3>
+      <p><strong>Der dritte Brief des Johannes</strong> best&auml;tigt Gastfreundschaft und ermutigt, treue Arbeiter in der Gemeinde zu unterst&uuml;tzen.</p>
+      <h3 class="bible-book-title">27. Judas</h3>
+      <p><strong>Der Brief des Judas</strong> ist eine kraftvolle Warnung vor falschen Lehrern, die in die Gemeinde eingedrungen waren. Er dr&auml;ngt die Gl&auml;ubigen, sich an die Lehren der Apostel zu erinnern und f&uuml;r den Glauben zu k&auml;mpfen.</p>
+    </div>
+
+    <h2 id="poetry-wisdom" class="bible-category" style="color: black;">28-33 <strong>Poesie/Weisheitsb&uuml;cher</strong> <a href="#poetry-wisdom" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">28. Hiob</h3>
+      <p><strong>Das Buch Hiob</strong> ist eine kraftvolle und komplexe Geschichte &uuml;ber Leiden und Glauben mit tiefgr&uuml;ndigen Lektionen &uuml;ber die Souver&auml;nit&auml;t Gottes und die Bedeutung von Glauben und Vertrauen inmitten von Pr&uuml;fungen. Es gilt als eines der &auml;ltesten B&uuml;cher der Bibel, geschrieben um 2000 v. Chr.</p>
+      <h3 class="bible-book-title">29. Psalmen</h3>
+      <p><strong>Das Buch der Psalmen</strong> ist eine Sammlung von 150 poetischen Anbetungsliedern, bekannt als Hymnen, Gebete und Lobpreisungen an Gott. Sie decken ein breites Spektrum menschlicher Erfahrungen ab, von Klage und Trauer bis zu Freude und Lobpreis.</p>
+      <h3 class="bible-book-title">30. Spr&uuml;che</h3>
+      <p><strong>Das Buch der Spr&uuml;che</strong> ist eine Sammlung praktischer Weisheit und Anleitung f&uuml;r das pers&ouml;nliche und gemeinschaftliche Leben. Es er&ouml;rtert zeitlose Wahrheiten zu verschiedenen Aspekten des Lebens, einschlie&szlig;lich Beziehungen, Arbeit, Sprache und Charakter.</p>
+      <h3 class="bible-book-title">31. Prediger</h3>
+      <p><strong>Der Prediger</strong> ist ein tiefgr&uuml;ndiges Buch der Weisheit, das uns herausfordert, &uuml;ber den Sinn und Zweck des Lebens nachzudenken. Es wird oft K&ouml;nig Salomo zugeschrieben und ist voller nachdenklich stimmender Betrachtungen &uuml;ber die Verg&auml;nglichkeit des menschlichen Daseins.</p>
+      <h3 class="bible-book-title">32. Hoheslied</h3>
+      <p><strong>Das Hohelied, auch bekannt als das Lied Salomos</strong>, ist ein Buch leidenschaftlicher Liebespoesie, das die Sch&ouml;nheit der Liebe und Intimit&auml;t in der Ehe feiert.</p>
+      <h3 class="bible-book-title">33. Klagelieder</h3>
+      <p><strong>Die Klagelieder, auch bekannt als die Klagelieder Jeremias</strong>, bestehen aus f&uuml;nf poetischen Klagen, die traditionell dem Propheten Jeremia zugeschrieben werden. Es ist eine traurige Betrachtung &uuml;ber die Zerst&ouml;rung Jerusalems und das Exil der Israeliten.</p>
+    </div>
+
+    <h2 id="mosaic-law" class="bible-category" style="color: #b33c00;">34-49 <strong>Mosaisches Gesetz/Geschichte</strong> <a href="#mosaic-law" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">34. 2. Mose (Exodus)</h3>
+      <p><strong>Das 2. Buch Mose</strong> erz&auml;hlt die Geschichte, wie Gott die Israeliten aus der Sklaverei in &Auml;gypten befreite. Durch die F&uuml;hrung Moses, die Plagen &uuml;ber &Auml;gypten und die Durchquerung des Roten Meeres zeigt Gott seine Macht und Souver&auml;nit&auml;t. Auch die Zehn Gebote werden in diesem Buch gegeben.</p>
+      <h3 class="bible-book-title">35. 3. Mose (Levitikus)</h3>
+      <p><strong>Das 3. Buch Mose</strong> ist gef&uuml;llt mit Anweisungen und Vorschriften f&uuml;r die Israeliten bez&uuml;glich ihrer Anbetung und ihres t&auml;glichen Lebens.</p>
+      <h3 class="bible-book-title">36. 4. Mose (Numeri)</h3>
+      <p><strong>Das 4. Buch Mose</strong> setzt die Erz&auml;hlung der Reise der Israeliten zum Gelobten Land fort.</p>
+      <h3 class="bible-book-title">37. 5. Mose (Deuteronomium)</h3>
+      <p><strong>Das 5. Buch Mose</strong> wird oft als das &bdquo;zweite Gesetz&ldquo; bezeichnet und dient als Erinnerung an Gottes Bund mit Israel.</p>
+      <h3 class="bible-book-title">38. Josua</h3>
+      <p><strong>Das Buch Josua</strong> berichtet &uuml;ber Josuas F&uuml;hrung nach dem Tod Moses und den Einzug der Israeliten ins Gelobte Land nach vierzig Jahren W&uuml;stenwanderung.</p>
+      <h3 class="bible-book-title">39. Richter</h3>
+      <p><strong>Das Buch der Richter</strong> setzt die Erz&auml;hlung der Eroberung und Besiedlung des Gelobten Landes fort und erz&auml;hlt die Geschichten verschiedener Richter, die Gott erweckte, um die Israeliten von ihren Feinden zu befreien.</p>
+      <h3 class="bible-book-title">40. Rut</h3>
+      <p><strong>Das Buch Rut</strong> ist eine wundersch&ouml;ne Erz&auml;hlung &uuml;ber Liebe, Treue und Gottes Vorsehung. Es dient als wichtiges Bindeglied in der Abstammungslinie von K&ouml;nig David und letztendlich Jesus Christus.</p>
+      <h3 class="bible-book-title">41. 1. Samuel</h3>
+      <p><strong>Das 1. Buch Samuel</strong> dokumentiert den &Uuml;bergang der F&uuml;hrung vom letzten Richter Samuel zum ersten K&ouml;nig Israels, Saul, und dann zu David.</p>
+      <h3 class="bible-book-title">42. 2. Samuel</h3>
+      <p><strong>Das 2. Buch Samuel</strong> setzt die Erz&auml;hlung fort und beschreibt die Herrschaft K&ouml;nig Davids.</p>
+      <h3 class="bible-book-title">43. 1. K&ouml;nige</h3>
+      <p><strong>Das 1. Buch der K&ouml;nige</strong> folgt der Herrschaft K&ouml;nig Salomos und der Teilung des K&ouml;nigreichs Israel.</p>
+      <h3 class="bible-book-title">44. 2. K&ouml;nige</h3>
+      <p><strong>Das 2. Buch der K&ouml;nige</strong> setzt die Erz&auml;hlung der K&ouml;nige von Israel und Juda fort.</p>
+      <h3 class="bible-book-title">45. 1. Chronik</h3>
+      <p><strong>Das 1. Buch der Chronik</strong> ist eine Geschichte Israels, die den Stammbaum von Adam bis K&ouml;nig David nachzeichnet.</p>
+      <h3 class="bible-book-title">46. 2. Chronik</h3>
+      <p><strong>Das 2. Buch der Chronik</strong> setzt die Erz&auml;hlung &uuml;ber die Herrschaft der K&ouml;nige von Israel und Juda fort.</p>
+      <h3 class="bible-book-title">47. Esra</h3>
+      <p><strong>Das Buch Esra</strong> erz&auml;hlt von der R&uuml;ckkehr der Israeliten aus dem Exil in Babylon und dem Wiederaufbau des Tempels in Jerusalem.</p>
+      <h3 class="bible-book-title">48. Nehemia</h3>
+      <p><strong>Das Buch Nehemia</strong> konzentriert sich auf Nehemias Bem&uuml;hungen, die Stadtmauern Jerusalems wieder aufzubauen und den Glauben des Volkes wiederherzustellen.</p>
+      <h3 class="bible-book-title">49. Ester</h3>
+      <p><strong>Das Buch Ester</strong> erz&auml;hlt die Geschichte, wie K&ouml;nigin Ester mutig ihr Leben riskierte, um ihr Volk vor dem V&ouml;lkermord durch das Persische Reich zu retten.</p>
+    </div>
+
+    <h2 id="major-prophets" class="bible-category" style="color: #7a00cc;">50-53 <strong>Gro&szlig;e Propheten</strong> <a href="#major-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">50. Jesaja</h3>
+      <p><strong>Das Buch des Propheten Jesaja</strong> enth&auml;lt eine Mischung aus Botschaften des Gerichts, der Warnung, des Trostes und der Hoffnung. Jesaja prophezeit auch &uuml;ber das Kommen des Messias, Jesus Christus.</p>
+      <h3 class="bible-book-title">51. Jeremia</h3>
+      <p><strong>Das Buch des Propheten Jeremia</strong> ist eine Sammlung von Prophezeiungen und Botschaften, die zum Volk von Juda und Jerusalem w&auml;hrend einer Zeit gro&szlig;er Korruption und G&ouml;tzendienst sprechen.</p>
+      <h3 class="bible-book-title">52. Hesekiel</h3>
+      <p><strong>Das Buch des Propheten Hesekiel</strong> enth&auml;lt lebhafte Visionen und symbolische Bilder, die Gottes Gericht und letztendliche Erl&ouml;sung f&uuml;r sein Volk vermitteln.</p>
+      <h3 class="bible-book-title">53. Daniel</h3>
+      <p><strong>Das Buch des Propheten Daniel</strong> erz&auml;hlt die Geschichte Daniels, eines j&uuml;dischen Exilanten in Babylon, und enth&auml;lt eine Mischung aus Geschichte, Prophetie und apokalyptischer Literatur.</p>
+    </div>
+
+    <h2 id="minor-prophets" class="bible-category" style="color: #5c8a8a;">54-65 <strong>Kleine Propheten</strong> <a href="#minor-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">54. Hosea</h3>
+      <p><strong>Das Buch des Propheten Hosea</strong> erz&auml;hlt die Geschichte von Hosea und seiner untreuen Frau Gomer als Metapher f&uuml;r die untreue Beziehung zwischen Israel und Gott.</p>
+      <h3 class="bible-book-title">55. Joel</h3>
+      <p><strong>Das Buch des Propheten Joel</strong> beschreibt eine Heuschreckenplage als Metapher f&uuml;r das kommende Gericht Gottes und spricht auch von Bu&szlig;e und Umkehr zu Gott.</p>
+      <h3 class="bible-book-title">56. Amos</h3>
+      <p><strong>Das Buch des Propheten Amos</strong> offenbart die Folgen der S&uuml;nden Israels und warnt vor dem bevorstehenden Gericht Gottes.</p>
+      <h3 class="bible-book-title">57. Obadja</h3>
+      <p><strong>Das Buch des Propheten Obadja</strong> ist das k&uuml;rzeste Buch im Alten Testament und enth&auml;lt eine kraftvolle Botschaft Gottes an die Nation Edom.</p>
+      <h3 class="bible-book-title">58. Jona</h3>
+      <p><strong>Das Buch des Propheten Jona</strong> erz&auml;hlt die Geschichte eines widerwilligen Propheten, der sich zun&auml;chst Gottes Befehl widersetzt, den Menschen von Ninive zu predigen.</p>
+      <h3 class="bible-book-title">59. Micha</h3>
+      <p><strong>Das Buch des Propheten Micha</strong> enth&auml;lt Botschaften des Gerichts und der Hoffnung und prophezeit &uuml;ber den Geburtsort des Messias (Micha 5:1).</p>
+      <h3 class="bible-book-title">60. Nahum</h3>
+      <p><strong>Das Buch des Propheten Nahum</strong> konzentriert sich auf die bevorstehende Zerst&ouml;rung der assyrischen Stadt Ninive.</p>
+      <h3 class="bible-book-title">61. Habakuk</h3>
+      <p><strong>Das Buch des Propheten Habakuk</strong> ist ein Dialog zwischen dem Propheten und Gott &uuml;ber das B&ouml;se und die Ungerechtigkeit in der Welt.</p>
+      <h3 class="bible-book-title">62. Zefanja</h3>
+      <p><strong>Das Buch des Propheten Zefanja</strong> beginnt mit einer Botschaft des Gerichts und der kommenden Zerst&ouml;rung, bietet aber auch Hoffnung f&uuml;r den treuen &Uuml;berrest von Gottes Volk.</p>
+      <h3 class="bible-book-title">63. Haggai</h3>
+      <p><strong>Das Buch des Propheten Haggai</strong> enth&auml;lt vier Prophezeiungen, die das Volk dr&auml;ngen, den Wiederaufbau des Tempels zu priorisieren und ihre Herzen zu Gott zur&uuml;ckzuwenden.</p>
+      <h3 class="bible-book-title">64. Sacharja</h3>
+      <p><strong>Das Buch des Propheten Sacharja</strong> ist in zwei Teile geteilt: acht Visionen, die Gottes Pl&auml;ne offenbaren, und Botschaften, die zur Bu&szlig;e und R&uuml;ckkehr zu Gott aufrufen.</p>
+      <h3 class="bible-book-title">65. Maleachi</h3>
+      <p><strong>Das Buch des Propheten Maleachi</strong> ist das letzte Buch des Alten Testaments und die letzte prophetische Botschaft Gottes vor dem Kommen des Messias.</p>
+    </div>
+
+    <h2 id="apocalyptic" class="bible-category" style="color: darkred;">66 <strong>Apokalyptisch/Endgericht</strong> <a href="#apocalyptic" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">66. Offenbarung</h3>
+      <p><strong>Das Buch der Offenbarung</strong> ist ein m&auml;chtiges und r&auml;tselhaftes Buch, das die Endzeit und die Wiederkunft Jesu Christi offenbart. Die Symbolik in diesem Buch kann schwer zu deuten sein, aber eines ist klar: Gott hat die Kontrolle und seine Verhei&szlig;ungen werden erf&uuml;llt. Die Parallelen zwischen dem ersten und letzten Buch der Bibel, 1. Mose und Offenbarung, sind auff&auml;llig. In 1. Mose erschafft Gott die Welt, und in der Offenbarung errichtet er den neuen Himmel und die neue Erde. Denken wir immer daran, dass Gottes Plan vollkommen ist und er die Kontrolle hat, im Namen des Herrn Jesus. Amen.</p>
+    </div>
+
+    <p class="text-center text-muted">Inhalt von Pascal. Bearbeitet von <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Verwandte Themen</h3>
+    <div class="comparison-grid">
+      <a href="../Genealogy/index.html" class="related-card">
+        <strong>Stammbaum</strong>
+        <p>Biblische Generationen von Adam bis Jesus</p>
+      </a>
+      <a href="../Religions/index.html" class="related-card">
+        <strong>Religionen</strong>
+        <p>Welche Religion ist wahr und was ist Religion &uuml;berhaupt?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../Religions/index.html" class="page-nav-link page-nav-prev">
+      <small>Vorherige</small>
+      <span>Religionen</span>
+    </a>
+    <a href="../Genealogy/index.html" class="page-nav-link page-nav-next">
+      <small>N&auml;chste</small>
+      <span>Stammbaum</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Das Heilige Buch</span>
+      <ul class="footer-links">
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="../trinity/index.html">Dreifaltigkeit</a></li>
+        <li><a href="../apocalypse/index.html">Endzeit</a></li>
+        <li><a href="../Afterdeath/index.html">Nach dem Tod</a></li>
+        <li><a href="../sins/index.html">S&uuml;nden</a></li>
+        <li><a href="../Religions/index.html">Religionen</a></li>
+        <li><a href="index.html">Bibelf&uuml;hrer</a></li>
+        <li><a href="../Genealogy/index.html">Stammbaum</a></li>
+      </ul>
+      <p class="footer-credits">Erstellt von Pascal | Bearbeitet von <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link kopiert!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
+</body>
+
+</html>
