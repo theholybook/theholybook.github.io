@@ -5,14 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="A categorized guide to all 66 books of the Bible, organized by genre -- Gospels, Letters, Prophecy, History, and more.">
   <meta property="og:title" content="Categorized Guide To The Books of The Bible" />
   <meta property="og:type" content="website" />
+  <meta property="og:description" content="Which order should you read the Bible? A categorized guide to all 66 books." />
+  <meta property="og:url" content="https://theholybook.github.io/bible%20order/" />
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/theholybook/theholybook.github.io/main/bible%20order/biblebook.jpg" />
+    content="https://theholybook.github.io/bible%20order/biblebook.jpg" />
   <title>Categorized Guide To The Books of The Bible</title>
 </head>
 
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -31,10 +47,16 @@
         <li><a href="index.html" class="active">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="active-lang">EN</a>
+        <a href="../de/bible-order/index.html">DE</a>
+        <a href="../fr/bible-order/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <h1>Categorized Guide To The Books of The Bible</h1>
   </header>
 
@@ -46,207 +68,225 @@
         the books. We've broken them down into 9 categories you will see below, they're color coded as you read through
         and I've written descriptions regarding each book within the categories. At the top of each category there will
         be a short paragraph explaining the category and why the books within fall under it.</p>
-      <p style="color: darkgreen;">1 <strong>Creation Story/The Fall</strong></p>
-      <p style="color: darkblue;">2-5 <strong>The Gospels</strong></p>
-      <p style="color: darkmagenta;">6 <strong>The Acts of The Apostles</strong></p>
-      <p style="color: darkgoldenrod;">7-27 <strong>Letters/Epistles</strong></p>
-      <p style="color: #333;">28-33 <strong>Poetry/Wisdom Books</strong></p>
-      <p style="color: #b33c00;">34-49 <strong>Mosaic Law/History</strong></p>
-      <p style="color: #7a00cc;">50-53 <strong>Major Prophets</strong></p>
-      <p style="color: #5c8a8a;">54-65 <strong>Minor Prophets</strong></p>
-      <p style="color: darkred;">66 <strong>Apocalyptic/Final Judgement</strong></p>
+      <ul class="bible-guide-intro">
+        <li style="color: darkgreen;">1 <strong>Creation Story/The Fall</strong></li>
+        <li style="color: darkblue;">2-5 <strong>The Gospels</strong></li>
+        <li style="color: darkmagenta;">6 <strong>The Acts of The Apostles</strong></li>
+        <li style="color: darkgoldenrod;">7-27 <strong>Letters/Epistles</strong></li>
+        <li style="color: #333;">28-33 <strong>Poetry/Wisdom Books</strong></li>
+        <li style="color: #b33c00;">34-49 <strong>Mosaic Law/History</strong></li>
+        <li style="color: #7a00cc;">50-53 <strong>Major Prophets</strong></li>
+        <li style="color: #5c8a8a;">54-65 <strong>Minor Prophets</strong></li>
+        <li style="color: darkred;">66 <strong>Apocalyptic/Final Judgement</strong></li>
+      </ul>
+    </div>
+
+    <div class="toc-card">
+      <h4>Quick Navigation</h4>
+      <ul>
+        <li><a href="#creation-story">Creation Story/The Fall</a></li>
+        <li><a href="#the-gospels">The Gospels</a></li>
+        <li><a href="#acts-of-apostles">The Acts of The Apostles</a></li>
+        <li><a href="#letters-epistles">Letters/Epistles</a></li>
+        <li><a href="#poetry-wisdom">Poetry/Wisdom Books</a></li>
+        <li><a href="#mosaic-law">Mosaic Law/History</a></li>
+        <li><a href="#major-prophets">Major Prophets</a></li>
+        <li><a href="#minor-prophets">Minor Prophets</a></li>
+        <li><a href="#apocalyptic">Apocalyptic/Final Judgement</a></li>
+      </ul>
     </div>
 
 
-    <h2 style="color: darkgreen; margin-top: var(--space-2xl);">1 <strong>Creation Story/The Fall</strong></h2>
-    <div class="card">
-      <h2>1. Genesis</h2>
+    <h2 id="creation-story" class="bible-category" style="color: darkgreen;">1 <strong>Creation Story/The Fall</strong> <a href="#creation-story" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">1. Genesis</h3>
       <p><strong>The Book of Genesis</strong> is a foundational text in both Christian faith and theology. It speaks of
         the origins of the world and humanity, and the relationship between God and His creation. It also reveals the
         devastating consequences of the fall of mankind and the promise of redemption through the coming of our Lord
         Jesus Christ. It is a rich and complex text, full of symbolism and theological truths that continue to guide us
         in our understanding of God's plan for salvation.</p>
     </div>
-    <h2 style="color: darkblue; margin-top: var(--space-2xl);">2-5 <strong>The Gospels</strong></h2>
-    <div class="card">
-      <h2>2. Matthew</h2>
+    <h2 id="the-gospels" class="bible-category" style="color: darkblue;">2-5 <strong>The Gospels</strong> <a href="#the-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">2. Matthew</h3>
       <p><strong>The Gospel of Matthew</strong> is a true treasure among the four gospels, as it presents a
         comprehensive account of the life and teachings of our Lord Jesus Christ. It begins with the genealogy of Jesus,
         tracing His lineage back to Abraham, and then follows with His miraculous birth and early life. It then delves
         into His powerful teachings, including the famous Sermon on the Mount, and ends with His death and resurrection.
         Through the gospel of Matthew, we are reminded of the fulfillment of Old Testament prophecies and the ultimate
         victory of our Savior over sin and death.</p>
-      <h2>3. Mark</h2>
+      <h3 class="bible-book-title">3. Mark</h3>
       <p><strong>The Gospel of Mark</strong> is a testament to the power and authority of our Lord Jesus Christ. It is
         the shortest of the four gospels, yet it contains a powerful account of the life, ministry, and miracles of
         Jesus. It begins with John the Baptist and then follows Jesus as He preaches, heals the sick, casts out demons,
         and ultimately sacrifices Himself for our salvation. Through the gospel of Mark, we are reminded of the
         incredible love and compassion of our Savior and the urgency of following Him with all our hearts.</p>
-      <h2>4. Luke</h2>
+      <h3 class="bible-book-title">4. Luke</h3>
       <p><strong>The Gospel of Luke</strong> is a unique gospel, known for its emphasis on the humanity of Jesus and His
         ministry to the marginalized and oppressed. It begins with the miraculous birth of Jesus and then follows His
         ministry, teachings, and miracles. Notably, it contains several parables, including the famous parable of the
         prodigal son. The gospel of Luke also emphasizes the role of women in Jesus' ministry, highlighting the radical
         inclusivity of His message. Through this gospel, we are reminded of the all-encompassing love and grace of our
         Savior, who came to save all people, regardless of their social status or background.</p>
-      <h2>5. John</h2>
+      <h3 class="bible-book-title">5. John</h3>
       <p><strong>The Gospel of John</strong> is a profound and mystical account of the life and ministry of Jesus
         Christ. It begins with the famous prologue, which speaks of the Word becoming flesh, and then follows Jesus'
         ministry, teachings, and miracles. This gospel also contains several unique stories, such as the wedding at Cana
         and the raising of Lazarus, which reveal the divinity of our Lord. The gospel of John also emphasizes the role
         of faith, love, and eternal life, providing a powerful reminder of our ultimate hope in Christ.</p>
     </div>
-    <h2 style="color: darkmagenta; margin-top: var(--space-2xl);">6 <strong>The Acts of The Apostles</strong></h2>
-    <div class="card">
-      <h2>6. The Acts</h2>
+    <h2 id="acts-of-apostles" class="bible-category" style="color: darkmagenta;">6 <strong>The Acts of The Apostles</strong> <a href="#acts-of-apostles" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">6. The Acts</h3>
       <p><strong>The Acts of The Apostles</strong> is a historical account of the early church and the spread of the
         gospel after the death and resurrection of our Lord Jesus Christ. It begins with the ascension of Jesus and then
         follows the ministry of the apostles, including Peter and Paul, as they spread the good news of salvation to all
         people. The book of Acts is a reminder of the power of the Holy Spirit and the unstoppable love and message of
         Jesus Christ.</p>
     </div>
-    <h2 style="color: darkgoldenrod; margin-top: var(--space-2xl);">7-27 <strong>Letters/Epistles</strong></h2>
-    <div class="card">
-      <h2>7. Romans</h2>
+    <h2 id="letters-epistles" class="bible-category" style="color: darkgoldenrod;">7-27 <strong>Letters/Epistles</strong> <a href="#letters-epistles" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">7. Romans</h3>
       <p><strong>The Epistle of Paul to the Romans</strong> is a powerful theological treatise written by the apostle
         Paul to the church in Rome. It delves into the doctrine of salvation, justification by faith, and the
         relationship between faith and works. It also emphasizes the unity of all believers in Christ, regardless of
         their cultural or religious backgrounds. The letter to the Romans remains a cornerstone of Christian theology
         and continues to guide us in our journey towards a deeper understanding and relationship with our Savior.</p>
-      <h2>8. 1st Corinthians</h2>
+      <h3 class="bible-book-title">8. 1st Corinthians</h3>
       <p><strong>The First Epistle of Paul to the Corinthians</strong> is a pastoral letter written by the apostle Paul
         to the church in Corinth. It addresses various issues within the church at Corinth, including divisions,
         immorality, and disputes. It also covers topics such as spiritual gifts, love, and the resurrection. The letter
         of 1st Corinthians provides valuable insights into the early church and continues to guide us in our Christian
         walk today.</p>
-      <h2>9. 2nd Corinthians</h2>
+      <h3 class="bible-book-title">9. 2nd Corinthians</h3>
       <p><strong>The Second Epistle of Paul to the Corinthians</strong> is another pastoral letter written by the
         apostle Paul to the church in Corinth. In this letter, Paul addresses issues such as his apostleship, the giving
         of alms, and his own sufferings. He also emphasizes the importance of reconciliation and forgiveness within the
         church community. The letter of 2nd Corinthians is a reminder of the challenges faced by early Christians and
         the enduring message of hope and love found in the gospel.</p>
-      <h2>10. Galatians</h2>
+      <h3 class="bible-book-title">10. Galatians</h3>
       <p><strong>The Epistle of Paul to the Galatians</strong> is a passionate defense of the gospel of grace written by
         the apostle Paul. He addresses the issue of legalism, emphasizing that salvation comes through faith in Jesus,
         not through adherence to the law. He also highlights the unity of all believers in Christ, regardless of their
         ethnic or cultural backgrounds. The letter of Galatians serves as a powerful reminder of the grace of God and
         the freedom from sin we have in our Lord and Savior Jesus Christ.</p>
-      <h2>11. Ephesians</h2>
+      <h3 class="bible-book-title">11. Ephesians</h3>
       <p><strong>The Epistle of Paul to the Ephesians</strong> is a powerful theological treatise written by the apostle
         Paul. It discusses topics such as the unity of believers in Christ, the spiritual blessings we have in Him, and
         our identity as children of God. Paul also emphasizes the importance of living out our faith through good works
         and spiritual warfare against evil forces. The letter of Ephesians serves as a guide for our Christian walk,
         reminding us of our identity and purpose in Christ.</p>
-      <h2>12. Philippians</h2>
+      <h3 class="bible-book-title">12. Philippians</h3>
       <p><strong>The Epistle of Paul to the Philippians</strong> is a warm and encouraging letter written by the apostle
         Paul to the church in Philippi. He emphasizes the joy and contentment that comes from having a personal
         relationship with Christ, regardless of our circumstances. He also speaks about the importance of humility,
         unity, and perseverance in our Christian walk. The letter of Philippians is a reminder to always find our joy
         and strength in Christ, and to continually grow in our faith and love for Him.</p>
-      <h2>13. Colossians</h2>
+      <h3 class="bible-book-title">13. Colossians</h3>
       <p><strong>The Epistle of Paul to the Colossians</strong> is a powerful and theological treatise written by the
         apostle Paul. He emphasizes the supremacy of Christ and His role in reconciling all things to Himself. He also
         addresses the issue of false teachings and the importance of living out our faith in practical ways. The letter
         of Colossians serves as a reminder of the centrality and supremacy of Christ in our lives and the need to
         continually grow in our understanding and relationship with Him.</p>
-      <h2>14. 1st Thessalonians</h2>
+      <h3 class="bible-book-title">14. 1st Thessalonians</h3>
       <p><strong>The First Epistle of Paul to the Thessalonians</strong> is a pastoral letter written by the apostle
         Paul to the church in Thessalonica. Paul teaches on the second coming of Christ and the importance of living a
         life that is pleasing to God. Paul also addresses issues such as persecution and the proper conduct of believers
         within the church. The letter of 1st Thessalonians serves as a reminder to remain steadfast in our faith and to
         eagerly await the return of our Lord.</p>
-      <h2>15. 2nd Thessalonians</h2>
+      <h3 class="bible-book-title">15. 2nd Thessalonians</h3>
       <p><strong>The Second Epistle of Paul to the Thessalonians</strong> is another pastoral letter written by Paul to
         the church in Thessalonica. It displays Paul's continued emphasis on the second coming of Christ and the need to
         live in readiness for His return. He also addresses issues such as false teachings and idleness within the
         church. The letter of 2nd Thessalonians serves as a reminder to remain faithful and diligent in our walk with
         Christ, while always looking forward to His return.</p>
-      <h2>16. 1st Timothy</h2>
+      <h3 class="bible-book-title">16. 1st Timothy</h3>
       <p><strong>The First Epistle of Paul to Timothy</strong> is a pastoral letter written by the apostle Paul to
         Timothy, a young leader in the church. I have studied this letter and am impressed by Paul's practical
         instructions on church leadership and the proper conduct of believers within the church. He emphasizes the
         importance of sound doctrine and the role of prayer and godliness in the lives of leaders. The letter of 1st
         Timothy serves as a guide for both leaders and believers in living out our faith in a way that glorifies God.
       </p>
-      <h2>17. 2nd Timothy</h2>
+      <h3 class="bible-book-title">17. 2nd Timothy</h3>
       <p><strong>The Second Epistle of Paul to Timothy</strong> is a personal letter written by Paul to Timothy, his
         beloved disciple and fellow worker. I have studied this letter and am moved by Paul's heartfelt encouragement,
         exhortation, and reminder of the importance of persevering in the face of trials and persecution. Paul also
         addresses issues such as false teachings and the need for sound doctrine and personal growth in faith. The
         letter of 2nd Timothy serves as a reminder of the enduring love and faithfulness of God, as well as the
         importance of standing strong in our faith in all circumstances.</p>
-      <h2>18. Titus</h2>
+      <h3 class="bible-book-title">18. Titus</h3>
       <p><strong>The Epistle of Paul to Titus</strong> is a pastoral letter written by Paul to Titus, a leader in the
         church. It contains Paul's instructions on church organization and the qualities of godly leaders. He also
         emphasizes the importance of sound doctrine and the need for believers to live in a way that reflects their
         faith. The letter of Titus serves as a reminder to be diligent in our service to God and to strive for godliness
         in all aspects of our lives.</p>
-      <h2>19. Philemon</h2>
+      <h3 class="bible-book-title">19. Philemon</h3>
       <p><strong>The Epistle of Paul to Philemon</strong> is a personal letter written by Paul to his friend, Philemon.
         I am moved deeply by Paul's example of love and reconciliation. He appeals to Philemon to welcome back his
         runaway slave, Onesimus, with love and forgiveness. The letter of Philemon serves as a reminder of the
         transformative power of Christ's love and the importance of forgiveness and reconciliation within the body of
         Christ.</p>
-      <h2>20. Hebrews</h2>
-      <p><strong>The Epistle of Paul to the Hebrews</strong> is a powerful and theological work believed to be written
-        by Luke or Paul although authorship is debated. It contains rich teachings on the superiority of Christ and the
+      <h3 class="bible-book-title">20. Hebrews</h3>
+      <p><strong>The Epistle to the Hebrews</strong> is a powerful and theological work whose authorship remains
+        anonymous and debated among scholars, though various candidates such as Paul, Barnabas, Apollos, and others
+        have been suggested over the centuries. It contains rich teachings on the superiority of Christ and the
         new covenant He has ushered in. The author also reveals the fulfillment of Old Testament prophecies and the
         ultimate sacrifice of Christ for the forgiveness of sins. The letter of Hebrews serves as a powerful reminder of
         the centrality and supremacy of Christ in our faith.</p>
-      <h2>21. James</h2>
+      <h3 class="bible-book-title">21. James</h3>
       <p><strong>The General Epistle of James</strong> is believed to be written by James, the brother of Jesus and
         leader of the church in Jerusalem. I have studied this letter and am struck by its practical teachings on living
         out our faith in our actions and relationships. James emphasizes the need for works to accompany our faith and
         warns against favoritism and worldly wisdom. The letter of James serves as a call to authentic and sincere faith
         that is reflected in our daily lives.</p>
-      <h2>22. 1st Peter</h2>
+      <h3 class="bible-book-title">22. 1st Peter</h3>
       <p><strong>The First Epistle of Peter</strong> is a pastoral letter written by the apostle Peter to encourage
         believers who were facing persecution and trials. I am moved by Peter's compassionate and uplifting words. He
         reminds believers of their identity in Christ and encourages them to persevere through suffering, while also
         addressing issues such as submission to authority and living as foreigners in this world. The first letter of
         Peter serves as a source of hope and strength for believers facing trials in any age.</p>
-      <h2>23. 2nd Peter</h2>
+      <h3 class="bible-book-title">23. 2nd Peter</h3>
       <p><strong>The Second Epistle of Peter</strong> is a pastoral letter written by the apostle Peter to warn against
         false teachers and encourage believers in their faith. It shows Peter's urgency in defending the truth of the
         Gospel and the coming judgment of God. He exhorts believers to grow in their knowledge and love for God, while
         also reminding them of the authority and reliability of Scripture. The second letter of Peter serves as a timely
         reminder to remain steadfast in our faith and guard against false teachings.</p>
-      <h2>24. 1st John</h2>
+      <h3 class="bible-book-title">24. 1st John</h3>
       <p><strong>The First Epistle of John</strong> is a pastoral letter written by the apostle John to encourage
         believers in their faith and warn against false teachings. It shows John's emphasis on love for God and one
         another. He also addresses the assurance of salvation and the importance of walking in the light and rejecting
         the ways of the world. The first letter of John serves as a reminder of the eternal love and fellowship we have
         in Christ and the importance of living out our faith through love.</p>
-      <h2>25. 2nd John</h2>
+      <h3 class="bible-book-title">25. 2nd John</h3>
       <p><strong>The Second Epistle of John</strong> is a personal letter written by the apostle John to a chosen lady
         and her children. As a theological writer, I have studied this letter and am struck by John's emphasis on love
         and truth. He warns against false teachers and encourages believers to remain steadfast in the truth of the
         Gospel. The second letter of John serves as a reminder to stay vigilant and rooted in the love and truth of
         Christ.</p>
-      <h2>26. 3rd John</h2>
+      <h3 class="bible-book-title">26. 3rd John</h3>
       <p><strong>The Third Epistle of John</strong> is a personal letter written by the apostle John to Gaius, a
         faithful member of the church. I have studied this letter and am impressed by John's affirmation of Gaius'
         hospitality and encouragement to continue supporting faithful workers in the church. He also addresses the issue
         of Diotrephes, who was causing division in the church, and encourages Gaius to remain faithful and stand for the
         truth. The third letter of John serves as a reminder of the importance of hospitality and standing firm in the
         face of opposition within the church.</p>
-      <h2>27. Jude</h2>
+      <h3 class="bible-book-title">27. Jude</h3>
       <p><strong>The Epistle of Jude</strong> is a powerful warning against certain false teachers who were infiltrating
         the church. I have studied this letter and am struck by Jude's use of vivid imagery and references to Old
         Testament figures to expose the deception and consequences of these false teachers. He urges believers to
         remember the teachings of the apostles and fight for the faith. The letter of Jude serves as a reminder to
         remain vigilant and protect the truth of the Gospel.</p>
     </div>
-    <h2 style="color: black; margin-top: var(--space-2xl);">28-33 <strong>Poetry/Wisdom Books</strong></h2>
-    <div class="card">
-      <h2>28. Job</h2>
+    <h2 id="poetry-wisdom" class="bible-category" style="color: black;">28-33 <strong>Poetry/Wisdom Books</strong> <a href="#poetry-wisdom" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">28. Job</h3>
       <p><strong>The Book of Job</strong> is a powerful and complex story of suffering and faith. I’m struck by its
         profound lessons on the sovereignty of God, the reality of suffering, and the importance of faith and trust in
         the midst of trials. It serves as a reminder that even in our darkest moments, God is in control and we must
         hold fast to our faith in Him. One interesting fact about the book of Job is that it is believed to be one of
         the oldest books in the Bible, written around 2000 BC. This makes it one of the oldest pieces of literature in
         the world! It is a powerful story of faith, perseverance, and the ultimate justice of God.</p>
-      <h2>29. Psalms</h2>
+      <h3 class="bible-book-title">29. Psalms</h3>
       <p><strong>The Book of Psalms</strong> is a collection of 150 poetic and lyrical worship songs, known as hymns,
         prayers, and praises to God. After deep study into the Psalms I’m struck by their depth of emotion, diversity of
         themes, and timeless relevance. They cover a wide range of human experiences, from lament and sorrow to joy and
@@ -254,12 +294,12 @@
         Psalms are often read and sung in worship services, and they continue to guide and shape prayers and songs
         today. A personal practice I have developed is reading a minimum of three Psalms nightly before my nightly
         prayer leading to rest. </p>
-      <h2>30. Proverbs</h2>
+      <h3 class="bible-book-title">30. Proverbs</h3>
       <p><strong>The Book of Proverbs</strong> is a collection of practical wisdom and guidance for personal and
         communal living. It discusses timeless truths and insights on various aspects of life, including relationships,
         work, speech, and character. The book of Proverbs serves as a powerful reminder to seek wisdom and live in the
         fear of the Lord, for it is the beginning of knowledge and understanding.</p>
-      <h2>31. Ecclesiastes</h2>
+      <h3 class="bible-book-title">31. Ecclesiastes</h3>
       <p><strong>Ecclesiastes or, The Preacher</strong> is a profound book of wisdom that challenges us to reflect on
         the meaning and purpose of life. It is often attributed to King Solomon and is full of thought-provoking
         reflections on the fleeting nature of human existence and the futility of chasing after worldly pleasures and
@@ -267,7 +307,7 @@
         know that the word "vanity" appears 38 times in the Book of Ecclesiastes, highlighting the theme of the fleeting
         and temporary nature of earthly things. The key takeaway I’ve gathered is that life without God that’s solely
         based on worldly pursuits as a sense of one’s purpose is vexation of spirit.</p>
-      <h2>32. Song of Songs</h2>
+      <h3 class="bible-book-title">32. Song of Songs</h3>
       <p><strong>The Song of Songs, also known as the Song of Solomon</strong>, is a book of passionate love poetry that
         celebrates the beauty of love and intimacy in marriage. It has been interpreted as an allegory for the love
         between Christ and His Church, with the bride representing the Church and the bridegroom representing Christ, I
@@ -275,7 +315,7 @@
         This book is a beautiful depiction of the love and intimacy that God desires for His people to experience in
         their relationships, both with one another and with Him. The imagery is rich, filled with metaphors from nature,
         and the poetic language contributes to its timeless and universal appeal.</p>
-      <h2>33. Lamentations</h2>
+      <h3 class="bible-book-title">33. Lamentations</h3>
       <p><strong>Lamentations also known as The Lamentations of Jeremiah</strong> is a book in the Old Testament of the
         Bible, consisting of five poetic laments or dirges traditionally attributed to the prophet Jeremiah. It is a
         sorrowful reflection on the destruction of Jerusalem and the exile of the Israelites. Each chapter expresses
@@ -285,9 +325,9 @@
         expression of sorrow and repentance in the face of tragedy. The poetic structure and emotional intensity
         contribute to its significance in the context of biblical literature.</p>
     </div>
-    <h2 style="color: #b33c00; margin-top: var(--space-2xl);">34-49 <strong>Mosaic Law/History</strong></h2>
-    <div class="card">
-      <h2>34. Exodus</h2>
+    <h2 id="mosaic-law" class="bible-category" style="color: #b33c00;">34-49 <strong>Mosaic Law/History</strong> <a href="#mosaic-law" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">34. Exodus</h3>
       <p><strong>The Book of Exodus</strong> is a part of the Pentateuch, the first five books of the Bible, and tells
         the story of how God delivered the Israelites from slavery in Egypt. It is a powerful testament to God’s
         faithfulness and His miraculous intervention on behalf of His people. Through the leadership of Moses, the
@@ -301,7 +341,7 @@
         only demonstrated God’s power, but also revealed Him to be the one true God, above all other false idols and
         deities. Through these plagues, God showed Himself to be greater than any other supposed god, demonstrating His
         ultimate authority and sovereignty.</p>
-      <h2>35. Leviticus</h2>
+      <h3 class="bible-book-title">35. Leviticus</h3>
       <p><strong>The Book of Leviticus</strong> is the third book of the Pentateuch and is filled with instructions and
         regulations for the Israelites regarding their worship and daily lives. It outlines the various offerings and
         sacrifices that were to be made, the roles and responsibilities of the priests, and the importance of
@@ -310,24 +350,24 @@
         our daily lives. It also foreshadows the perfect sacrifice of Christ, who would ultimately fulfill all of the
         requirements of the Law. This is a book I highly recommend sitting through despite the challenge it may bring.
       </p>
-      <h2>36. Numbers</h2>
+      <h3 class="bible-book-title">36. Numbers</h3>
       <p><strong>The Book of Numbers</strong> continues the narrative of the Israelites' journey towards the Promised
         Land. It begins with a census of all the tribes of Israel and details their travels and various encounters along
         the way. This book also contains important events such as the story of Balaam, the rebellion of Korah, and the
         sending of the twelve spies into Canaan. It also shows the faithfulness of God in providing for and protecting
         his people, despite their constant grumbling and disobedience. Ultimately, the book of Numbers teaches us about
         the importance of trust and obedience in our relationship with God.</p>
-      <h2>37. Deuteronomy</h2>
+      <h3 class="bible-book-title">37. Deuteronomy</h3>
       <p><strong>The Book of Deuteronomy</strong> is the final book of the Pentateuch and is often referred to as the
         "second law" or a repetition of the Law given in Exodus and Leviticus. It serves as a reminder of God's covenant
         with Israel and the laws and commandments they must follow in order to experience the blessings of God's
         promises. It is a powerful reminder that obedience to God's law is not a burden, but a pathway to true freedom
-        and life. One interesting fact about Moses' farewell speech in Deuteronomy is that it is the longest recorded
-        speech in the Bible, spanning over three chapters. It serves as a powerful reminder of the importance of passing
+        and life. One interesting fact about Moses' farewell speeches in Deuteronomy is that they make up the longest
+        recorded address in the Bible, spanning the vast majority of the book. They serve as a powerful reminder of the importance of passing
         down God's teachings to future generations and living in obedience to His commandments. Moses' words continue to
         inspire and guide believers to this very day.
       </p>
-      <h2>38. Joshua</h2>
+      <h3 class="bible-book-title">38. Joshua</h3>
       <p><strong>The Book of Joshua</strong> is the first book following Deuteronomy in the historical scriptures of the
         Old Testament and holds a cherished place in my heart among the historical accounts. It chronicles Joshua's
         leadership following the passing of Moses, detailing the Israelites' journey into the Promised Land after forty
@@ -342,7 +382,7 @@
         it could be the pre-incarnate manifestation of Jesus Christ, others contend it to be an angelic emissary
         dispatched by God to shepherd and safeguard Joshua and the Israelites. Nonetheless, this encounter resonates as
         a poignant declaration of God's presence and guidance throughout their journey towards the Promised Land.</p>
-      <h2>39. Judges</h2>
+      <h3 class="bible-book-title">39. Judges</h3>
       <p><strong>The Book of Judges</strong> continues the narrative of the Israelites' conquest and settlement of the
         Promised Land. It covers a period of history after Joshua's death, when there was no clear leader or ruler over
         the tribes of Israel. As a result, the people repeatedly turned away from God and suffered the consequences of
@@ -353,7 +393,7 @@
         consequences of giving into temptations and straying from God's will, as seen in Samson's downfall through his
         love for Delilah. This serves as a reminder for us to stay steadfast in our faith and obedience to God's
         commands.</p>
-      <h2>40. Ruth</h2>
+      <h3 class="bible-book-title">40. Ruth</h3>
       <p><strong>The Book of Ruth</strong> is a beautiful narrative of love, loyalty, and God's providence. It takes
         place during the time of the Judges, and tells the story of Ruth, a non-Jewish Moabite woman who shows great
         devotion to her mother-in-law, Naomi, after both of their husbands pass away. Ruth's dedication and hard work
@@ -365,14 +405,14 @@
         through them in His plan for salvation. It also highlights the value and worth of all individuals, regardless of
         their gender or status.
       </p>
-      <h2>41. 1st Samuel</h2>
+      <h3 class="bible-book-title">41. 1st Samuel</h3>
       <p><strong>The First Book of Samuel</strong> is an integral part of the historical narrative of the Old Testament.
         It records the transition of leadership from the last judge, Samuel, to the first king of Israel, Saul, and then
         to David. It showcases the triumphs and failures of these leaders, as well as the interactions and guidance from
         God throughout their reigns. It also highlights the importance of obedience and trust in God's plan, as seen in
         the contrast between Saul and David's actions, as well as the importance of choosing leaders who are faithful
         and obedient to God's will.</p>
-      <h2>42. 2nd Samuel</h2>
+      <h3 class="bible-book-title">42. 2nd Samuel</h3>
       <p><strong>The Second Book of Samuel</strong> continues the narrative of 1st Samuel, detailing the reign of King
         David. It covers his victories and triumphs, as well as his failures and consequences. It also highlights the
         importance of God's covenant with David and the establishment of the Davidic dynasty. This book ultimately
@@ -381,7 +421,7 @@
         David's sin and the importance of repentance. This story also shows the human side of King David, who despite
         his mistakes, is still called "a man after God's own heart." (1 Samuel 13:14) It serves as a reminder that God
         can use imperfect people for His perfect plan.</p>
-      <h2>43. 1st Kings</h2>
+      <h3 class="bible-book-title">43. 1st Kings</h3>
       <p><strong>The First Book of The Kings</strong> follows the reign of King Solomon, David's son, and the division
         of the kingdom of Israel into the northern kingdom of Israel and the southern kingdom of Judah. It also
         chronicles the rise and fall of various kings from both kingdoms, and the continuous struggles with idolatry and
@@ -390,24 +430,24 @@
         story of Elijah and the prophets of Baal, where Elijah proves the power and authority of God over the false gods
         worshipped by the Israelites. Giving the powerful reminder of the importance of staying faithful to God and not
         giving in to the temptations of idolatry.</p>
-      <h2>44. 2nd Kings</h2>
+      <h3 class="bible-book-title">44. 2nd Kings</h3>
       <p><strong>The Second Book of The Kings</strong> continues the narrative of the kings of Israel and Judah,
         focusing on the reigns of Hezekiah and Josiah and their efforts to restore righteousness and remove idolatry
         from the land. It also covers the fall of Israel and Judah to foreign powers and the eventual exile of the
         Israelites. This book serves as a reminder of the consequences of turning away from God and the importance of
         staying faithful to His commandments. One interesting fact about the second book of Kings is that it contains a
-        record of the reign of Manasseh, who was one of the most wicked kings in the history of Judah. However, towards
-        the end of his life, he repented and returned to God, emphasizing the power of God's forgiveness and the
-        potential for transformation in our lives.</p>
-      <h2>45. 1st Chronicles</h2>
+        record of the reign of Manasseh, who was one of the most wicked kings in the history of Judah. However, as
+        recorded in 2nd Chronicles 33, towards the end of his life he repented and returned to God, emphasizing the
+        power of God's forgiveness and the potential for transformation in our lives.</p>
+      <h3 class="bible-book-title">45. 1st Chronicles</h3>
       <p><strong>The First Book of The Chronicles</strong> in the Old Testament is a history of Israel, tracing the
-        genealogy of Adam to King David. It also covers the reign of King David and his son, King Solomon, in greater
-        detail compared to the books of Samuel and Kings. This book serves as a reminder of God's faithfulness to His
+        genealogy of Adam to King David. It also covers the reign of King David in greater
+        detail, ending with David's death and Solomon's ascension to the throne. This book serves as a reminder of God's faithfulness to His
         promises and His continued guidance and protection over His people. One interesting detail about the first book
-        of Chronicles is that it includes a list of the kings of Israel and Judah, along with their specific reigns and
-        accounts of their actions and accomplishments, showing that God holds all leaders accountable for their actions
+        of Chronicles is that it opens with extensive genealogies stretching from Adam through the tribes of Israel,
+        showing that God holds all leaders accountable for their actions
         and that ultimately, His will and plans will prevail.</p>
-      <h2>46. 2nd Chronicles</h2>
+      <h3 class="bible-book-title">46. 2nd Chronicles</h3>
       <p><strong>The Second Book of The Chronicles</strong> continues the narrative of the reign of the kings of Israel
         and Judah, focusing on the southern kingdom of Judah. It covers the reigns of King Solomon, as well as various
         other kings and their struggles with disobedience to God. This book serves as a reminder of the consequences of
@@ -418,7 +458,7 @@
         David my second favorite king was King Josiah. I respect Josiah's reign and his efforts to restore righteousness
         and remove idolatry as recorded in 2nd Chronicles. His story serves as a powerful example of the importance of
         staying faithful to God and His commandments, even in the face of opposition and challenges.</p>
-      <h2>47. Ezra</h2>
+      <h3 class="bible-book-title">47. Ezra</h3>
       <p><strong>The Book of Ezra</strong> continues the narrative of the Israelites' return from exile in Babylon and
         the rebuilding of the temple in Jerusalem. It covers the reign of King Cyrus of Persia and his decree allowing
         the Israelites to return to their homeland and rebuild their temple. The book also highlights the struggles and
@@ -426,13 +466,13 @@
         even in difficult circumstances. While the book of Ezra and the book of Nehemiah are often considered together
         as a single historical account, they were written by different authors and cover different aspects of the
         rebuilding of Jerusalem and the restoration of its people.</p>
-      <h2>48. Nehemiah</h2>
+      <h3 class="bible-book-title">48. Nehemiah</h3>
       <p><strong>The Book of Nehemiah</strong> continues the narrative of the Israelites' return from exile and the
         rebuilding of Jerusalem. It specifically focuses on the efforts of Nehemiah, a cupbearer to King Artaxerxes of
         Persia, in leading the rebuilding of the city walls and restoring the people's faith and commitment to God. This
         book serves as a reminder of the importance of perseverance and trust in God's plan, even in the face of
         adversity.</p>
-      <h2>49. Esther</h2>
+      <h3 class="bible-book-title">49. Esther</h3>
       <p><strong>The Book of Esther</strong> recounts the story of how Queen Esther, a Jewish woman, courageously risks
         her life to save her people from genocide at the hands of the Persian empire. It highlights the theme of God's
         providence, as He works through seemingly ordinary events and individuals to carry out His plans. The book also
@@ -445,9 +485,9 @@
         world.</p>
     </div>
 
-    <h2 style="color: #7a00cc; margin-top: var(--space-2xl);">50-53 <strong>Major Prophets</strong></h2>
-    <div class="card">
-      <h2>50. Isaiah</h2>
+    <h2 id="major-prophets" class="bible-category" style="color: #7a00cc;">50-53 <strong>Major Prophets</strong> <a href="#major-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">50. Isaiah</h3>
       <p><strong>The Book of The Prophet Isaiah</strong> is a long prophetic book in the Old Testament, attributed to
         the prophet Isaiah who lived in the 8th century BC. It contains a mixture of messages of judgment, warning,
         comfort, and hope for the people of Israel and Judah. Isaiah also prophesies about the coming of the Messiah,
@@ -457,16 +497,16 @@
         foreshadowing of the coming of Christ found in the book of Isaiah. It also emphasizes the importance of
         repentance and faith in God throughout its pages. Additionally, the poetic language and imagery used by Isaiah
         make it a beautiful and thought-provoking read.</p>
-      <h2>51. Jeremiah</h2>
+      <h3 class="bible-book-title">51. Jeremiah</h3>
       <p><strong>The Book of The Prophet Jeremiah</strong> is a collection of prophecies and messages from the prophet
         Jeremiah, who lived in the 7th century BC. He speaks to the people of Judah and Jerusalem during a time of great
         corruption and idolatry, warning them of the impending judgment from God. However, he also offers hope for
         restoration and redemption if they turn back to God. The book also contains personal and emotional accounts of
         Jeremiah's struggles and relationship with God. It is a powerful reminder of the consequences of disobedience
-        and the importance of staying faithful to God. It is also one of the most quoted books in the New Testament,
-        with over 250 references to its verses. Personally, I admire Jeremiah's unwavering dedication to God's message,
+        and the importance of staying faithful to God. It is also frequently referenced in the New Testament,
+        with numerous allusions to its verses throughout. Personally, I admire Jeremiah's unwavering dedication to God's message,
         even in the face of persecution and rejection from his own people.</p>
-      <h2>52. Ezekiel</h2>
+      <h3 class="bible-book-title">52. Ezekiel</h3>
       <p><strong>The Book of The Prophet Ezekiel</strong> is a prophetic book attributed to the prophet Ezekiel, who
         lived during the Babylonian exile in the 6th century BC. It contains vivid visions and symbolic images that
         convey God's judgment and ultimate redemption for His people. Ezekiel's messages also contain warnings against
@@ -476,7 +516,7 @@
         future temple, which has sparked much debate and interpretation among scholars. Personally, I appreciate the
         strong themes of repentance and restoration found in Ezekiel's prophecies, as they remind us of God's unfailing
         love and mercy even in the midst of His judgment.</p>
-      <h2>53. Daniel</h2>
+      <h3 class="bible-book-title">53. Daniel</h3>
       <p><strong>The Book of The Prophet Daniel</strong> is a prophetic book that tells the story of Daniel, a Jewish
         exile in Babylon who rises to a position of prominence in the Babylonian and Persian empires. The book contains
         a mix of history, prophecy, and apocalyptic literature, written in both Hebrew and Aramaic. It is divided into
@@ -486,20 +526,20 @@
         Daniel serves as a reminder of God's sovereignty and His ultimate plan for redemption and restoration. One
         interesting fact about the book of Daniel is that it contains the famous "70 weeks" prophecy, which many
         scholars see as a foreshadowing of the coming of Jesus Christ as the Messiah. This prophecy, given to Daniel by
-        the archangel Gabriel, accurately predicts the timeline of Jesus' birth and death, bringing to light the divine
+        the archangel Gabriel, is widely understood to point to the coming and sacrifice of the Messiah, bringing to light the divine
         inspiration and accuracy of the book of Daniel.</p>
     </div>
 
-    <h2 style="color: #5c8a8a; margin-top: var(--space-2xl);">54-65 <strong>Minor Prophet</strong></h2>
-    <div class="card">
-      <h2>54. Hosea</h2>
+    <h2 id="minor-prophets" class="bible-category" style="color: #5c8a8a;">54-65 <strong>Minor Prophets</strong> <a href="#minor-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">54. Hosea</h3>
       <p><strong>The Book of The Prophet Hosea</strong> is a prophetic book in the Old Testament, written by the prophet
         Hosea. It is divided into 14 chapters and tells the story of Hosea and his unfaithful wife, Gomer, serving as a
         metaphor for the unfaithful relationship between Israel and God. It speaks of God's judgment, but also His mercy
         and love for His people, as He continually calls for them to return to Him. The book of Hosea also foreshadows
         the coming of Christ and His ultimate sacrifice for our sins. It is a powerful reminder of God's faithfulness
         and enduring love for His people.</p>
-      <h2>55. Joel</h2>
+      <h3 class="bible-book-title">55. Joel</h3>
       <p><strong>The Book of The Prophet Joel</strong> is a prophetic book in the Old Testament, written by the prophet
         Joel. It is divided into three chapters and describes a locust plague that devastated the land of Judah, serving
         as a metaphor for the coming judgment of God. The book also speaks of repentance and turning back to God, with
@@ -509,7 +549,7 @@
         does not mention any specific kings or historical events, making it difficult to determine exactly when it was
         written. This has led to much debate and speculation among scholars and theologians throughout history. But what
         we do know is that it carries a powerful message of repentance, redemption, and the faithfulness of God.</p>
-      <h2>56. Amos</h2>
+      <h3 class="bible-book-title">56. Amos</h3>
       <p><strong>The Book of The Prophet Amos</strong> is a powerful prophetic book, detailing the visions and messages
         given to Amos by God for the people of Israel. It reveals the consequences of their sins and warns them of the
         impending judgment from God. Through this book, we can see the heart of God for His people and the importance of
@@ -518,25 +558,25 @@
         about a conviction to not only believe in God, but also to actively live out my faith through my actions and
         choices. It also reminds me to always remain humble and seek guidance from God in all things, no matter what.
       </p>
-      <h2>57. Obadiah</h2>
+      <h3 class="bible-book-title">57. Obadiah</h3>
       <p><strong>The Book of The Prophet Obadiah</strong> is the shortest book in the Old Testament, but it contains a
         powerful message from God to the nation of Edom. Through this book, we see the consequences of pride and
         arrogance, as well as the faithfulness of God to His people. It also speaks of the restoration and judgment that
         will come in the future. Overall, it serves as a call for all nations to humble themselves before God and seek
-        His will. Another interesting fact is that the book of Obadiah is also quoted in the New Testament in the book
-        of Romans, showing the significance of this prophetic message even in the time of Jesus and the early church.
+        His will. Another interesting fact is that the book of Obadiah shares themes with other prophetic books, and
+        its message of God's judgment against the prideful echoes throughout Scripture across the ages.
       </p>
-      <h2>58. Jonah</h2>
+      <h3 class="bible-book-title">58. Jonah</h3>
       <p><strong>The Book of The Prophet Jonah</strong> tells the story of a reluctant prophet who initially resists
         God's command to preach to the people of Nineveh. Through Jonah's journey and interactions with God, we see
         themes of repentance, forgiveness, and God's sovereignty. It also serves as a reminder of God's love and mercy
         for all people, even those who may be considered enemies. Throughout the book, it teaches us about obedience to
         God and trusting in His plan for our lives. There is a parallel between Jonah's experience in the belly of the
         great fish and Jesus' death and resurrection. Just as Jonah was in the belly of the fish for three days and
-        three nights before being brought back to life, Jesus was in the tomb for three days before His resurrection.
+        three nights before being delivered onto dry land, Jesus was in the tomb for three days before His resurrection.
         This further emphasizes the significance of Jesus' sacrifice and triumph over death for our salvation.
         (Sidenote: Jonah was a hilariously disobedient prophet).</p>
-      <h2>59. Micah</h2>
+      <h3 class="bible-book-title">59. Micah</h3>
       <p><strong>The Book of The Prophet Micah</strong> is a prophetic book that contains messages of both judgment and
         hope for the people of Israel. Through Micah, God reveals His righteous and just nature, condemning the people
         for their idolatry and injustice, while also offering the promise of restoration and salvation. The book also
@@ -545,7 +585,7 @@
         the birthplace of the Messiah. In Micah 5:2, it is prophesied that the Messiah will come from Bethlehem, a
         prophecy that was fulfilled hundreds of years later with the birth of Jesus. This further solidifies the truth
         of God's prophetic word and His sovereignty in fulfilling His promised plans.</p>
-      <h2>60. Nahum</h2>
+      <h3 class="bible-book-title">60. Nahum</h3>
       <p><strong>The Book of The Prophet Nahum</strong> is a prophetic book that focuses on the eventual destruction of
         the Assyrian city of Nineveh. Through Nahum's prophecies, God reveals His judgment against Nineveh for their
         wickedness and violence. It also serves as a reminder of God's sovereignty and justice, and shows that He will
@@ -554,20 +594,21 @@
         forgiveness. In Nahum, we see the eventual destruction of Nineveh due to their persistent wickedness. These
         books show the faithfulness of God in His warnings and judgments, as well as His mercy and willingness to
         forgive when the people repent.</p>
-      <h2>61. Habakkuk</h2>
+      <h3 class="bible-book-title">61. Habakkuk</h3>
       <p><strong>The Book of The Prophet Habakkuk</strong> is a prophetic book in the Old Testament. It is a dialogue
         between the prophet Habakkuk and God, with Habakkuk questioning the evil and injustice in the world and God
         answering with His plan for judgement and salvation. It serves as a reminder to trust in God's sovereignty and
         to have faith in His ultimate plan for redemption and justice. One interesting fact about Habakkuk is that it is
-        the only book in the Bible that consists entirely of a conversation between a prophet and God. This unique
+        one of the few prophetic books structured around a direct dialogue between a prophet and God, culminating in
+        a beautiful psalm of faith in chapter 3. This unique
         structure emphasizes the personal relationship between God and His people, and shows the importance of seeking
         and listening to His guidance in our lives. It also serves as a reminder that God hears and answers our doubts
-        and questions, and He is always faithful to His promises even when we may not understand God's plans and ways,
+        and questions, and He is always faithful to His promises. Even when we may not understand God's plans and ways,
         we can trust in His goodness and purpose for our lives. As it says in Habakkuk 3:17-18, "Though the fig tree may
         not blossom, nor fruit be on the vines; though the labor of the olive may fail, and the fields yield no food;
         though the flock may be cut off from the fold, and there be no herd in the stalls- yet I will rejoice in the
         Lord, I will joy in the God of my salvation."</p>
-      <h2>62. Zephaniah</h2>
+      <h3 class="bible-book-title">62. Zephaniah</h3>
       <p><strong>The Book of The Prophet Zephaniah</strong> is a prophetic book in the Old Testament, written by the
         prophet Zephaniah during the reign of King Josiah of Judah. It begins with a message of judgement and coming
         destruction, but also offers hope for the faithful remnant of God's people. One interesting fact about Zephaniah
@@ -579,7 +620,7 @@
         thee with singing." It emphasizes God's power and love for His people, and the joy that comes from being in His
         presence.
         Bam</p>
-      <h2>63. Haggai</h2>
+      <h3 class="bible-book-title">63. Haggai</h3>
       <p><strong>The Book of The Prophet Haggai</strong> is a short but powerful book in the Old Testament, consisting
         of only two chapters. It was written by the prophet Haggai during the time when the Israelites had returned from
         exile in Babylon and were rebuilding the temple in Jerusalem. The book contains four prophecies from Haggai,
@@ -589,7 +630,7 @@
         that it is the only book in the entire Bible that contains a specific date for every prophecy given. This serves
         as a testament to the historical accuracy of the book and the events it records. It also shows the importance of
         timing in God's plan for His people.</p>
-      <h2>64. Zechariah</h2>
+      <h3 class="bible-book-title">64. Zechariah</h3>
       <p><strong>The Book of The Prophet Zechariah</strong> is divided into two parts. The first part consists of eight
         visions that Zechariah receives from God, revealing His plans for the future of His people. These visions give
         hope to the Israelites in the midst of their struggles and oppression. The second part consists of messages and
@@ -599,7 +640,7 @@
         people. Zechariah 2:8 in the NKJV says, "For thus says the Lord of hosts: 'He sent Me after glory, to the
         nations which plunder you; for he who touches you touches the apple of His eye.'" This verse shows that God sees
         His people as precious and will protect them from any harm or oppression from their enemies.</p>
-      <h2>65. Malachi</h2>
+      <h3 class="bible-book-title">65. Malachi</h3>
       <p><strong>The Book of The Prophet Malachi</strong> is the final book of the Old Testament, representing the last
         prophetic message from God before the coming of the Messiah. The book speaks of God's disappointment with the
         priests and people who have become complacent and unfaithful in their worship and offerings. However, it also
@@ -610,9 +651,9 @@
         faithfulness, even when we fall short of His glory (Romans 3:23).</p>
     </div>
 
-    <h2 style="color: darkred; margin-top: var(--space-2xl);">66 <strong>Apocalyptic/Final Judgement</strong></h2>
-    <div class="card">
-      <h2>66. Revelation</h2>
+    <h2 id="apocalyptic" class="bible-category" style="color: darkred;">66 <strong>Apocalyptic/Final Judgement</strong> <a href="#apocalyptic" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">66. Revelation</h3>
       <p><strong>The Book of Revelation</strong> is a powerful and enigmatic book that reveals the end times and the
         return of Jesus Christ. The symbolism in this book can be challenging to interpret, but one thing is clear: God
         is in control and His promises will be fulfilled. One verse that stands out to me is Revelation 1:8 in the NKJV,
@@ -633,7 +674,34 @@
         together showcasing God’s perfect plan from the beginning to the end, in Lord Jesus’ name. Amen.</p>
     </div>
 
-    <p class="text-center text-muted">Content made by Connor. Website made by Pascal.</p>
+    <p class="text-center text-muted">Content by Pascal. Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Related Topics</h3>
+    <div class="comparison-grid">
+      <a href="../Genealogy/index.html" class="related-card">
+        <strong>Genealogy</strong>
+        <p>Biblical generations from Adam to Jesus</p>
+      </a>
+      <a href="../Religions/index.html" class="related-card">
+        <strong>Religions</strong>
+        <p>What religion is true and what even is religion?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../Religions/index.html" class="page-nav-link page-nav-prev">
+      <small>Previous</small>
+      <span>Religions</span>
+    </a>
+    <a href="../Genealogy/index.html" class="page-nav-link page-nav-next">
+      <small>Next</small>
+      <span>Genealogy</span>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -650,10 +718,51 @@
         <li><a href="index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

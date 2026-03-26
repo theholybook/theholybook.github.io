@@ -5,14 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-  <meta property="og:title" content="How to get truelly saved" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="God's intended way to live through Scripture. Salvation, faith, the Kingdom of God, and how to be truly saved through Jesus Christ.">
+  <meta property="og:title" content="How to get truly saved" />
   <meta property="og:type" content="website" />
+  <meta property="og:description" content="Understanding salvation, faith, and the Kingdom of God through Scripture." />
+  <meta property="og:url" content="https://theholybook.github.io/" />
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/theholybook/theholybook.github.io/main/heaven.jpg" />
+    content="https://theholybook.github.io/heaven.jpg" />
   <title>God's intended way to live</title>
 </head>
 
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -31,46 +47,53 @@
         <li><a href="bible%20order/index.html">Bible Guide</a></li>
         <li><a href="Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="active-lang">EN</a>
+        <a href="de/index.html">DE</a>
+        <a href="fr/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <h1>God's Intended Way to Live</h1>
-    <p class="subtitle">Understanding salvation, faith, and the Kingdom of God through Scripture</p>
+    <p class="subtitle">Salvation, faith, and the Kingdom of God through Scripture</p>
   </header>
 
-  <!-- Color Legend -->
-  <div class="content">
-    <div class="color-legend">
-      <h4>Scripture Highlight Colors</h4>
-      <div class="legend-items">
-        <span class="legend-item"><span class="legend-dot" style="background: #ff4500;"></span> Requirement</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #e9967a;"></span> Second Commandment</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #32cd32;"></span> Given by God</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #facc15;"></span> Reborn</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #22d3ee;"></span> Goal: Kingdom of God</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #b0c4de;"></span> Works</span>
-        <span class="legend-item"><span class="legend-dot" style="background: #9370db;"></span> Faith</span>
-      </div>
+  <!-- Sticky Color Legend (sidebar) -->
+  <div class="color-legend-sticky">
+    <h4>Highlight Colors</h4>
+    <div class="legend-items">
+      <span class="legend-item"><span class="legend-dot dot-requirement"></span> Requirement</span>
+      <span class="legend-item"><span class="legend-dot dot-second-cmd"></span> 2nd Commandment</span>
+      <span class="legend-item"><span class="legend-dot dot-given"></span> Given by God</span>
+      <span class="legend-item"><span class="legend-dot dot-reborn"></span> Reborn</span>
+      <span class="legend-item"><span class="legend-dot dot-goal"></span> Kingdom of God</span>
+      <span class="legend-item"><span class="legend-dot dot-works"></span> Works</span>
+      <span class="legend-item"><span class="legend-dot dot-faith"></span> Faith</span>
     </div>
+  </div>
+
+  <div class="content">
 
     <!-- The Great Commandment -->
     <div class="card">
       <h2><a href="https://www.biblegateway.com/passage/?search=Matthew+22%3A34-40&version=mev">Matthew 22:34-40</a></h2>
-      <p><mark style="background-color: lime;">The Great Commandment</mark></p>
+      <p><mark class="hl-given">The Great Commandment</mark></p>
       <p>
         34 When the Pharisees heard that He silenced the Sadducees, they came together. 35 One of them, who was a
-        lawyer, tested Him by asking Him, 36 "Teacher, which is the <mark style="background-color: orangered;">greatest
+        lawyer, tested Him by asking Him, 36 "Teacher, which is the <mark class="hl-requirement">greatest
           commandment</mark> in the law?"
 
-        37 Jesus said to him, " <mark style="background-color: orangered;">'You shall love the Lord your God with all
+        37 Jesus said to him, " <mark class="hl-requirement">'You shall love the Lord your God with all
           your heart, and with all your soul, and with
-          all your mind.'</mark> 38 This is the <mark style="background-color: orangered;">first and great
-          commandment.</mark> 39 And <mark style="background-color: DarkSalmon;">the second is like it: 'You shall
+          all your mind.'</mark> 38 This is the <mark class="hl-requirement">first and great
+          commandment.</mark> 39 And <mark class="hl-second-cmd">the second is like it: 'You shall
           love
-          your neighbor as yourself.'</mark> 40 On <mark style="background-color: lime;">these two commandments</mark>
-        hang <mark style="background-color: orangered;">all the Law and the Prophets."</mark></p>
+          your neighbor as yourself.'</mark> 40 On <mark class="hl-given">these two commandments</mark>
+        hang <mark class="hl-requirement">all the Law and the Prophets."</mark></p>
     </div>
 
     <p class="text-muted">Also in the Old Testament:</p>
@@ -78,7 +101,7 @@
     <!-- Deuteronomy -->
     <div class="card">
       <h2><a href="https://www.biblegateway.com/passage/?search=Deuteronomy+6%3A4-9&version=MEV">Deuteronomy 6:4-9</a></h2>
-      <p>4 Hear, O Israel: <mark style="background-color: orangered;">The Lord is our God. The Lord is one! 5 And you
+      <p>4 Hear, O Israel: <mark class="hl-requirement">The Lord is our God. The Lord is one! 5 And you
           shall love the Lord your God with all your heart and with all your soul and with all your might. 6 These
           words, which I am commanding you today, shall be in your heart.</mark> 7 You shall teach them diligently to
         your children and shall talk of them when you sit in your house, and when you walk by the way, and when you lie
@@ -86,20 +109,20 @@
         your eyes. 9 You shall write them on the doorposts of your house and on your gates.</p>
     </div>
 
-    <h3>You have to give your life to God and loving him with <mark style="background-color: orangered;">everything</mark> you have.</h3>
+    <h3>You have to give your life to God and loving him with <mark class="hl-requirement">everything</mark> you have.</h3>
 
     <hr>
 
     <!-- Q&A Sections -->
     <div class="qa-block">
-      <p class="question">Q. How do you know that you even have to be <mark style="background-color: yellow;">reborn</mark> to get into <mark style="background-color: cyan;">the kingdom of God</mark>?</p>
+      <p class="question">Q. How do you know that you even have to be <mark class="hl-reborn">reborn</mark> to get into <mark class="hl-goal">the kingdom of God</mark>?</p>
       <div class="answer">
         <p>A.</p>
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=John+3%3A5&version=MEV">John 3:5</a></h4>
           <p>5 Jesus answered, "Truly, truly I say to you, unless a man is born of water and <mark
-              style="background-color: yellow;">the
-              Spirit</mark>, he cannot enter <mark style="background-color: cyan;">the kingdom of God.</mark></p>
+              class="hl-reborn">the
+              Spirit</mark>, he cannot enter <mark class="hl-goal">the kingdom of God.</mark></p>
         </div>
       </div>
     </div>
@@ -107,20 +130,19 @@
     <hr>
 
     <div class="qa-block">
-      <p class="question">Q. But God said that you won't be saved by <mark style="background-color: lightsteelblue;">works</mark>, only by <mark style="background-color: mediumpurple;">faith</mark></p>
+      <p class="question">Q. But God said that you won't be saved by <mark class="hl-works">works</mark>, only by <mark class="hl-faith">faith</mark></p>
       <div class="answer">
-        <p>A. Correct, <mark style="background-color: mediumpurple;">Submitting yourself to God is not works, its an act
+        <p>A. Correct, <mark class="hl-faith">Submitting yourself to God is not works, it's an act
             of faith</mark></p>
-        <p><mark style="background-color: orangered;">Repent means "to change mind".</mark> you repent from your sinful
-          nature,
-          and theres only one way to repent from your
-          sinfull nature, <strong><mark style="background-color: orangered;">Giving your whole sinfull life to
+        <p><mark class="hl-requirement">Repent means "to change mind".</mark> you repent from your sinful nature,
+          and there's only one way to repent from your
+          sinful nature, <strong><mark class="hl-requirement">Giving your whole sinful life to
               God.</mark></strong></p>
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=Ephesians%202:8-9&version=mev">Ephesians 2:8-9</a></h4>
-          <p>8 <mark style="background-color: mediumpurple;">For by grace you have been saved through faith, and this
-              is not of yourselves. </mark><mark style="background-color: lime;">It is the gift of God</mark>, 9 <mark
-              style="background-color: lightsteelblue;">not
+          <p>8 <mark class="hl-faith">For by grace you have been saved through faith, and this
+              is not of yourselves. </mark><mark class="hl-given">It is the gift of God</mark>, 9 <mark
+              class="hl-works">not
               of works, so that no one should boast.</mark></p>
         </div>
       </div>
@@ -136,7 +158,7 @@
           <h4><a href="https://www.biblegateway.com/passage/?search=Matthew+7%3A13-14&version=mev">Matthew 7:13-14</a></h4>
           <p>The Narrow Gate</p>
           <p>13 "Enter at the narrow gate, for wide is the gate and broad is the way that leads to destruction, and there
-            are many who are going through it, 14 <mark style="background-color: cyan;">because small is the gate and
+            are many who are going through it, 14 <mark class="hl-goal">because small is the gate and
               narrow
               is the way which leads to life, and
               there are few who find it.</mark></p>
@@ -144,7 +166,7 @@
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=Matthew+19%3A24&version=mev">Matthew 19:24</a></h4>
           <p>24 And again I say to you, it is easier for a camel to go through the eye of a needle than for a rich man
-            <mark style="background-color: cyan;">to
+            <mark class="hl-goal">to
               enter the kingdom of God."</mark>
           </p>
         </div>
@@ -159,20 +181,20 @@
         <p>A.</p>
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=2%20Corinthians%205:17&version=mev">2 Corinthians 5:17</a></h4>
-          <p><mark style="background-color: yellow;">17 Therefore, if any man is in Christ, he is a new creature. Old
+          <p><mark class="hl-reborn">17 Therefore, if any man is in Christ, he is a new creature. Old
               things
               have passed away. Look, all things have
               become new.</mark></p>
         </div>
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=John+3%3A6-8&version=mev">John 3:6-8</a></h4>
-          <p>6 That which is born of the flesh is flesh, and <mark style="background-color: yellow;">that which is born of
+          <p>6 That which is born of the flesh is flesh, and <mark class="hl-reborn">that which is born of
               the Spirit is spirit.</mark> 7 Do not marvel
-            that I said to you, <mark style="background-color: orangered;">'You must be born again.'</mark> 8 The wind
+            that I said to you, <mark class="hl-requirement">'You must be born again.'</mark> 8 The wind
             blows
             where
             it wishes, and you hear its sound, but you
-            do not know where it comes from or where it goes. <mark style="background-color: mediumpurple;">So it is with
+            do not know where it comes from or where it goes. <mark class="hl-faith">So it is with
               everyone who is born of the Spirit."</mark></p>
         </div>
       </div>
@@ -181,12 +203,12 @@
     <hr>
 
     <div class="qa-block">
-      <p class="question">Q. How long does it last <mark style="background-color: yellow;">to be reborn?</mark></p>
+      <p class="question">Q. How long does it last <mark class="hl-reborn">to be reborn?</mark></p>
       <div class="answer">
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=2+Corinthians+1%3A21-22&version=mev">2 Corinthians 1:21-22</a></h4>
           <p>21 Now He who establishes us with you in Christ and has anointed us is God, <mark
-              style="background-color: lime;">22 who also has sealed us and
+              class="hl-given">22 who also has sealed us and
               established the guarantee with the Spirit in our hearts.</mark></p>
         </div>
       </div>
@@ -205,7 +227,7 @@
         </div>
         <div class="card">
           <h4><a href="https://www.biblegateway.com/passage/?search=romans%2010&version=mev">Romans 10:8-11</a></h4>
-          <p>8 But what does it say? <mark style="background-color: orangered;">"The word is near you, in your mouth and
+          <p>8 But what does it say? <mark class="hl-requirement">"The word is near you, in your mouth and
               in
               your heart."[d] This is the word of faith that we preach: 9 that if you confess with your mouth Jesus is
               Lord,
@@ -221,7 +243,7 @@
     <hr>
 
     <!-- Other Topics -->
-    <h2 class="text-center">Other Biblical Topics</h2>
+    <h2 id="other-biblical-topics" class="text-center">Other Biblical Topics <a href="#other-biblical-topics" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="topic-grid">
       <a href="trinity/index.html" class="topic-card">
         <h3>The Trinity</h3>
@@ -254,6 +276,14 @@
     </div>
   </div>
 
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="trinity/index.html" class="page-nav-link page-nav-next">
+      <small>Next</small>
+      <span>Trinity</span>
+    </a>
+  </div>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
@@ -268,10 +298,51 @@
         <li><a href="bible%20order/index.html">Bible Guide</a></li>
         <li><a href="Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

@@ -5,11 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <title>The Genealogy of Jesus Christ - From Adam to Jesus</title>
   <meta name="description" content="A complete, scripture-based genealogy from Adam to Jesus Christ, tracing both the royal line through Joseph (Matthew 1) and the biological line through Mary (Luke 3).">
+  <meta property="og:title" content="The Genealogy of Jesus Christ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Trace the biblical generations from Adam to Jesus Christ through Scripture." />
+  <meta property="og:url" content="https://theholybook.github.io/Genealogy/" />
 </head>
 
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -28,12 +45,18 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="index.html" class="active">Genealogy</a></li>
       </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="active-lang">EN</a>
+        <a href="../de/Genealogy/index.html">DE</a>
+        <a href="../fr/Genealogy/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <h1>The Genealogy of Jesus Christ</h1>
-    <p class="subtitle">Tracing the direct line from Adam to Jesus through 77 generations of scripture, spanning over 4,000 years of biblical history.</p>
+    <p class="subtitle">The direct line from Adam to Jesus, 77 generations across 4,000+ years of scripture.</p>
   </header>
 
   <!-- Color Legend -->
@@ -57,11 +80,11 @@
       <h4 style="margin-top:0">Scripture Sources</h4>
       <p style="margin-bottom:var(--space-sm); font-size:0.9rem; color:var(--color-text-secondary)">This genealogy is compiled from the following key passages (MEV):</p>
       <ul style="font-size:0.9rem; margin-bottom:0">
-        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+5&version=MEV">Genesis 5</a> &mdash; Adam to Noah (Pre-Flood patriarchs)</li>
-        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+11&version=MEV">Genesis 11</a> &mdash; Shem to Abram (Post-Flood patriarchs)</li>
-        <li><a href="https://www.biblegateway.com/passage/?search=Ruth+4%3A18-22&version=MEV">Ruth 4:18-22</a> &mdash; Perez to David</li>
-        <li><a href="https://www.biblegateway.com/passage/?search=Matthew+1&version=MEV">Matthew 1</a> &mdash; Abraham to Jesus through Joseph (royal/legal line)</li>
-        <li><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=MEV">Luke 3:23-38</a> &mdash; Jesus to Adam through Mary (biological line)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+5&version=MEV">Genesis 5</a> -- Adam to Noah (Pre-Flood patriarchs)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+11&version=MEV">Genesis 11</a> -- Shem to Abram (Post-Flood patriarchs)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Ruth+4%3A18-22&version=MEV">Ruth 4:18-22</a> -- Perez to David</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Matthew+1&version=MEV">Matthew 1</a> -- Abraham to Jesus through Joseph (royal/legal line)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=MEV">Luke 3:23-38</a> -- Jesus to Adam through Mary (biological line)</li>
       </ul>
     </div>
   </div>
@@ -72,7 +95,7 @@
   <div class="gen-timeline">
 
     <div class="tl-era">
-      <span class="tl-era-label bg-preflood">Pre-Flood Patriarchs &mdash; Genesis 5</span>
+      <span class="tl-era-label bg-preflood">Pre-Flood Patriarchs -- Genesis 5</span>
     </div>
 
     <!-- 1. Adam -->
@@ -161,7 +184,7 @@
         <div class="tl-number era-preflood">7th Generation</div>
         <h3>Enoch</h3>
         <div class="tl-lifespan">Lived 365 years</div>
-        <p class="tl-detail">Walked faithfully with God, then God took him &mdash; he did not see death. Fathered Methuselah at age 65.</p>
+        <p class="tl-detail">Walked faithfully with God, then God took him; he did not see death. Fathered Methuselah at age 65.</p>
         <span class="tl-event-badge">Taken by God</span>
         <br><span class="tl-ref">Genesis 5:21-24</span>
       </div>
@@ -174,7 +197,7 @@
       <div class="tl-card" data-era="preflood">
         <div class="tl-number era-preflood">8th Generation</div>
         <h3>Methuselah</h3>
-        <div class="tl-lifespan">Lived 969 years &mdash; longest-lived person in scripture</div>
+        <div class="tl-lifespan">Lived 969 years, the longest-lived person in scripture</div>
         <p class="tl-detail">Fathered Lamech at age 187. Died the year of the Great Flood.</p>
         <span class="tl-ref">Genesis 5:25-27</span>
       </div>
@@ -211,7 +234,7 @@
          POST-FLOOD PATRIARCHS (Genesis 11)
          ============================================================ -->
     <div class="tl-era">
-      <span class="tl-era-label bg-postflood">Post-Flood Patriarchs &mdash; Genesis 11</span>
+      <span class="tl-era-label bg-postflood">Post-Flood Patriarchs -- Genesis 11</span>
     </div>
 
     <!-- 11. Shem -->
@@ -222,7 +245,7 @@
         <div class="tl-number era-postflood">11th Generation</div>
         <h3>Shem</h3>
         <div class="tl-lifespan">Lived 600 years</div>
-        <p class="tl-detail">Fathered Arphaxad at age 100 &mdash; two years after the Flood. Ancestor of all Semitic peoples.</p>
+        <p class="tl-detail">Fathered Arphaxad at age 100, two years after the Flood. Ancestor of all Semitic peoples.</p>
         <span class="tl-ref">Genesis 11:10-11</span>
       </div>
     </div>
@@ -400,7 +423,7 @@
       <span class="tribe-chip">Joseph</span>
       <span class="tribe-chip">Benjamin</span>
     </div>
-    <img src="Tribes.webp" alt="The Twelve Tribes of Israel" class="tribes-img">
+    <img src="Tribes.webp" alt="The Twelve Tribes of Israel" class="tribes-img" loading="lazy">
   </div>
 
   <!-- ============================================================
@@ -409,7 +432,7 @@
   <div class="gen-timeline">
 
     <div class="tl-era">
-      <span class="tl-era-label bg-patriarchs">Judah &mdash; The Royal Tribe</span>
+      <span class="tl-era-label bg-patriarchs">Judah -- The Royal Tribe</span>
     </div>
 
     <!-- 23. Judah -->
@@ -425,7 +448,7 @@
     </div>
 
     <div class="tl-era">
-      <span class="tl-era-label bg-judges">Perez to David &mdash; Ruth 4:18-22</span>
+      <span class="tl-era-label bg-judges">Perez to David -- Ruth 4:18-22</span>
     </div>
 
     <!-- 24. Perez -->
@@ -565,7 +588,7 @@
   <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
     <div class="card" style="text-align:center; border-left:3px solid #7c3aed; border-right:3px solid #7c3aed; margin-bottom:var(--space-xl);">
       <h3 style="margin-top:0; color:var(--color-accent);">The Line Divides After David</h3>
-      <p style="font-size:0.9rem; max-width:100%;">After King David, scripture records two genealogical lines to Jesus. <strong>Matthew&rsquo;s Gospel</strong> traces the <em>royal/legal</em> line through Solomon to Joseph, establishing Jesus as the legal heir to David's throne. <strong>Luke&rsquo;s Gospel</strong> traces the <em>biological</em> line through Nathan to Mary, establishing Jesus as a physical descendant of David.</p>
+      <p style="font-size:0.9rem; max-width:100%;">After King David, scripture records two genealogical lines to Jesus. <strong>Matthew&rsquo;s Gospel</strong> traces the <em>royal/legal</em> line through Solomon to Joseph, making Jesus the legal heir to David's throne. <strong>Luke&rsquo;s Gospel</strong> traces the <em>biological</em> line through Nathan to Mary, making Jesus a physical descendant of David.</p>
     </div>
   </div>
 
@@ -713,7 +736,7 @@
         <div class="tl-track-node">
           <div class="tl-mini-card" style="border-left:3px solid #dc2626;">
             <strong>Nathan</strong>
-            <small>Son of David. Not the prophet &mdash; a different Nathan.</small>
+            <small>Son of David. Son of David, not the prophet Nathan.</small>
           </div>
         </div>
 
@@ -901,7 +924,7 @@
       <p>"The Son of David, the Son of Abraham"</p>
       <p style="font-size:0.85rem;">Born in Bethlehem of Judea. Legal heir to David's throne through Joseph. Biological descendant of David through Mary. The promised Messiah.</p>
       <p><small><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A1&version=MEV">Matthew 1:1</a> &bull; <a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=MEV">Luke 3:23-38</a></small></p>
-      <img src="cross.jpg" alt="The Cross of Jesus Christ">
+      <img src="cross.jpg" alt="The Cross of Jesus Christ" loading="lazy">
     </div>
   </div>
 
@@ -912,16 +935,39 @@
 
     <div class="notes-section">
       <h3>Why Two Different Genealogies?</h3>
-      <p style="max-width:100%">One of the most frequently asked questions about the Gospels is why Matthew and Luke record different genealogies for Jesus. The widely held explanation is that <strong>Matthew traces the legal/royal line through Joseph</strong>, establishing Jesus as the legal heir to the throne of David, while <strong>Luke traces the biological line through Mary</strong>, establishing Jesus as a physical descendant of David. In Jewish culture, a genealogy could be listed under the husband's name even when tracing the wife's lineage &mdash; Luke 3:23 carefully notes that Jesus was "the son, so it was thought, of Joseph."</p>
+      <p style="max-width:100%">Matthew and Luke record different genealogies for Jesus. The widely held explanation is that <strong>Matthew traces the legal/royal line through Joseph</strong>, making Jesus the legal heir to David's throne, while <strong>Luke traces the biological line through Mary</strong>, making Jesus a physical descendant of David. In Jewish culture, a genealogy could be listed under the husband's name even when tracing the wife's lineage. Luke 3:23 carefully notes that Jesus was "the son, so it was thought, of Joseph."</p>
       <p style="max-width:100%">Both lines converge at David and earlier at Abraham, confirming that Jesus fulfilled the messianic prophecies requiring the Messiah to be both a son of Abraham (Genesis 22:18) and a son of David (2 Samuel 7:12-16).</p>
-      <img src="explaination.png" alt="Diagram showing the two genealogical lines" style="max-width:100%; margin-top:var(--space-md); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);">
+      <img src="explaination.png" alt="Diagram showing the two genealogical lines" style="max-width:100%; margin-top:var(--space-md); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);" loading="lazy">
     </div>
 
     <blockquote class="scripture" style="margin-top:var(--space-xl);">
       The book of the genealogy of Jesus Christ, the Son of David, the Son of Abraham.
-      <cite class="verse-ref">&mdash; Matthew 1:1 (MEV)</cite>
+      <cite class="verse-ref">-- Matthew 1:1 (MEV)</cite>
     </blockquote>
 
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Related Topics</h3>
+    <div class="comparison-grid">
+      <a href="../bible%20order/index.html" class="related-card">
+        <strong>Bible Guide</strong>
+        <p>Which order should I read the Bible?</p>
+      </a>
+      <a href="../trinity/index.html" class="related-card">
+        <strong>Trinity</strong>
+        <p>Is God the Trinity? And who is the Trinity?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../bible%20order/index.html" class="page-nav-link page-nav-prev">
+      <small>Previous</small>
+      <span>Bible Guide</span>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -938,10 +984,51 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

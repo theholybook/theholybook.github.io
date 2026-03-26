@@ -5,14 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="What are sins according to the Bible? Lying, stealing, pride, and more. Why every person needs Jesus Christ as their only hope for salvation.">
   <meta property="og:title" content="What are sins?" />
   <meta property="og:type" content="website" />
+  <meta property="og:description" content="What are sins, why are you guilty, and why do you need Jesus?" />
+  <meta property="og:url" content="https://theholybook.github.io/sins/" />
   <meta property="og:image"
-    content="https://github.com/theholybook/theholybook.github.io/blob/main/sins/guilty.jpg?raw=true" />
+    content="https://theholybook.github.io/sins/guilty.jpg" />
   <title>Sins</title>
 </head>
 
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -31,10 +47,16 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="active-lang">EN</a>
+        <a href="../de/sins/index.html">DE</a>
+        <a href="../fr/sins/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <h1>Sins</h1>
     <p class="subtitle"><strong>All sins will be judged equally before the Lord!</strong> And 1 sin is already too much for heaven.</p>
     <p><a href="https://www.biblegateway.com/passage/?search=Romans+3%3A23&version=MEV"
@@ -42,12 +64,33 @@
   </header>
 
   <div class="content">
-    <h2>Guilty List</h2>
+    <h2 id="guilty-list">Guilty List <a href="#guilty-list" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+
+    <div class="toc-card">
+      <h4>Quick Navigation</h4>
+      <ul>
+        <li><a href="#lying">Lying</a></li>
+        <li><a href="#stealing">Stealing</a></li>
+        <li><a href="#blaspheming">Blaspheming</a></li>
+        <li><a href="#hatred">Hatred</a></li>
+        <li><a href="#lusting">Lusting</a></li>
+        <li><a href="#fornication">Fornication and Adultery</a></li>
+        <li><a href="#idolatry">Idolatry</a></li>
+        <li><a href="#sorcery">Sorcery/Witchcraft/Magic</a></li>
+        <li><a href="#homosexuality">Homosexuality/Sodomy</a></li>
+        <li><a href="#drunkenness">Drunkenness</a></li>
+        <li><a href="#murder">Murder</a></li>
+        <li><a href="#slander">Slander</a></li>
+        <li><a href="#pride">Pride</a></li>
+        <li><a href="#unforgivable-sin">The Unforgivable Sin</a></li>
+        <li><a href="#the-only-hope">The Only Hope</a></li>
+      </ul>
+    </div>
 
     <!-- Lying -->
-    <div class="sin-card">
+    <div class="sin-card" id="lying">
       <h4>Lying</h4>
-      <p>Thats almost a natural sin, pretty much every human has lied in thier life before which even the bible confirms
+      <p>That's almost a natural sin, pretty much every human has lied in their life before which even the bible confirms
         this in <a href="https://www.biblegateway.com/passage/?search=Romans%203%3A4-8&version=mev"
           title="4 God forbid! Let God be true, and every man a liar. As it is written:">Romans 3:4-8</a></p>
       <p><a href="https://www.biblegateway.com/passage/?search=Proverbs+19&version=MEV" title="9 A false witness will not be unpunished, and he who speaks lies will perish.">Proverbs 19:9</a> tells us that even people who constantly lie will find death</p>
@@ -56,7 +99,7 @@
     </div>
 
     <!-- Stealing -->
-    <div class="sin-card">
+    <div class="sin-card" id="stealing">
       <h4>Stealing</h4>
       <p><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+6%3A10&version=MEV"
           title="10 nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners will inherit the kingdom of God.">1 Corinthians 6:10</a> Tells us that Thieves wont inherit the kingdom of God</p>
@@ -68,78 +111,78 @@
     </div>
 
     <!-- Blaspheming -->
-    <div class="sin-card">
+    <div class="sin-card" id="blaspheming">
       <h4>Blaspheming</h4>
-      <p>Words like "oh my god" that people use is called blasphemie which is even in the 10 commandements (<a
+      <p>Words like "oh my god" that people use is called blasphemy which is even in the 10 commandments (<a
           href="https://www.biblegateway.com/passage/?search=exodus%2020:7&version=mev"
           title="7 You shall not take the name of the Lord your God in vain, for the Lord will not hold guiltless anyone who takes His name in vain.">Exodus 20:7</a>)</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Leviticus%2019:12&version=mev"
-          title="12 You shall not swear falsely by My name, and so defile the name of your God: I am the Lord.">Leviticus 19:12</a> tells us that God does not want his name to be used in vain, He is the allmighty and deserves respect.</p>
+          title="12 You shall not swear falsely by My name, and so defile the name of your God: I am the Lord.">Leviticus 19:12</a> tells us that God does not want his name to be used in vain, He is the almighty and deserves respect.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Philippians+2%3A9&version=MEV" title="9 Therefore God highly exalted Him and gave Him the name which is above every name,">Philippians 2:9</a> tells us that the name Jesus holds power thus using his name in vain, he will help less</p>
       <p><span class="sin-verdict">BLASPHEMER</span></p>
       <p>so is someone who insults God</p>
     </div>
 
     <!-- Hatred -->
-    <div class="sin-card">
+    <div class="sin-card" id="hatred">
       <h4>Hatred</h4>
       <p><a href="https://www.biblegateway.com/passage/?search=1+John+4%3A20&version=MEV"
           title="20 If anyone says, I love God, and hates his brother, he is a liar. For whoever does not love his brother whom he has seen, how can he love God whom he has not seen?">1 John 4:20</a> tells us that someone that hates others, cannot love God.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Proverbs+10%3A12&version=mev" title="12 Hatred stirs up strife, but love covers all sins.">Proverbs 10:12</a> is about how hatred creates conflicts and love covers up for errors</p>
       <p><a href="https://www.biblegateway.com/passage/?search=1+John+2%3A9&version=mev"
-          title="9 Whoever says he is in the light but hates his brother is in darkness even until now.">1 John 2:9</a> tells us that whoever thinks thei're good, but hates someone, isnt good</p>
+          title="9 Whoever says he is in the light but hates his brother is in darkness even until now.">1 John 2:9</a> tells us that whoever thinks they're good, but hates someone, isnt good</p>
       <p><a href="https://www.biblegateway.com/passage/?search=1+John+3%3A15&version=mev"
           title="15 Whoever hates his brother is a murderer, and you know that no murderer has eternal life remaining in him.">1 John 3:15</a> tells us that whoever hates is a <span class="sin-verdict">MURDERER BY HEART</span></p>
     </div>
 
     <!-- Lusting -->
-    <div class="sin-card">
+    <div class="sin-card" id="lusting">
       <h4>Lusting</h4>
-      <p>Its probably one of the most common sin since theres so much pornography and other sexual content on the internet tempting people to commit this sin</p>
+      <p>Its probably one of the most common sin since there's so much pornography and other sexual content on the internet tempting people to commit this sin</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Matthew+5%3A27-30&version=MEV"
-          title="Teaching About Adultery - 27 You have heard that it was said by the ancients, You shall not commit adultery. 28 But I say to you that whoever looks on a woman to lust after her has committed adultery with her already in his heart.">Matthew 5:27-30</a> tells us that lusting at a woman is commiting adultery in the heart and God hates this sin</p>
+          title="Teaching About Adultery - 27 You have heard that it was said by the ancients, You shall not commit adultery. 28 But I say to you that whoever looks on a woman to lust after her has committed adultery with her already in his heart.">Matthew 5:27-30</a> tells us that lusting at a woman is committing adultery in the heart and God hates this sin</p>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20John%202:16&version=mev"
           title="16 For all that is in the world-the lust of the flesh, the lust of the eyes, and the pride of life-is not of the Father, but is of the world.">1 John 2:16</a> tells us that God did not give us lust, but the world did, and pride is connected to it</p>
       <p><a href="https://www.biblegateway.com/passage/?search=2%20timothy%201:7&version=mev"
-          title="7 For God has not given us the spirit of fear, but of power, and love, and self-control.">2 timothy 1:7</a> tells us that God gave us a spirit of power, love and self controll.</p>
+          title="7 For God has not given us the spirit of fear, but of power, and love, and self-control.">2 timothy 1:7</a> tells us that God gave us a spirit of power, love and self control.</p>
       <p><span class="sin-verdict">ADULTERER BY HEART</span></p>
     </div>
 
     <!-- Fornication and Adultery -->
-    <div class="sin-card">
+    <div class="sin-card" id="fornication">
       <h4>Fornication and Adultery</h4>
       <p>Throwing both in the same pot, they are both related to another:<br>Fornication means having sexual intercourse
         with someone you're not married with<br>Adultery means having sexual intercourse or even a relationship with
-        someone who is not your wife/husband even tho you're married, basicly <strong>Cheating</strong></p>
+        someone who is not your wife/husband even tho you're married, basically <strong>Cheating</strong></p>
       <p><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+6%3A18&version=MEV"
           title="18 Escape from sexual immorality. Every sin that a man commits is outside the body. But he who commits sexual immorality sins against his own body.">1 Corinthians 6:18</a> tells us that fornicating and cheating/adultery is against the body not just God</p>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%207%3A2&version=mev"
-          title="2 Nevertheless, because of sexual immorality, let every man have his own wife, and let every woman have her own husband.">1 Corinthians 7:2</a> tells us that every man should only have 1 wife and every woman only 1 husband concerning as much the adulterers and the fornicaters</p>
+          title="2 Nevertheless, because of sexual immorality, let every man have his own wife, and let every woman have her own husband.">1 Corinthians 7:2</a> tells us that every man should only have 1 wife and every woman only 1 husband concerning as much the adulterers and the fornicators</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation+21%3A8&version=mev"
-          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have thier portion in the lake which burns with fire and brimstone. This is the second death.">Revelation 21:8</a> tells us that sexual immoral people will go to hell</p>
+          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have their portion in the lake which burns with fire and brimstone. This is the second death.">Revelation 21:8</a> tells us that sexual immoral people will go to hell</p>
       <p><span class="sin-verdict">FORNICATOR</span> / <span class="sin-verdict">ADULTERER</span></p>
     </div>
 
     <!-- Idolatry -->
-    <div class="sin-card">
-      <h4>Idolatery</h4>
-      <p>People that take certain things from the bible and concider parts of the bible fake/false are also creating thier own god/gods and are also idolaters</p>
-      <p><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2010%3A14&version=mev" title="14 So, my beloved, flee from idolatry.">1 Corinthians 10:14</a> tells us to literally run from idolatery</p>
+    <div class="sin-card" id="idolatry">
+      <h4>Idolatry</h4>
+      <p>People that take certain things from the bible and consider parts of the bible fake/false are also creating their own god/gods and are also idolaters</p>
+      <p><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2010%3A14&version=mev" title="14 So, my beloved, flee from idolatry.">1 Corinthians 10:14</a> tells us to literally run from idolatry</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Exodus%2020%3A4&version=mev"
-          title="4 You shall not make for yourself any graven idol, or any likeness of anything that is in heaven above, or that is in the earth beneath, or that is in the water below the earth.">Exodus 20:4</a> is in the 10 commandements and tells us not to make Idols</p>
+          title="4 You shall not make for yourself any graven idol, or any likeness of anything that is in heaven above, or that is in the earth beneath, or that is in the water below the earth.">Exodus 20:4</a> is in the 10 commandments and tells us not to make Idols</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Colossians%203%3A5&version=mev"
-          title="5 Therefore put to death the parts of your earthly nature: sexual immorality, uncleanness, inordinate affection, evil desire, and covetousness, which is idolatry.">Colossians 3:5</a> tells us to crucify our flesh that wants to commit idolatery with earthly things.</p>
+          title="5 Therefore put to death the parts of your earthly nature: sexual immorality, uncleanness, inordinate affection, evil desire, and covetousness, which is idolatry.">Colossians 3:5</a> tells us to crucify our flesh that wants to commit idolatry with earthly things.</p>
       <p><span class="sin-verdict">IDOLATER</span></p>
     </div>
 
     <!-- Sorcery -->
-    <div class="sin-card">
-      <h4>Sorcerie/Witchcraft/Magic</h4>
-      <p>Magic isn't power or anything from the spirit, its demonic, demons help you perform magic in real life by missleading you</p>
+    <div class="sin-card" id="sorcery">
+      <h4>Sorcery/Witchcraft/Magic</h4>
+      <p>Magic isn't power or anything from the spirit, its demonic, demons help you perform magic in real life by misleading you</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation%2021:8&version=mev"
-          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have thier portion in the lake which burns with fire and brimstone. This is the second death.">Revelation 21:8</a> tells us that sorcerers will burn in hell.</p>
+          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have their portion in the lake which burns with fire and brimstone. This is the second death.">Revelation 21:8</a> tells us that sorcerers will burn in hell.</p>
       <p>In <a href="https://www.biblegateway.com/passage/?search=2%20Chronicles%2033&version=mev"
-          title="23 He did not humble himself before the Lord as his father humbled himself. But he increased his guilt all the more.">2 Chronicles</a>, Manasseh has been sacrificing childrem and has made himself more and more guilty before the lord</p>
+          title="23 He did not humble himself before the Lord as his father humbled himself. But he increased his guilt all the more.">2 Chronicles</a>, Manasseh has been sacrificing children and has made himself more and more guilty before the lord</p>
       <p>Firstly, God does not want human sacrifice, less even child sacrifice, and secondly, you shall not worship idols</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Galatians+5%3A16-26&version=MEV"
           title="19 Now the works of the flesh are revealed, which are these: adultery, sexual immorality, impurity, lewdness, 20 idolatry, sorcery, hatred, strife, jealousy, rage, selfishness, dissensions, heresies, 21 envy, murders, drunkenness, carousing, and the like.">Galatians 5:16-26</a> tells us that sorcerers wont inherit the kingdom of God</p>
@@ -147,10 +190,10 @@
     </div>
 
     <!-- Homosexuality -->
-    <div class="sin-card">
-      <h4>Homosexuality/Sodomie</h4>
+    <div class="sin-card" id="homosexuality">
+      <h4>Homosexuality/Sodomy</h4>
       <p>Todays world connected homosexuality sadly with pride.</p>
-      <p>Nowerdays homosexuality has missused and put bad stains on a creation God has made for us, the rainbow stands for the part God has promised us that he will never flood the world again as in <a
+      <p>Nowadays homosexuality has misused and put bad stains on a creation God has made for us, the rainbow stands for the part God has promised us that he will never flood the world again as in <a
           href="https://www.biblegateway.com/passage/?search=genesis+9%3A1-17&version=mev"
           title="13 I have set My rainbow in the cloud, and it shall be a sign of a covenant between Me and the earth.">genesis 9:1-17</a></p>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%206:9-11&version=mev"
@@ -158,52 +201,52 @@
       <p><a href="https://www.biblegateway.com/passage/?search=1+Timothy+1%3A8-11&version=MEV"
           title="10 for the sexually immoral, for sodomites, for slave traders, for liars, for perjurers, and for anything else that is contrary to sound doctrine,">1 Timothy 1:8-11</a> tells us that homosexuality goes against the sound doctrine</p>
       <p><a href="https://www.biblegateway.com/passage/?search=romans%201:26-27&version=mev"
-          title="26 For this reason God gave them up to dishonorable passions. thier women exchanged the natural function for what is against nature.">romans 1:26-27</a> tells us that homosexuality is something shamefull and awaits penality</p>
+          title="26 For this reason God gave them up to dishonorable passions. their women exchanged the natural function for what is against nature.">romans 1:26-27</a> tells us that homosexuality is something shameful and awaits penalty</p>
       <p><span class="sin-verdict">HOMOSEXUAL/SODOMITE</span></p>
     </div>
 
     <!-- Drunkenness -->
-    <div class="sin-card">
-      <h4>Drunkeness</h4>
-      <p>Many people think that alcohol is the solution to depression, but its not true, God gave us a spirit of controll as in <a href="https://www.biblegateway.com/passage/?search=2%20timothy%201:7&version=mev"
+    <div class="sin-card" id="drunkenness">
+      <h4>Drunkenness</h4>
+      <p>Many people think that alcohol is the solution to depression, but its not true, God gave us a spirit of control as in <a href="https://www.biblegateway.com/passage/?search=2%20timothy%201:7&version=mev"
           title="7 For God has not given us the spirit of fear, but of power, and love, and self-control.">2 timothy 1:7</a></p>
       <p><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+6%3A9-10&version=mev"
           title="9 Do you not know that the unrighteous will not inherit the kingdom of God?">1 Corinthians 6:9-10</a> and <a href="https://www.biblegateway.com/passage/?search=Galatians+5%3A21&version=mev"
-          title="21 envy, murders, drunkenness, carousing, and the like.">Galatians 5:21</a> tells us that drunkyards wont inherit the kingdom of God</p>
+          title="21 envy, murders, drunkenness, carousing, and the like.">Galatians 5:21</a> tells us that drunkards wont inherit the kingdom of God</p>
       <p><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+5%3A11&version=mev"
           title="11 But I have written to you not to keep company with any man who is called a brother, who is sexually immoral, or covetous, or an idolater, or a reviler, or a drunkard, or an extortioner.">1 Corinthians 5:11</a> and <a href="https://www.biblegateway.com/passage/?search=Proverbs+23%3A20-21&version=mev"
-          title="20 Do not be among winebibbers, among riotous eaters of meat; 21 for the drunkard and the glutton will come to poverty,">Proverbs 23:20-21</a> tells us to stay away from immoral people including the drunkyards</p>
+          title="20 Do not be among winebibbers, among riotous eaters of meat; 21 for the drunkard and the glutton will come to poverty,">Proverbs 23:20-21</a> tells us to stay away from immoral people including the drunkards</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Ephesians+5%3A18-20&version=mev"
           title="18 Do not be drunk with wine, for that is reckless living. But be filled with the Spirit.">Ephesians 5:18-20</a> tells us to not get drunk instead seek and worship God.</p>
-      <p><span class="sin-verdict">DRUNKYARD</span></p>
+      <p><span class="sin-verdict">DRUNKARD</span></p>
     </div>
 
     <!-- Murder -->
-    <div class="sin-card">
+    <div class="sin-card" id="murder">
       <h4>Murder</h4>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation+21%3A8&version=mev"
-          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have thier portion in the lake which burns with fire and brimstone.">Revelation 21:8</a> tells us that murderers go burn in hell</p>
+          title="8 But the cowardly, the unbelieving, the abominable, the murderers, the sexually immoral, the sorcerers, the idolaters, and all liars shall have their portion in the lake which burns with fire and brimstone.">Revelation 21:8</a> tells us that murderers go burn in hell</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Matthew+15%3A16-20&version=MEV"
-          title="19 For out of the heart proceed evil thoughts, murders, adulteries, sexual immorality, thefts, false witness, and blasphemies.">Matthew 15:19</a> tells us that murder is something that comes from the heart to begin with, be it hatred or dark desires</p>
+          title="19 For out of the heart proceed evil thoughts, murders, adulteries, sexual immorality, thefts, false witness, and blasphemys.">Matthew 15:19</a> tells us that murder is something that comes from the heart to begin with, be it hatred or dark desires</p>
       <p>In <a href="https://www.biblegateway.com/passage/?search=Matthew+19.16-22&version=MEV"
           title="18 He said to Him, Which ones? Jesus said, You shall not murder, You shall not commit adultery, You shall not steal, You shall not bear false witness,">Matthew 19.16-22</a> Jesus said that murderers won't get eternal life</p>
       <p><span class="sin-verdict">MURDERER</span></p>
     </div>
 
     <!-- Slander -->
-    <div class="sin-card">
+    <div class="sin-card" id="slander">
       <h4>Slander</h4>
       <p>Slander is making fun of people and saying bad things about them</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Psalm+101&version=MEV" title="Whoever privately slanders his neighbor, him I will destroy;">Psalm 101:5</a> tells us that God destroys whoever slanders others</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Matthew+12%3A36&version=mev"
           title="36 But I say to you that for every idle word that men speak, they will give an account on the Day of Judgment.">Matthew 12:36</a> says that every word we say in life will be judged by God</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Proverbs+8%3A13&version=mev" title="13 The fear of the Lord is to hate evil; pride and arrogance and the evil way and the perverse mouth I hate.">Proverbs 8:13</a> tells us to stop using hate speech against humans</p>
-      <p>Note: hate speech is specificly things like racism or badmouthing someone, coming with arguments against someones ideology is not hate speech.</p>
+      <p>Note: hate speech is specifically things like racism or badmouthing someone, coming with arguments against someones ideology is not hate speech.</p>
       <p><span class="sin-verdict">SLANDERER</span></p>
     </div>
 
     <!-- Pride -->
-    <div class="sin-card">
+    <div class="sin-card" id="pride">
       <h4>Pride</h4>
       <p>Pride is the source to many many sins, its also what made satan fall in the first place</p>
       <p><a href="Proverbs 8:12-21" title="13 The fear of the Lord is to hate evil; pride and arrogance and the evil way and the perverse mouth I hate.">proverbs 8:12-21</a> explains how God doesn't like pride and arrogance.</p>
@@ -214,34 +257,34 @@
     </div>
 
     <!-- Unforgivable Sin -->
-    <div class="unforgivable-card">
-      <h2>Unforgivable Sin</h2>
-      <h4>Denying God/Blasphemie Against the Holy Spirit</h4>
-      <p>The unforgivable sin isn't a quick and accidental sin, its a <strong>LONG AND WILLFULL</strong> one</p>
+    <div class="unforgivable-card" id="unforgivable-sin">
+      <h2>Unforgivable Sin <a href="#unforgivable-sin" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+      <h4>Denying God/Blasphemy Against the Holy Spirit</h4>
+      <p>The unforgivable sin isn't a quick and accidental sin, its a <strong>LONG AND WILLFUL</strong> one</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Matthew+12%3A31&version=MEV"
           title="31 Therefore I say to you, all kinds of sin and blasphemy will be forgiven men, but the blasphemy against the Holy Spirit will not be forgiven men.">Matthew 12:31</a>, <a href="https://www.biblegateway.com/passage/?search=Mark+3%3A28&version=mev"
-          title="28 Truly I say to you, all sins will be forgiven the sons of men, and whatever blasphemies they speak.">Mark 3:28</a> and <a href="https://www.biblegateway.com/passage/?search=Luke+12%3A10&version=MEV"
-          title="10 And everyone who speaks a word against the Son of Man will be forgiven, but he who blasphemes against the Holy Spirit will not be forgiven.">Luke 12:10</a> say that blasphemie against the Holy Spirit cannot be forgiven.</p>
-      <p>Knowing the truth but denying it leads one day to the unforgivable sin, pharoh from the book of exodus commited the unforgivable sin by hardening his heart continiously until God accepted his choice and left him in the darkness</p>
+          title="28 Truly I say to you, all sins will be forgiven the sons of men, and whatever blasphemys they speak.">Mark 3:28</a> and <a href="https://www.biblegateway.com/passage/?search=Luke+12%3A10&version=MEV"
+          title="10 And everyone who speaks a word against the Son of Man will be forgiven, but he who blasphemes against the Holy Spirit will not be forgiven.">Luke 12:10</a> say that blasphemy against the Holy Spirit cannot be forgiven.</p>
+      <p>Knowing the truth but denying it leads one day to the unforgivable sin, pharaoh from the book of exodus committed the unforgivable sin by hardening his heart continuously until God accepted his choice and left him in the darkness</p>
       <p>God seeks a relationship with you, and constantly tries getting your attention, willfully denying him will make him no more seek you, until the point you cannot even find him anymore</p>
-      <p>Theres an invisble line you cross one day by denying Jesus in which one day you cannot accept Jesus anymore and become lost</p>
+      <p>There's an invisible line you cross one day by denying Jesus in which one day you cannot accept Jesus anymore and become lost</p>
     </div>
 
     <!-- External Factors -->
     <div class="card">
-      <h2>External Factors</h2>
+      <h2 id="external-factors">External Factors <a href="#external-factors" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20corinthians%2010:13&version=mev"
           title="13 No temptation has taken you except what is common to man. God is faithful, and He will not permit you to be tempted above what you can endure, but will with the temptation also make a way to escape, that you may be able to bear it.">1 corinthians 10:13</a> tells us that God does not allow temptation beyond of what you can bear, he will protect you against it, if it goes too far, but God does not tempt people as in <a
           href="https://www.biblegateway.com/passage/?search=James%201:13-15&version=mev"
           title="13 Let no man say when he is tempted, I am tempted by God, for God cannot be tempted with evil; neither does He tempt anyone.">James 1:13-15</a></p>
-      <p>Satan is always tempting people, he cannot do anything else but tempting, Satan is already a defeated ennemy.</p>
+      <p>Satan is always tempting people, he cannot do anything else but tempting, Satan is already a defeated enemy.</p>
     </div>
 
     <!-- The Only Hope -->
-    <div class="hope-card">
-      <h2>THE ONLY HOPE</h2>
+    <div class="hope-card" id="the-only-hope">
+      <h2>THE ONLY HOPE <a href="#the-only-hope" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>Everyone is a sinner, and no one deserves heaven, but <strong>Jesus gave his Life for US all.</strong><br>So that
-        we can be forgiven and trought his <strong>GRACE</strong> only, will we get eternal LIFE.</p>
+        we can be forgiven and through his <strong>GRACE</strong> only, will we get eternal LIFE.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=John+5%3A24&version=mev"
           title="24 Truly, truly I say to you, whoever hears My word and believes in Him who sent Me has eternal life and shall not come into condemnation, but has passed from death into life.">John 5:24</a>, <a href="https://www.biblegateway.com/passage/?search=John+14%3A6&version=mev"
           title="6 Jesus said to him, I am the way, the truth, and the life. No one comes to the Father except through Me.">John 14:6</a>, <a href="https://www.biblegateway.com/passage/?search=John+1%3A29&version=mev"
@@ -251,14 +294,41 @@
       <p>We can't pay our way into heaven, the death of Jesus is <strong>sufficient</strong> as in <a
           href="https://www.biblegateway.com/passage/?search=1+John+2%3A2&version=mev"
           title="2 He is the atoning sacrifice for our sins, and not for ours only, but also for the sins of the whole world.">1 John 2:2</a></p>
-      <p>Trought the <strong>blood of Jesus alone</strong> are we saved</p>
+      <p>Through the <strong>blood of Jesus alone</strong> are we saved</p>
       <div class="img-card">
-        <img src="paid.png" alt="It is paid">
+        <img src="paid.png" alt="It is paid" loading="lazy">
       </div>
       <h4>Why believe in Jesus?</h4>
       <p><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A12-32&version=MEV"
           title="17 If Christ is not raised, your faith is vain; you are still in your sins.">1 Corinthians 15:12-32</a> tells us that if Jesus did not die on the cross, we couldn't have our sins forgiven</p>
     </div>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Related Topics</h3>
+    <div class="comparison-grid">
+      <a href="../Afterdeath/index.html" class="related-card">
+        <strong>After Death</strong>
+        <p>What happens after death? Sheol, Heaven, and Hell</p>
+      </a>
+      <a href="../trinity/index.html" class="related-card">
+        <strong>Trinity</strong>
+        <p>Is God the Trinity? And who is the Trinity?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../Afterdeath/index.html" class="page-nav-link page-nav-prev">
+      <small>Previous</small>
+      <span>After Death</span>
+    </a>
+    <a href="../Religions/index.html" class="page-nav-link page-nav-next">
+      <small>Next</small>
+      <span>Religions</span>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -275,10 +345,51 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

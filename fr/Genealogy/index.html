@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <title>La Genealogie de Jesus-Christ - D'Adam a Jesus</title>
+  <meta name="description" content="Une genealogie complete basee sur les Ecritures, d'Adam a Jesus-Christ, retracant la lignee royale par Joseph (Matthieu 1) et la lignee biologique par Marie (Luc 3).">
+  <meta property="og:title" content="La Genealogie de Jesus-Christ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Retracez les generations bibliques d'Adam a Jesus-Christ a travers les Ecritures." />
+  <meta property="og:url" content="https://theholybook.github.io/fr/Genealogy/" />
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">The Holy Book</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Basculer la navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../trinity/index.html">Trinite</a></li>
+        <li><a href="../apocalypse/index.html">Fin des Temps</a></li>
+        <li><a href="../Afterdeath/index.html">Apres la Mort</a></li>
+        <li><a href="../sins/index.html">Peches</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="../bible-order/index.html">Guide Biblique</a></li>
+        <li><a href="index.html" class="active">Genealogie</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <a href="../../Genealogy/index.html">EN</a>
+        <a href="../../de/Genealogy/index.html">DE</a>
+        <a href="index.html" class="active-lang">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le mode sombre" title="Basculer le mode sombre">☀️</button>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <h1>La Genealogie de Jesus-Christ</h1>
+    <p class="subtitle">La lignee directe d'Adam a Jesus, 77 generations sur plus de 4 000 ans d'Ecritures.</p>
+  </header>
+
+  <!-- Color Legend -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="color-legend">
+      <h4>Code Couleur des Epoques</h4>
+      <div class="legend-items">
+        <span class="legend-item"><span class="legend-dot" style="background:#0d9488"></span> Pre-Deluge</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span> Post-Deluge</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#059669"></span> Patriarches</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#64748b"></span> De Juda a David</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span> Royaume Uni</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span> Royaume Divise / Exil</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#6b7280"></span> Intertestamentaire</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ca8a04"></span> Jesus</span>
+      </div>
+    </div>
+
+    <!-- Scripture References -->
+    <div class="card" style="margin-bottom:var(--space-xl)">
+      <h4 style="margin-top:0">Sources Scripturaires</h4>
+      <p style="margin-bottom:var(--space-sm); font-size:0.9rem; color:var(--color-text-secondary)">Cette genealogie est compilee a partir des passages cles suivants (LSG) :</p>
+      <ul style="font-size:0.9rem; margin-bottom:0">
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+5&version=LSG">Genese 5</a> -- Adam a Noe (Patriarches pre-Deluge)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Genesis+11&version=LSG">Genese 11</a> -- Sem a Abram (Patriarches post-Deluge)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Ruth+4%3A18-22&version=LSG">Ruth 4:18-22</a> -- Perets a David</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Matthew+1&version=LSG">Matthieu 1</a> -- Abraham a Jesus par Joseph (lignee royale/legale)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=LSG">Luc 3:23-38</a> -- Jesus a Adam par Marie (lignee biologique)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TIMELINE: PRE-FLOOD -->
+  <div class="gen-timeline">
+
+    <div class="tl-era">
+      <span class="tl-era-label bg-preflood">Patriarches Pre-Deluge -- Genese 5</span>
+    </div>
+
+    <!-- 1. Adam -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">1ere Generation</div>
+        <h3>Adam</h3>
+        <div class="tl-lifespan">A vecu 930 ans</div>
+        <p class="tl-detail">Le premier homme, cree par Dieu a partir de la poussiere du sol. A engendre Seth a l'age de 130 ans.</p>
+        <span class="tl-ref">Genese 5:3-5</span>
+      </div>
+    </div>
+
+    <!-- 2. Seth -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">2e Generation</div>
+        <h3>Seth</h3>
+        <div class="tl-lifespan">A vecu 912 ans</div>
+        <p class="tl-detail">Ne d'Adam et Eve apres la mort d'Abel. A engendre Enosh a l'age de 105 ans.</p>
+        <span class="tl-ref">Genese 5:6-8</span>
+      </div>
+    </div>
+
+    <!-- 3. Enosh -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">3e Generation</div>
+        <h3>Enosh</h3>
+        <div class="tl-lifespan">A vecu 905 ans</div>
+        <p class="tl-detail">A son epoque, les gens commencerent a invoquer le nom de l'Eternel. A engendre Kenan a l'age de 90 ans.</p>
+        <span class="tl-ref">Genese 5:9-11</span>
+      </div>
+    </div>
+
+    <!-- 4-10: Kenan through Noah -->
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">4e Generation</div>
+        <h3>Kenan</h3>
+        <div class="tl-lifespan">A vecu 910 ans</div>
+        <p class="tl-detail">A engendre Mahalaleel a l'age de 70 ans.</p>
+        <span class="tl-ref">Genese 5:12-14</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">5e Generation</div>
+        <h3>Mahalaleel</h3>
+        <div class="tl-lifespan">A vecu 895 ans</div>
+        <p class="tl-detail">A engendre Jered a l'age de 65 ans.</p>
+        <span class="tl-ref">Genese 5:15-17</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">6e Generation</div>
+        <h3>Jered</h3>
+        <div class="tl-lifespan">A vecu 962 ans</div>
+        <p class="tl-detail">A engendre Henoc a l'age de 162 ans.</p>
+        <span class="tl-ref">Genese 5:18-20</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">7e Generation</div>
+        <h3>Henoc</h3>
+        <div class="tl-lifespan">A vecu 365 ans</div>
+        <p class="tl-detail">A marche fidelement avec Dieu, puis Dieu le prit ; il ne vit pas la mort. A engendre Methuselah a l'age de 65 ans.</p>
+        <span class="tl-event-badge">Enleve par Dieu</span>
+        <br><span class="tl-ref">Genese 5:21-24</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">8e Generation</div>
+        <h3>Methuselah</h3>
+        <div class="tl-lifespan">A vecu 969 ans, la personne ayant vecu le plus longtemps dans les Ecritures</div>
+        <p class="tl-detail">A engendre Lemec a l'age de 187 ans. Est mort l'annee du Grand Deluge.</p>
+        <span class="tl-ref">Genese 5:25-27</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">9e Generation</div>
+        <h3>Lemec</h3>
+        <div class="tl-lifespan">A vecu 777 ans</div>
+        <p class="tl-detail">A engendre Noe a l'age de 182 ans. A dit de Noe : "Celui-ci nous consolera."</p>
+        <span class="tl-ref">Genese 5:28-31</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">10e Generation</div>
+        <h3>Noe</h3>
+        <div class="tl-lifespan">A vecu 950 ans</div>
+        <p class="tl-detail">A engendre Sem, Cham et Japhet a l'age de 500 ans. A construit l'arche et a survecu au Grand Deluge a l'age de 600 ans.</p>
+        <span class="tl-event-badge">Le Grand Deluge</span>
+        <br><span class="tl-ref">Genese 5:32, 7:6, 9:29</span>
+      </div>
+    </div>
+
+    <!-- POST-FLOOD PATRIARCHS -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-postflood">Patriarches Post-Deluge -- Genese 11</span>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">11e Generation</div>
+        <h3>Sem</h3>
+        <div class="tl-lifespan">A vecu 600 ans</div>
+        <p class="tl-detail">A engendre Arpakschad a l'age de 100 ans, deux ans apres le Deluge. Ancetre de tous les peuples semitiques.</p>
+        <span class="tl-ref">Genese 11:10-11</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">12e Generation</div>
+        <h3>Arpakschad</h3>
+        <div class="tl-lifespan">A vecu 438 ans</div>
+        <p class="tl-detail">A engendre Schelach a l'age de 35 ans.</p>
+        <span class="tl-ref">Genese 11:12-13</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">13e Generation</div>
+        <h3>Schelach</h3>
+        <div class="tl-lifespan">A vecu 433 ans</div>
+        <p class="tl-detail">A engendre Heber a l'age de 30 ans.</p>
+        <span class="tl-ref">Genese 11:14-15</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">14e Generation</div>
+        <h3>Heber</h3>
+        <div class="tl-lifespan">A vecu 464 ans</div>
+        <p class="tl-detail">A engendre Peleg a l'age de 34 ans. Racine du nom "Hebreu."</p>
+        <span class="tl-ref">Genese 11:16-17</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">15e Generation</div>
+        <h3>Peleg</h3>
+        <div class="tl-lifespan">A vecu 239 ans</div>
+        <p class="tl-detail">A engendre Rehu a l'age de 30 ans. "De son temps la terre fut partagee."</p>
+        <span class="tl-event-badge">Tour de Babel / La terre divisee</span>
+        <br><span class="tl-ref">Genese 10:25, 11:18-19</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">16e Generation</div>
+        <h3>Rehu</h3>
+        <div class="tl-lifespan">A vecu 239 ans</div>
+        <p class="tl-detail">A engendre Serug a l'age de 32 ans.</p>
+        <span class="tl-ref">Genese 11:20-21</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">17e Generation</div>
+        <h3>Serug</h3>
+        <div class="tl-lifespan">A vecu 230 ans</div>
+        <p class="tl-detail">A engendre Nachor a l'age de 30 ans.</p>
+        <span class="tl-ref">Genese 11:22-23</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">18e Generation</div>
+        <h3>Nachor</h3>
+        <div class="tl-lifespan">A vecu 148 ans</div>
+        <p class="tl-detail">A engendre Terach a l'age de 29 ans.</p>
+        <span class="tl-ref">Genese 11:24-25</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood">
+        <div class="tl-number era-postflood">19e Generation</div>
+        <h3>Terach</h3>
+        <div class="tl-lifespan">A vecu 205 ans</div>
+        <p class="tl-detail">A engendre Abram, Nachor et Haran a l'age de 70 ans. Est parti d'Ur en Chaldee.</p>
+        <span class="tl-ref">Genese 11:26-32</span>
+      </div>
+    </div>
+
+    <!-- THE PATRIARCHS -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-patriarchs">Les Patriarches</span>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">20e Generation</div>
+        <h3>Abraham</h3>
+        <div class="tl-lifespan">A vecu 175 ans</div>
+        <p class="tl-detail">A l'origine Abram. Appele par Dieu hors d'Ur. Pere de nombreuses nations. A engendre Isaac a l'age de 100 ans avec sa femme Sarah.</p>
+        <span class="tl-ref">Genese 12:1-4, 21:5, 25:7</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">21e Generation</div>
+        <h3>Isaac</h3>
+        <div class="tl-lifespan">A vecu 180 ans</div>
+        <p class="tl-detail">L'enfant de la promesse. A engendre les jumeaux Jacob et Esau a l'age de 60 ans avec sa femme Rebecca.</p>
+        <span class="tl-ref">Genese 25:26, 35:28</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">22e Generation</div>
+        <h3>Jacob / Israel</h3>
+        <div class="tl-lifespan">A vecu 147 ans</div>
+        <p class="tl-detail">A lutte avec Dieu et a recu le nom d'Israel. Pere des 12 tribus. Epouses : Lea et Rachel.</p>
+        <span class="tl-ref">Genese 32:28, 47:28</span>
+      </div>
+    </div>
+
+  </div><!-- end .gen-timeline -->
+
+  <!-- THE 12 TRIBES -->
+  <div class="tl-tribes-card">
+    <h3>Les Douze Tribus d'Israel</h3>
+    <p class="tl-detail" style="max-width:100%; margin: 0 auto var(--space-md);">Les fils de Jacob qui devinrent les douze tribus. La lignee vers Jesus continue par <strong>Juda</strong>.</p>
+    <div class="tribes-grid">
+      <span class="tribe-chip">Ruben</span>
+      <span class="tribe-chip">Simeon</span>
+      <span class="tribe-chip">Levi</span>
+      <span class="tribe-chip tribe-highlight">Juda</span>
+      <span class="tribe-chip">Dan</span>
+      <span class="tribe-chip">Nephthali</span>
+      <span class="tribe-chip">Gad</span>
+      <span class="tribe-chip">Aser</span>
+      <span class="tribe-chip">Issacar</span>
+      <span class="tribe-chip">Zabulon</span>
+      <span class="tribe-chip">Joseph</span>
+      <span class="tribe-chip">Benjamin</span>
+    </div>
+    <img src="../../Genealogy/Tribes.webp" alt="Les Douze Tribus d'Israel" class="tribes-img" loading="lazy">
+  </div>
+
+  <!-- JUDAH TO DAVID -->
+  <div class="gen-timeline">
+    <div class="tl-era">
+      <span class="tl-era-label bg-patriarchs">Juda -- La Tribu Royale</span>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs">
+        <div class="tl-number era-patriarchs">23e Generation</div>
+        <h3>Juda</h3>
+        <p class="tl-detail">Fils de Jacob et Lea. Pere de Perets par Tamar. La tribu de la royaute et du Messie.</p>
+        <span class="tl-ref">Genese 38, 49:10</span>
+      </div>
+    </div>
+
+    <div class="tl-era">
+      <span class="tl-era-label bg-judges">Perets a David -- Ruth 4:18-22</span>
+    </div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">24e Generation</div><h3>Perets</h3><p class="tl-detail">Fils de Juda et Tamar. Frere jumeau de Zerach.</p><span class="tl-ref">Genese 38:29, Ruth 4:18</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">25e Generation</div><h3>Hetsron</h3><p class="tl-detail">Fils de Perets.</p><span class="tl-ref">Ruth 4:18</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">26e Generation</div><h3>Ram</h3><p class="tl-detail">Fils d'Hetsron.</p><span class="tl-ref">Ruth 4:19</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">27e Generation</div><h3>Amminadab</h3><p class="tl-detail">Fils de Ram. A vecu a l'epoque de l'Exode d'Egypte.</p><span class="tl-event-badge">Epoque de l'Exode</span><br><span class="tl-ref">Ruth 4:19, Nombres 1:7</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">28e Generation</div><h3>Nachschon</h3><p class="tl-detail">Fils d'Amminadab. Chef de la tribu de Juda pendant l'errance dans le desert.</p><span class="tl-ref">Ruth 4:20, Nombres 2:3</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">29e Generation</div><h3>Salmon</h3><p class="tl-detail">Fils de Nachschon. A epouse Rahab de Jericho.</p><span class="tl-ref">Ruth 4:20, Matthieu 1:5</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">30e Generation</div><h3>Boaz</h3><p class="tl-detail">Fils de Salmon et Rahab. Le parent-redempteur qui a epouse Ruth la Moabite.</p><span class="tl-ref">Ruth 4:21</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">31e Generation</div><h3>Obed</h3><p class="tl-detail">Fils de Boaz et Ruth.</p><span class="tl-ref">Ruth 4:21</span></div></div>
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="judges"><div class="tl-number era-judges">32e Generation</div><h3>Jesse</h3><p class="tl-detail">Fils d'Obed. Pere de huit fils, le plus jeune etant David.</p><span class="tl-ref">Ruth 4:22, 1 Samuel 16:10-11</span></div></div>
+
+    <!-- THE KINGS -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-kingdom">Le Royaume Uni</span>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-kingdom"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="kingdom">
+        <div class="tl-number era-kingdom">33e Generation</div>
+        <h3>Roi David</h3>
+        <div class="tl-lifespan">A vecu ~70 ans &bull; A regne 40 ans</div>
+        <p class="tl-detail">Berger, guerrier, psalmiste, roi de tout Israel. Dieu a fait une alliance eternelle avec sa maison. Pere de Salomon par Bathscheba, et aussi pere de Nathan.</p>
+        <span class="tl-ref">2 Samuel 5:4, 7:12-16</span>
+      </div>
+    </div>
+
+  </div><!-- end .gen-timeline -->
+
+  <!-- THE SPLIT -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="card" style="text-align:center; border-left:3px solid #7c3aed; border-right:3px solid #7c3aed; margin-bottom:var(--space-xl);">
+      <h3 style="margin-top:0; color:var(--color-accent);">La lignee se divise apres David</h3>
+      <p style="font-size:0.9rem; max-width:100%;">Apres le roi David, les Ecritures enregistrent deux lignees genealogiques vers Jesus. <strong>L'Evangile de Matthieu</strong> retrace la lignee <em>royale/legale</em> par Salomon jusqu'a Joseph, faisant de Jesus l'heritier legal du trone de David. <strong>L'Evangile de Luc</strong> retrace la lignee <em>biologique</em> par Nathan jusqu'a Marie, faisant de Jesus un descendant physique de David.</p>
+    </div>
+  </div>
+
+  <div class="tl-split-section">
+    <div class="tl-split-header">
+      <div>
+        <h3 style="color:#7c3aed;">Lignee de Matthieu</h3>
+        <small>Lignee royale/legale par <strong>Salomon</strong> jusqu'a <strong>Joseph</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A6-16&version=LSG">Matthieu 1:6-16</a></small>
+      </div>
+      <div>
+        <h3 style="color:#dc2626;">Lignee de Luc</h3>
+        <small>Lignee biologique par <strong>Nathan</strong> jusqu'a <strong>Marie</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-31&version=LSG">Luc 3:23-38</a></small>
+      </div>
+    </div>
+
+    <div class="tl-dual-track">
+      <!-- LEFT TRACK: Matthew's Line -->
+      <div class="tl-track tl-track-left">
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #7c3aed;"><strong>Salomon</strong><small>Fils de David et Bathscheba. Roi le plus sage. A bati le Temple.</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Roboam</strong><small>Le royaume divise sous son regne</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Abija</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Asa</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josaphat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joram</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Ozias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jotham</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Achaz</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Ezechias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Manasse</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Amon</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #dc2626;"><strong>Jeconia</strong><small>Emmene a Babylone</small><br><span class="tl-event-badge">Exil a Babylone</span></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Schealtiel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Zorobabel</strong><small>A dirige le retour de l'exil ; a rebati le Temple</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Abiud</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eliakim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Azor</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Sadok</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Achim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eliud</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eleazar</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthan</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jacob</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Joseph</strong><small>Epoux de Marie, pere legal de Jesus</small></div></div>
+      </div>
+
+      <!-- RIGHT TRACK: Luke's Line -->
+      <div class="tl-track tl-track-right">
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #dc2626;"><strong>Nathan</strong><small>Fils de David, pas le prophete Nathan.</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattatha</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Menna</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melea</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eliakim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jonam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joseph</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Juda</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Simeon</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Levi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jorim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eliezer</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josue</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Er</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Elmadam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Cosam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Addi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melchi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Neri</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Schealtiel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Zorobabel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Rhesa</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joanan</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joda</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josech</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Semein</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattathias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Maath</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Naggai</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Esli</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Nahum</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Amos</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattathias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joseph</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jannai</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melchi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Levi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Heli (Eli)</strong><small>Pere de Marie</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Marie</strong><small>Mere de Jesus, naissance virginale</small></div></div>
+      </div>
+    </div><!-- end .tl-dual-track -->
+  </div><!-- end .tl-split-section -->
+
+  <!-- CONVERGENCE: Jesus Christ -->
+  <div class="tl-converge">
+    <div class="tl-converge-arrows">
+      &#9660; &#9660;
+    </div>
+    <div class="tl-jesus-card">
+      <h2>Jesus-Christ</h2>
+      <p>"Le Fils de David, le Fils d'Abraham"</p>
+      <p style="font-size:0.85rem;">Ne a Bethleem de Judee. Heritier legal du trone de David par Joseph. Descendant biologique de David par Marie. Le Messie promis.</p>
+      <p><small><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A1&version=LSG">Matthieu 1:1</a> &bull; <a href="https://www.biblegateway.com/passage/?search=Luke+3%3A23-38&version=LSG">Luc 3:23-38</a></small></p>
+      <img src="../../Genealogy/cross.jpg" alt="La Croix de Jesus-Christ" loading="lazy">
+    </div>
+  </div>
+
+  <!-- EXPLANATION / NOTES -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem var(--space-3xl);">
+    <div class="notes-section">
+      <h3>Pourquoi deux genealogies differentes ?</h3>
+      <p style="max-width:100%">Matthieu et Luc enregistrent des genealogies differentes pour Jesus. L'explication largement acceptee est que <strong>Matthieu retrace la lignee legale/royale par Joseph</strong>, faisant de Jesus l'heritier legal du trone de David, tandis que <strong>Luc retrace la lignee biologique par Marie</strong>, faisant de Jesus un descendant physique de David. Dans la culture juive, une genealogie pouvait etre listee sous le nom du mari meme en retracant la lignee de l'epouse. Luc 3:23 note soigneusement que Jesus etait "fils, comme on le croyait, de Joseph."</p>
+      <p style="max-width:100%">Les deux lignees convergent vers David et plus tot vers Abraham, confirmant que Jesus a accompli les propheties messianiques exigeant que le Messie soit a la fois un fils d'Abraham (Genese 22:18) et un fils de David (2 Samuel 7:12-16).</p>
+      <img src="../../Genealogy/explaination.png" alt="Diagramme montrant les deux lignees genealogiques" style="max-width:100%; margin-top:var(--space-md); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);" loading="lazy">
+    </div>
+
+    <blockquote class="scripture" style="margin-top:var(--space-xl);">
+      Genealogie de Jesus-Christ, fils de David, fils d'Abraham.
+      <cite class="verse-ref">-- Matthieu 1:1 (LSG)</cite>
+    </blockquote>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Sujets Connexes</h3>
+    <div class="comparison-grid">
+      <a href="../bible-order/index.html" class="related-card">
+        <strong>Guide Biblique</strong>
+        <p>Dans quel ordre dois-je lire la Bible ?</p>
+      </a>
+      <a href="../trinity/index.html" class="related-card">
+        <strong>Trinite</strong>
+        <p>Dieu est-il la Trinite ? Et qui est la Trinite ?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../bible-order/index.html" class="page-nav-link page-nav-prev">
+      <small>Precedent</small>
+      <span>Guide Biblique</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">The Holy Book</span>
+      <ul class="footer-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../trinity/index.html">Trinite</a></li>
+        <li><a href="../apocalypse/index.html">Fin des Temps</a></li>
+        <li><a href="../Afterdeath/index.html">Apres la Mort</a></li>
+        <li><a href="../sins/index.html">Peches</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="../bible-order/index.html">Guide Biblique</a></li>
+        <li><a href="index.html">Genealogie</a></li>
+      </ul>
+      <p class="footer-credits">Cree par Pascal | Edite par <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Lien copie !');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
+</body>
+
+</html>

@@ -5,14 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="Is God the Trinity? How God is one Being in three Persons -- the Father, the Son Jesus Christ, and the Holy Spirit.">
   <meta property="og:title" content="Who is the trinity?" />
   <meta property="og:type" content="website" />
+  <meta property="og:description" content="Is God the Trinity? Understanding the Father, the Son, and the Holy Spirit." />
+  <meta property="og:url" content="https://theholybook.github.io/trinity/" />
   <meta property="og:image"
-    content="https://github.com/theholybook/theholybook.github.io/blob/main/trinity/concept.jpg" />
+    content="https://theholybook.github.io/trinity/concept.jpg" />
   <title>The Trinity</title>
 </head>
 
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="site-nav">
@@ -31,10 +47,16 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <div class="lang-switcher">
+        <a href="index.html" class="active-lang">EN</a>
+        <a href="../de/trinity/index.html">DE</a>
+        <a href="../fr/trinity/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
-  <header class="page-header">
+  <header class="page-header" id="main-content">
     <h1>Trinity</h1>
     <p class="subtitle">Some humans believe that the trinity doesn't exist, but let me clarify it to you</p>
   </header>
@@ -46,7 +68,7 @@
           <p>The trinity does <strong style="color:Red">not</strong> mean 3 Gods
             in one God, <strong style="color:green">it means</strong> 1 God with 3 Persons</p>
           <div class="img-card">
-            <img src="trinity.png" alt="Trinity diagram" style="max-width: 200px;">
+            <img src="trinity.png" alt="Trinity diagram" style="max-width: 200px;" loading="lazy">
           </div>
         </li>
         <li><p>Jesus is NOT the Father</p></li>
@@ -57,7 +79,7 @@
       <p class="text-center">Why God is the Trinity, and who are those 3 Persons</p>
     </div>
 
-    <h2 class="text-center">God</h2>
+    <h2 id="god" class="text-center">God <a href="#god" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <p class="text-center text-muted">Also called "I am" and <a
         href="https://www.biblegateway.com/passage/?search=revelation+1%3A1-8&version=MEV"
         title="8 I am the Alpha and the Omega, the Beginning and the End, says the Lord, who is and who was and who is to come, the Almighty."
@@ -68,9 +90,9 @@
   <div class="content-wide">
     <div class="trinity-grid">
       <div class="trinity-card card-son">
-        <h2>Jesus</h2>
+        <h2 id="jesus">Jesus <a href="#jesus" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
 
-        <p>The son is in the verses with all 3 entities ment as one <a
+        <p>The son is in the verses with all 3 entities meant as one <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=Mev"
             title="19 Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy">Matthew
             28</a> and <a href="https://www.biblegateway.com/passage/?search=2+Corinthians+13&version=Mev"
@@ -103,16 +125,16 @@
           <li><p>Has taught about God to humans</p></li>
           <li><p>Has made many wonders in God's name</p></li>
           <li><p>Taken all our Sins on the cross dying the worst death ever so we don't have to taking away <strong>ALL our sins</strong> from us</p></li>
-          <li><p>Risen from the Death on the thirth day and defeated death on the cross</p></li>
+          <li><p>Risen from the Death on the third day and defeated death on the cross</p></li>
           <li><p>Returned to the Father "home"</p></li>
           <li><p>On his Second return will be Judging the world</p></li>
         </ul>
-        <img src="theson.jpg" alt="Jesus the Son">
+        <img src="theson.jpg" alt="Jesus the Son" loading="lazy">
       </div>
 
       <div class="trinity-card card-spirit">
-        <h2>Holy Spirit</h2>
-        <p>The Holy Spirit is also in the verses with all 3 entities ment as one <a
+        <h2 id="holy-spirit">Holy Spirit <a href="#holy-spirit" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+        <p>The Holy Spirit is also in the verses with all 3 entities meant as one <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=Mev"
             title="19 Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy">Matthew
             28</a> and <a href="https://www.biblegateway.com/passage/?search=2+Corinthians+13&version=Mev"
@@ -132,19 +154,19 @@
         <p>You cannot see nor hear the Holy Spirit, but you can feel him he is a <strong>Spirit</strong> just like what everyone of us has a spirit and don't see it</p>
         <p>His functions are:</p>
         <ul style="text-align: left;">
-          <li><p>Come to confort humans in the belief</p></li>
+          <li><p>Come to comfort humans in the belief</p></li>
           <li><p>Transform the new born christian into one of God's people</p></li>
           <li><p>Help humans finding the right path</p></li>
           <li><p>Warn humans from sinning</p></li>
           <li><p>Protect and fight demons for believers</p></li>
           <li><p>Guides and makes sure that his message will be heard</p></li>
         </ul>
-        <img src="holyspirit.jpg" alt="The Holy Spirit">
+        <img src="holyspirit.jpg" alt="The Holy Spirit" loading="lazy">
       </div>
 
       <div class="trinity-card card-father">
-        <h2>The Father</h2>
-        <p>The Father is also in the verses with all 3 entities ment as one <a
+        <h2 id="the-father">The Father <a href="#the-father" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
+        <p>The Father is also in the verses with all 3 entities meant as one <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=Mev"
             title="19 Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy">Matthew
             28</a> and <a href="https://www.biblegateway.com/passage/?search=2+Corinthians+13&version=Mev"
@@ -157,17 +179,17 @@
             href="https://www.biblegateway.com/passage/?search=Matthew+23&version=MEV"
             title="9 And call no man on earth your father, for you have one Father, who is in heaven.">Matthew 23</a></p>
         <p>The father is the judge you will see once at the end of your life, he is gonna judge you with his 2 other persons</p>
-        <p>Compared to you, the father is <strong>ALLMIGHTY, OMNISCIENT, OMNIPOTENT and OMNIPRESENT</strong></p>
+        <p>Compared to you, the father is <strong>ALMIGHTY, OMNISCIENT, OMNIPOTENT and OMNIPRESENT</strong></p>
         <p>His functions are:</p>
         <ul style="text-align: left;">
-          <li><p><strong>Hightest of all</strong></p></li>
+          <li><p><strong>Highest of all</strong></p></li>
           <li><p>Plan the lives of the believers</p></li>
-          <li><p>Punished the wicked</p></li>
+          <li><p>Punishes the wicked</p></li>
           <li><p>Secure a place with him and the believers</p></li>
           <li><p>Judge of the spiritual world we will end in after life</p></li>
           <li><p>The father of everything that ever existed</p></li>
         </ul>
-        <img src="thefather.jpg" alt="The Father">
+        <img src="thefather.jpg" alt="The Father" loading="lazy">
       </div>
     </div>
   </div>
@@ -175,7 +197,7 @@
   <!-- Binding Verses and Arguments -->
   <div class="content">
     <div class="card">
-      <h2>Binding Verses</h2>
+      <h2 id="binding-verses">Binding Verses <a href="#binding-verses" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20John%205:7-9&version=mev"
           title="7 There are three who testify in heaven: the Father, the Word, and the Holy Spirit, and the three are one.">1
           John 5:7</a> talks about how the father, the Holy Spirit and the word/Jesus as in <a
@@ -187,15 +209,15 @@
     </div>
 
     <div class="card">
-      <h2>Arguments Used Against the Trinity</h2>
+      <h2 id="arguments-against-trinity">Arguments Used Against the Trinity <a href="#arguments-against-trinity" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
 
       <p>In <a href="https://www.biblegateway.com/passage/?search=John+14%3A28&version=MEV"
           title="28 You have heard Me say to you, I am going away and am returning to you. If you loved Me, you would rejoice because I said, I am going to the Father, for My Father is greater than I."
-          target="_blank">John 14:28</a> people talk about the father being greater than jesus(the son) and trought <a
+          target="_blank">John 14:28</a> people talk about the father being greater than jesus(the son) and through <a
           href="https://www.biblegateway.com/passage/?search=John+17&version=MEV"
           title="4 I have glorified You on the earth. I have finished the work You have given Me to do. 5 And now, O Father, glorify Me in Your own presence with the glory which I had with You before the world existed."
           target="_blank">John 17</a> and <a href="https://www.biblegateway.com/passage/?search=Philippians+2&version=MEV" title="6 who, being in the form of God, did not consider equality with God something to be grasped. 7 But He emptied Himself, taking upon Himself the form of a servant, and was made in the likeness of men." target="_blank">Philippians 2</a> the bible shows how jesus laid aside the glory of God and became a humble human.<br>
-        Jesus does NOT say "God is greater than i" he says "the father is greater than i" now it makes sence, theire not the
+        Jesus does NOT say "God is greater than i" he says "the father is greater than i" now it makes sense, they're not the
         same, when jesus returns to the Father, he will get his glory back.</p>
 
       <p>The son(Jesus) is the only true God, The Father is the only true God and the Holy Spirit is the
@@ -219,7 +241,7 @@
           href="https://www.biblegateway.com/passage/?search=Colossians+1&version=MEV"
           title="15 He is the image of the invisible God and the firstborn of every creature." target="_blank">Colossians 1</a> which
         Colossians says at the beginning he is the image of the invisible God also Firstborn doesn't mean the first to be
-        born, it means the hightest of the foodchain, the leader, as said in <a
+        born, it means the highest of the food chain, the leader, as said in <a
           href="https://www.biblegateway.com/passage/?search=psalm+89&version=MEV" title="27 Also I will make him my firstborn, the highest of the kings of the earth." target="_blank">Psalm 89</a> and in <a
           href="https://www.biblegateway.com/passage/?search=exodus+4&version=MEV"
           title="22 You shall say to Pharaoh, Thus says the Lord: Israel is My son, even My firstborn."
@@ -228,7 +250,7 @@
       <hr>
 
       <p><strong>Jesus Never said he is God?</strong></p>
-      <p>Not even read the bible saying these claims, theres many verses where jesus says he IS God and
+      <p>Not even read the bible saying these claims, there's many verses where jesus says he IS God and
         claims the word to be his word!</p>
       <p>Examples:</p>
       <ul>
@@ -239,6 +261,33 @@
       </ul>
       <p><strong>Read the bible before you make false claims, try to understand the word, it is important!!!</strong></p>
     </div>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Related Topics</h3>
+    <div class="comparison-grid">
+      <a href="../Religions/index.html" class="related-card">
+        <strong>Religions</strong>
+        <p>What religion is true and what even is religion?</p>
+      </a>
+      <a href="../Afterdeath/index.html" class="related-card">
+        <strong>After Death</strong>
+        <p>What happens after death? Sheol, Heaven, and Hell</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../index.html" class="page-nav-link page-nav-prev">
+      <small>Previous</small>
+      <span>Home</span>
+    </a>
+    <a href="../apocalypse/index.html" class="page-nav-link page-nav-next">
+      <small>Next</small>
+      <span>End Times</span>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -255,10 +304,51 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

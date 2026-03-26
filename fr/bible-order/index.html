@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <meta name="description" content="Un guide categorise des 66 livres de la Bible, organise par genre -- Evangiles, Epitres, Prophetie, Histoire, et plus.">
+  <meta property="og:title" content="Guide Categorise des Livres de la Bible" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Dans quel ordre lire la Bible ? Un guide categorise des 66 livres." />
+  <meta property="og:url" content="https://theholybook.github.io/fr/bible-order/" />
+  <meta property="og:image"
+    content="https://theholybook.github.io/bible%20order/biblebook.jpg" />
+  <title>Guide Categorise des Livres de la Bible</title>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">The Holy Book</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Basculer la navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../trinity/index.html">Trinite</a></li>
+        <li><a href="../apocalypse/index.html">Fin des Temps</a></li>
+        <li><a href="../Afterdeath/index.html">Apres la Mort</a></li>
+        <li><a href="../sins/index.html">Peches</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="index.html" class="active">Guide Biblique</a></li>
+        <li><a href="../Genealogy/index.html">Genealogie</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <a href="../../bible order/index.html">EN</a>
+        <a href="../../de/bible-order/index.html">DE</a>
+        <a href="index.html" class="active-lang">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le mode sombre" title="Basculer le mode sombre">☀️</button>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <h1>Guide Categorise des Livres de la Bible</h1>
+  </header>
+
+  <div class="content">
+    <div class="card">
+      <p>Ce que vous etes sur le point de lire est un guide de categorisation des livres de la Bible. Ce n'est
+        en aucun cas un ordre de lecture. Avec ce site, nous avons l'intention de donner aux disciples du Seigneur Jesus une bonne ressource a
+        utiliser pour voir ou tous les livres s'inscrivent en ce qui concerne leurs themes, leur histoire ou les messages generaux entourant
+        les livres. Nous les avons repartis en 9 categories que vous verrez ci-dessous, elles sont codees par couleur au fur et a mesure que vous lisez
+        et j'ai ecrit des descriptions concernant chaque livre dans les categories. Au debut de chaque categorie il y aura
+        un court paragraphe expliquant la categorie et pourquoi les livres qui s'y trouvent y sont classes.</p>
+      <ul class="bible-guide-intro">
+        <li style="color: darkgreen;">1 <strong>Recit de la Creation/La Chute</strong></li>
+        <li style="color: darkblue;">2-5 <strong>Les Evangiles</strong></li>
+        <li style="color: darkmagenta;">6 <strong>Les Actes des Apotres</strong></li>
+        <li style="color: darkgoldenrod;">7-27 <strong>Lettres/Epitres</strong></li>
+        <li style="color: #333;">28-33 <strong>Livres Poetiques/de Sagesse</strong></li>
+        <li style="color: #b33c00;">34-49 <strong>Loi Mosaique/Histoire</strong></li>
+        <li style="color: #7a00cc;">50-53 <strong>Grands Prophetes</strong></li>
+        <li style="color: #5c8a8a;">54-65 <strong>Petits Prophetes</strong></li>
+        <li style="color: darkred;">66 <strong>Apocalyptique/Jugement Final</strong></li>
+      </ul>
+    </div>
+
+    <div class="toc-card">
+      <h4>Navigation Rapide</h4>
+      <ul>
+        <li><a href="#creation-story">Recit de la Creation/La Chute</a></li>
+        <li><a href="#the-gospels">Les Evangiles</a></li>
+        <li><a href="#acts-of-apostles">Les Actes des Apotres</a></li>
+        <li><a href="#letters-epistles">Lettres/Epitres</a></li>
+        <li><a href="#poetry-wisdom">Livres Poetiques/de Sagesse</a></li>
+        <li><a href="#mosaic-law">Loi Mosaique/Histoire</a></li>
+        <li><a href="#major-prophets">Grands Prophetes</a></li>
+        <li><a href="#minor-prophets">Petits Prophetes</a></li>
+        <li><a href="#apocalyptic">Apocalyptique/Jugement Final</a></li>
+      </ul>
+    </div>
+
+    <h2 id="creation-story" class="bible-category" style="color: darkgreen;">1 <strong>Recit de la Creation/La Chute</strong> <a href="#creation-story" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">1. Genese</h3>
+      <p><strong>Le Livre de la Genese</strong> est un texte fondamental dans la foi et la theologie chretiennes. Il parle des origines du monde et de l'humanite, et de la relation entre Dieu et sa creation. Il revele aussi les consequences devastatrices de la chute de l'humanite et la promesse de redemption par la venue de notre Seigneur Jesus-Christ. C'est un texte riche et complexe, plein de symbolisme et de verites theologiques qui continuent a nous guider dans notre comprehension du plan de salut de Dieu.</p>
+    </div>
+
+    <h2 id="the-gospels" class="bible-category" style="color: darkblue;">2-5 <strong>Les Evangiles</strong> <a href="#the-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">2. Matthieu</h3>
+      <p><strong>L'Evangile de Matthieu</strong> est un veritable tresor parmi les quatre evangiles, car il presente un recit complet de la vie et des enseignements de notre Seigneur Jesus-Christ. Il commence par la genealogie de Jesus, retracant sa lignee jusqu'a Abraham, puis suit sa naissance miraculeuse et sa vie precoce. Il plonge ensuite dans ses puissants enseignements, y compris le celebre Sermon sur la Montagne, et se termine par sa mort et sa resurrection. A travers l'evangile de Matthieu, nous sommes rappeles de l'accomplissement des propheties de l'Ancien Testament et de la victoire ultime de notre Sauveur sur le peche et la mort.</p>
+      <h3 class="bible-book-title">3. Marc</h3>
+      <p><strong>L'Evangile de Marc</strong> est un temoignage de la puissance et de l'autorite de notre Seigneur Jesus-Christ. C'est le plus court des quatre evangiles, mais il contient un recit puissant de la vie, du ministere et des miracles de Jesus. Il commence avec Jean-Baptiste puis suit Jesus alors qu'il preche, guerit les malades, chasse les demons et finalement se sacrifie pour notre salut. A travers l'evangile de Marc, nous sommes rappeles de l'incroyable amour et compassion de notre Sauveur et de l'urgence de le suivre de tout notre coeur.</p>
+      <h3 class="bible-book-title">4. Luc</h3>
+      <p><strong>L'Evangile de Luc</strong> est un evangile unique, connu pour son accent sur l'humanite de Jesus et son ministere envers les marginalises et les opprimes. Il commence par la naissance miraculeuse de Jesus puis suit son ministere, ses enseignements et ses miracles. Notamment, il contient plusieurs paraboles, dont la celebre parabole du fils prodigue. L'evangile de Luc souligne aussi le role des femmes dans le ministere de Jesus, mettant en lumiere l'inclusivite radicale de son message. A travers cet evangile, nous sommes rappeles de l'amour et de la grace englobants de notre Sauveur, qui est venu sauver tous les hommes, quel que soit leur statut social ou leur origine.</p>
+      <h3 class="bible-book-title">5. Jean</h3>
+      <p><strong>L'Evangile de Jean</strong> est un recit profond et mystique de la vie et du ministere de Jesus-Christ. Il commence par le celebre prologue, qui parle de la Parole faite chair, puis suit le ministere, les enseignements et les miracles de Jesus. Cet evangile contient aussi plusieurs histoires uniques, comme les noces de Cana et la resurrection de Lazare, qui revelent la divinite de notre Seigneur. L'evangile de Jean met aussi l'accent sur le role de la foi, de l'amour et de la vie eternelle, offrant un rappel puissant de notre esperance ultime en Christ.</p>
+    </div>
+
+    <h2 id="acts-of-apostles" class="bible-category" style="color: darkmagenta;">6 <strong>Les Actes des Apotres</strong> <a href="#acts-of-apostles" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">6. Les Actes</h3>
+      <p><strong>Les Actes des Apotres</strong> est un recit historique de l'Eglise primitive et de la propagation de l'Evangile apres la mort et la resurrection de notre Seigneur Jesus-Christ. Il commence par l'ascension de Jesus puis suit le ministere des apotres, dont Pierre et Paul, alors qu'ils repandent la bonne nouvelle du salut a tous les peuples. Le livre des Actes est un rappel de la puissance du Saint-Esprit et du message imparable d'amour de Jesus-Christ.</p>
+    </div>
+
+    <h2 id="letters-epistles" class="bible-category" style="color: darkgoldenrod;">7-27 <strong>Lettres/Epitres</strong> <a href="#letters-epistles" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">7. Romains</h3>
+      <p><strong>L'Epitre de Paul aux Romains</strong> est un puissant traite theologique ecrit par l'apotre Paul a l'eglise de Rome. Il traite de la doctrine du salut, de la justification par la foi et de la relation entre la foi et les oeuvres. Il souligne aussi l'unite de tous les croyants en Christ, quelles que soient leurs origines culturelles ou religieuses.</p>
+      <h3 class="bible-book-title">8. 1 Corinthiens</h3>
+      <p><strong>La Premiere Epitre de Paul aux Corinthiens</strong> est une lettre pastorale ecrite par l'apotre Paul a l'eglise de Corinthe. Elle aborde divers problemes au sein de l'eglise, y compris les divisions, l'immoralite et les disputes. Elle couvre aussi des sujets tels que les dons spirituels, l'amour et la resurrection.</p>
+      <h3 class="bible-book-title">9. 2 Corinthiens</h3>
+      <p><strong>La Deuxieme Epitre de Paul aux Corinthiens</strong> est une autre lettre pastorale a l'eglise de Corinthe. Paul y aborde des questions comme son apostolat, l'offrande et ses propres souffrances. Il souligne aussi l'importance de la reconciliation et du pardon au sein de la communaute de l'eglise.</p>
+      <h3 class="bible-book-title">10. Galates</h3>
+      <p><strong>L'Epitre de Paul aux Galates</strong> est une defense passionnee de l'Evangile de la grace. Il aborde la question du legalisme, soulignant que le salut vient par la foi en Jesus, non par l'obeissance a la loi.</p>
+      <h3 class="bible-book-title">11. Ephesiens</h3>
+      <p><strong>L'Epitre de Paul aux Ephesiens</strong> traite de sujets tels que l'unite des croyants en Christ, les benedictions spirituelles que nous avons en lui et notre identite en tant qu'enfants de Dieu.</p>
+      <h3 class="bible-book-title">12. Philippiens</h3>
+      <p><strong>L'Epitre de Paul aux Philippiens</strong> est une lettre chaleureuse et encourageante. Il souligne la joie et le contentement qui viennent d'une relation personnelle avec Christ, quelles que soient nos circonstances.</p>
+      <h3 class="bible-book-title">13. Colossiens</h3>
+      <p><strong>L'Epitre de Paul aux Colossiens</strong> souligne la suprematie du Christ et son role dans la reconciliation de toutes choses avec lui-meme.</p>
+      <h3 class="bible-book-title">14. 1 Thessaloniciens</h3>
+      <p><strong>La Premiere Epitre de Paul aux Thessaloniciens</strong> enseigne sur le second avenement du Christ et l'importance de vivre une vie qui plait a Dieu.</p>
+      <h3 class="bible-book-title">15. 2 Thessaloniciens</h3>
+      <p><strong>La Deuxieme Epitre de Paul aux Thessaloniciens</strong> continue l'accent sur le second avenement du Christ et la necessite de vivre dans l'attente de son retour.</p>
+      <h3 class="bible-book-title">16. 1 Timothee</h3>
+      <p><strong>La Premiere Epitre de Paul a Timothee</strong> contient des instructions pratiques sur le leadership de l'eglise et la conduite des croyants.</p>
+      <h3 class="bible-book-title">17. 2 Timothee</h3>
+      <p><strong>La Deuxieme Epitre de Paul a Timothee</strong> est une lettre personnelle d'encouragement et de rappel de l'importance de perseverer face aux epreuves et a la persecution.</p>
+      <h3 class="bible-book-title">18. Tite</h3>
+      <p><strong>L'Epitre de Paul a Tite</strong> contient des instructions sur l'organisation de l'eglise et les qualites des leaders pieux.</p>
+      <h3 class="bible-book-title">19. Philemon</h3>
+      <p><strong>L'Epitre de Paul a Philemon</strong> est une lettre personnelle ou Paul fait appel a Philemon pour accueillir son esclave fugitif, Onesime, avec amour et pardon.</p>
+      <h3 class="bible-book-title">20. Hebreux</h3>
+      <p><strong>L'Epitre aux Hebreux</strong> est une oeuvre theologique puissante contenant de riches enseignements sur la superiorite du Christ et la nouvelle alliance qu'il a inauguree.</p>
+      <h3 class="bible-book-title">21. Jacques</h3>
+      <p><strong>L'Epitre Generale de Jacques</strong> contient des enseignements pratiques sur la mise en oeuvre de notre foi dans nos actions et nos relations. Jacques souligne la necessite que les oeuvres accompagnent notre foi.</p>
+      <h3 class="bible-book-title">22. 1 Pierre</h3>
+      <p><strong>La Premiere Epitre de Pierre</strong> est une lettre pastorale pour encourager les croyants qui faisaient face a la persecution et aux epreuves.</p>
+      <h3 class="bible-book-title">23. 2 Pierre</h3>
+      <p><strong>La Deuxieme Epitre de Pierre</strong> est une lettre pastorale pour mettre en garde contre les faux enseignants et encourager les croyants dans leur foi.</p>
+      <h3 class="bible-book-title">24. 1 Jean</h3>
+      <p><strong>La Premiere Epitre de Jean</strong> met l'accent sur l'amour pour Dieu et les uns pour les autres, l'assurance du salut et l'importance de marcher dans la lumiere.</p>
+      <h3 class="bible-book-title">25. 2 Jean</h3>
+      <p><strong>La Deuxieme Epitre de Jean</strong> met l'accent sur l'amour et la verite, mettant en garde contre les faux enseignants.</p>
+      <h3 class="bible-book-title">26. 3 Jean</h3>
+      <p><strong>La Troisieme Epitre de Jean</strong> affirme l'hospitalite de Gaius et l'encourage a continuer de soutenir les ouvriers fideles dans l'eglise.</p>
+      <h3 class="bible-book-title">27. Jude</h3>
+      <p><strong>L'Epitre de Jude</strong> est un puissant avertissement contre certains faux enseignants qui s'infiltraient dans l'eglise. Il exhorte les croyants a se souvenir des enseignements des apotres et a combattre pour la foi.</p>
+    </div>
+
+    <h2 id="poetry-wisdom" class="bible-category" style="color: black;">28-33 <strong>Livres Poetiques/de Sagesse</strong> <a href="#poetry-wisdom" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">28. Job</h3>
+      <p><strong>Le Livre de Job</strong> est une histoire puissante et complexe de souffrance et de foi. Il enseigne des lecons profondes sur la souverainete de Dieu, la realite de la souffrance et l'importance de la foi et de la confiance au milieu des epreuves. C'est considere comme l'un des plus anciens livres de la Bible, ecrit vers 2000 av. J.-C.</p>
+      <h3 class="bible-book-title">29. Psaumes</h3>
+      <p><strong>Le Livre des Psaumes</strong> est une collection de 150 chants poetiques et lyriques d'adoration, connus comme des hymnes, des prieres et des louanges a Dieu. Ils couvrent un large eventail d'experiences humaines, de la lamentation et la tristesse a la joie et la louange, et pointent finalement vers le caractere et la nature de Dieu.</p>
+      <h3 class="bible-book-title">30. Proverbes</h3>
+      <p><strong>Le Livre des Proverbes</strong> est une collection de sagesse pratique et de conseils pour la vie personnelle et communautaire. Il traite de verites intemporelles sur divers aspects de la vie, y compris les relations, le travail, la parole et le caractere.</p>
+      <h3 class="bible-book-title">31. Ecclesiaste</h3>
+      <p><strong>L'Ecclesiaste, ou le Predicateur</strong> est un livre profond de sagesse qui nous met au defi de reflechir sur le sens et le but de la vie. Souvent attribue au roi Salomon, il est plein de reflexions stimulantes sur la nature ephemere de l'existence humaine et la futilite de poursuivre les plaisirs et les ambitions mondaines.</p>
+      <h3 class="bible-book-title">32. Cantique des Cantiques</h3>
+      <p><strong>Le Cantique des Cantiques, aussi connu comme le Cantique de Salomon</strong>, est un livre de poesie amoureuse passionnee qui celebre la beaute de l'amour et de l'intimite dans le mariage. Il a ete interprete comme une allegorie de l'amour entre Christ et son Eglise.</p>
+      <h3 class="bible-book-title">33. Lamentations</h3>
+      <p><strong>Les Lamentations, aussi connues comme les Lamentations de Jeremie</strong>, est un livre de l'Ancien Testament compose de cinq lamentations poetiques traditionnellement attribuees au prophete Jeremie. C'est une reflexion douloureuse sur la destruction de Jerusalem et l'exil des Israelites.</p>
+    </div>
+
+    <h2 id="mosaic-law" class="bible-category" style="color: #b33c00;">34-49 <strong>Loi Mosaique/Histoire</strong> <a href="#mosaic-law" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">34. Exode</h3>
+      <p><strong>Le Livre de l'Exode</strong> fait partie du Pentateuque et raconte comment Dieu a delivre les Israelites de l'esclavage en Egypte. Les Dix Commandements y sont aussi donnes, fournissant un cadre moral et ethique.</p>
+      <h3 class="bible-book-title">35. Levitique</h3>
+      <p><strong>Le Livre du Levitique</strong> est rempli d'instructions et de reglements pour les Israelites concernant leur culte et leur vie quotidienne. Il prefigure aussi le sacrifice parfait du Christ.</p>
+      <h3 class="bible-book-title">36. Nombres</h3>
+      <p><strong>Le Livre des Nombres</strong> continue le recit du voyage des Israelites vers la Terre Promise avec le recensement des tribus et les divers evenements en chemin.</p>
+      <h3 class="bible-book-title">37. Deuteronome</h3>
+      <p><strong>Le Livre du Deuteronome</strong> est le dernier livre du Pentateuque, souvent appele la "deuxieme loi" ou une repetition de la Loi donnee dans l'Exode et le Levitique.</p>
+      <h3 class="bible-book-title">38. Josue</h3>
+      <p><strong>Le Livre de Josue</strong> raconte le leadership de Josue apres la mort de Moise, detaillant l'entree des Israelites dans la Terre Promise apres quarante ans d'errance dans le desert.</p>
+      <h3 class="bible-book-title">39. Juges</h3>
+      <p><strong>Le Livre des Juges</strong> continue le recit de la conquete et de l'installation des Israelites dans la Terre Promise, couvrant une periode apres la mort de Josue.</p>
+      <h3 class="bible-book-title">40. Ruth</h3>
+      <p><strong>Le Livre de Ruth</strong> est un beau recit d'amour, de loyaute et de la providence de Dieu. C'est aussi une lignee importante pour l'ascendance du roi David et finalement de Jesus-Christ.</p>
+      <h3 class="bible-book-title">41. 1 Samuel</h3>
+      <p><strong>Le Premier Livre de Samuel</strong> enregistre la transition du leadership du dernier juge, Samuel, au premier roi d'Israel, Saul, puis a David.</p>
+      <h3 class="bible-book-title">42. 2 Samuel</h3>
+      <p><strong>Le Deuxieme Livre de Samuel</strong> continue le recit en detaillant le regne du roi David, ses victoires et ses echecs.</p>
+      <h3 class="bible-book-title">43. 1 Rois</h3>
+      <p><strong>Le Premier Livre des Rois</strong> suit le regne du roi Salomon et la division du royaume d'Israel en royaumes du nord et du sud.</p>
+      <h3 class="bible-book-title">44. 2 Rois</h3>
+      <p><strong>Le Deuxieme Livre des Rois</strong> continue le recit des rois d'Israel et de Juda, se concentrant sur les regnes d'Ezechias et de Josias.</p>
+      <h3 class="bible-book-title">45. 1 Chroniques</h3>
+      <p><strong>Le Premier Livre des Chroniques</strong> est une histoire d'Israel, retracant la genealogie d'Adam au roi David.</p>
+      <h3 class="bible-book-title">46. 2 Chroniques</h3>
+      <p><strong>Le Deuxieme Livre des Chroniques</strong> continue le recit des rois d'Israel et de Juda, se concentrant sur le royaume du sud de Juda.</p>
+      <h3 class="bible-book-title">47. Esdras</h3>
+      <p><strong>Le Livre d'Esdras</strong> continue le recit du retour des Israelites de l'exil a Babylone et la reconstruction du temple a Jerusalem.</p>
+      <h3 class="bible-book-title">48. Nehemie</h3>
+      <p><strong>Le Livre de Nehemie</strong> se concentre sur les efforts de Nehemie pour diriger la reconstruction des murs de la ville et restaurer la foi du peuple.</p>
+      <h3 class="bible-book-title">49. Esther</h3>
+      <p><strong>Le Livre d'Esther</strong> raconte comment la reine Esther, une femme juive, risque courageusement sa vie pour sauver son peuple du genocide aux mains de l'empire perse.</p>
+    </div>
+
+    <h2 id="major-prophets" class="bible-category" style="color: #7a00cc;">50-53 <strong>Grands Prophetes</strong> <a href="#major-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">50. Esaie</h3>
+      <p><strong>Le Livre du Prophete Esaie</strong> est un long livre prophetique contenant un melange de messages de jugement, d'avertissement, de consolation et d'esperance. Esaie prophetise aussi sur la venue du Messie, Jesus-Christ.</p>
+      <h3 class="bible-book-title">51. Jeremie</h3>
+      <p><strong>Le Livre du Prophete Jeremie</strong> est une collection de propheties et de messages pendant une epoque de grande corruption et d'idolatrie, avertissant du jugement imminent de Dieu mais offrant aussi l'esperance de la restauration.</p>
+      <h3 class="bible-book-title">52. Ezechiel</h3>
+      <p><strong>Le Livre du Prophete Ezechiel</strong> contient des visions vives et des images symboliques qui transmettent le jugement de Dieu et la redemption ultime pour son peuple.</p>
+      <h3 class="bible-book-title">53. Daniel</h3>
+      <p><strong>Le Livre du Prophete Daniel</strong> raconte l'histoire de Daniel, un exile juif a Babylone. Le livre contient un melange d'histoire, de prophetie et de litterature apocalyptique, y compris la celebre prophetie des "70 semaines".</p>
+    </div>
+
+    <h2 id="minor-prophets" class="bible-category" style="color: #5c8a8a;">54-65 <strong>Petits Prophetes</strong> <a href="#minor-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">54. Osee</h3>
+      <p><strong>Le Livre du Prophete Osee</strong> raconte l'histoire d'Osee et de sa femme infidele, Gomer, servant de metaphore pour la relation infidele entre Israel et Dieu.</p>
+      <h3 class="bible-book-title">55. Joel</h3>
+      <p><strong>Le Livre du Prophete Joel</strong> decrit un fleau de sauterelles servant de metaphore pour le jugement a venir de Dieu, mais parle aussi de repentance et du retour a Dieu.</p>
+      <h3 class="bible-book-title">56. Amos</h3>
+      <p><strong>Le Livre du Prophete Amos</strong> detaille les visions et messages donnes a Amos par Dieu pour le peuple d'Israel, revelant les consequences de leurs peches.</p>
+      <h3 class="bible-book-title">57. Abdias</h3>
+      <p><strong>Le Livre du Prophete Abdias</strong> est le livre le plus court de l'Ancien Testament, contenant un message puissant de Dieu a la nation d'Edom contre l'orgueil et l'arrogance.</p>
+      <h3 class="bible-book-title">58. Jonas</h3>
+      <p><strong>Le Livre du Prophete Jonas</strong> raconte l'histoire d'un prophete reticent qui resiste initialement a l'ordre de Dieu de precher au peuple de Ninive. Il y a un parallele entre l'experience de Jonas dans le ventre du grand poisson et la mort et resurrection de Jesus.</p>
+      <h3 class="bible-book-title">59. Michee</h3>
+      <p><strong>Le Livre du Prophete Michee</strong> contient des messages de jugement et d'esperance pour le peuple d'Israel, y compris des propheties sur le lieu de naissance du Messie (Michee 5:2).</p>
+      <h3 class="bible-book-title">60. Nahum</h3>
+      <p><strong>Le Livre du Prophete Nahum</strong> se concentre sur la destruction eventuelle de la ville assyrienne de Ninive.</p>
+      <h3 class="bible-book-title">61. Habacuc</h3>
+      <p><strong>Le Livre du Prophete Habacuc</strong> est un dialogue entre le prophete Habacuc et Dieu, questionnant le mal et l'injustice dans le monde.</p>
+      <h3 class="bible-book-title">62. Sophonie</h3>
+      <p><strong>Le Livre du Prophete Sophonie</strong> commence par un message de jugement et de destruction a venir, mais offre aussi l'esperance pour le reste fidele du peuple de Dieu.</p>
+      <h3 class="bible-book-title">63. Aggee</h3>
+      <p><strong>Le Livre du Prophete Aggee</strong> est un livre court mais puissant, exhortant le peuple a prioriser la reconstruction du temple et a tourner leurs coeurs vers Dieu.</p>
+      <h3 class="bible-book-title">64. Zacharie</h3>
+      <p><strong>Le Livre du Prophete Zacharie</strong> est divise en deux parties avec des visions de Dieu revelant ses plans pour l'avenir de son peuple, et des messages encourageant la repentance.</p>
+      <h3 class="bible-book-title">65. Malachie</h3>
+      <p><strong>Le Livre du Prophete Malachie</strong> est le dernier livre de l'Ancien Testament, representant le dernier message prophetique de Dieu avant la venue du Messie.</p>
+    </div>
+
+    <h2 id="apocalyptic" class="bible-category" style="color: darkred;">66 <strong>Apocalyptique/Jugement Final</strong> <a href="#apocalyptic" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
+    <div class="bible-guide-card">
+      <h3 class="bible-book-title">66. Apocalypse</h3>
+      <p><strong>Le Livre de l'Apocalypse</strong> est un livre puissant et enigmatique qui revele la fin des temps et le retour de Jesus-Christ. Le symbolisme de ce livre peut etre difficile a interpreter, mais une chose est claire : Dieu est aux commandes et ses promesses seront accomplies. Les paralleles entre le premier et le dernier livre de la Bible, la Genese et l'Apocalypse, sont frappants. Dans la Genese, Dieu cree le monde, et dans l'Apocalypse, il etablit le nouveau ciel et la nouvelle terre. Amen.</p>
+    </div>
+
+    <p class="text-center text-muted">Contenu par Pascal. Edite par <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Sujets Connexes</h3>
+    <div class="comparison-grid">
+      <a href="../Genealogy/index.html" class="related-card">
+        <strong>Genealogie</strong>
+        <p>Les generations bibliques d'Adam a Jesus</p>
+      </a>
+      <a href="../Religions/index.html" class="related-card">
+        <strong>Religions</strong>
+        <p>Quelle religion est vraie et qu'est-ce que la religion ?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../Religions/index.html" class="page-nav-link page-nav-prev">
+      <small>Precedent</small>
+      <span>Religions</span>
+    </a>
+    <a href="../Genealogy/index.html" class="page-nav-link page-nav-next">
+      <small>Suivant</small>
+      <span>Genealogie</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">The Holy Book</span>
+      <ul class="footer-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../trinity/index.html">Trinite</a></li>
+        <li><a href="../apocalypse/index.html">Fin des Temps</a></li>
+        <li><a href="../Afterdeath/index.html">Apres la Mort</a></li>
+        <li><a href="../sins/index.html">Peches</a></li>
+        <li><a href="../Religions/index.html">Religions</a></li>
+        <li><a href="index.html">Guide Biblique</a></li>
+        <li><a href="../Genealogy/index.html">Genealogie</a></li>
+      </ul>
+      <p class="footer-credits">Cree par Pascal | Edite par <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Lien copie !');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../stylesheet.css" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+  <title>Der Stammbaum Jesu Christi &ndash; Von Adam bis Jesus</title>
+  <meta name="description" content="Ein vollstaendiger, auf der Schrift basierender Stammbaum von Adam bis Jesus Christus, der sowohl die koenigliche Linie durch Joseph (Matthaeus 1) als auch die biologische Linie durch Maria (Lukas 3) nachzeichnet.">
+  <meta property="og:title" content="Der Stammbaum Jesu Christi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Verfolge die biblischen Generationen von Adam bis Jesus Christus durch die Heilige Schrift." />
+  <meta property="og:url" content="https://theholybook.github.io/de/Genealogy/" />
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">Das Heilige Buch</a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Navigation umschalten">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="../trinity/index.html">Dreifaltigkeit</a></li>
+        <li><a href="../apocalypse/index.html">Endzeit</a></li>
+        <li><a href="../Afterdeath/index.html">Nach dem Tod</a></li>
+        <li><a href="../sins/index.html">S&uuml;nden</a></li>
+        <li><a href="../Religions/index.html">Religionen</a></li>
+        <li><a href="../bible-order/index.html">Bibelf&uuml;hrer</a></li>
+        <li><a href="index.html" class="active">Stammbaum</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <a href="../../Genealogy/index.html">EN</a>
+        <a href="index.html" class="active-lang">DE</a>
+        <a href="../../fr/Genealogy/index.html">FR</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Dunkelmodus umschalten" title="Dunkelmodus umschalten">&#9728;&#65039;</button>
+    </div>
+  </nav>
+
+  <header class="page-header" id="main-content">
+    <h1>Der Stammbaum Jesu Christi</h1>
+    <p class="subtitle">Die direkte Linie von Adam bis Jesus &ndash; 77 Generationen &uuml;ber 4.000+ Jahre der Schrift.</p>
+  </header>
+
+  <!-- Color Legend -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="color-legend">
+      <h4>Zeitalter-Farbschl&uuml;ssel</h4>
+      <div class="legend-items">
+        <span class="legend-item"><span class="legend-dot" style="background:#0d9488"></span> Vor der Sintflut</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#d97706"></span> Nach der Sintflut</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#059669"></span> Erzvl&auml;ter</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#64748b"></span> Juda bis David</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span> Vereinigtes K&ouml;nigreich</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#dc2626"></span> Geteiltes K&ouml;nigreich / Exil</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#6b7280"></span> Zwischentestamentlich</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ca8a04"></span> Jesus</span>
+      </div>
+    </div>
+
+    <!-- Scripture References -->
+    <div class="card" style="margin-bottom:var(--space-xl)">
+      <h4 style="margin-top:0">Schriftquellen</h4>
+      <p style="margin-bottom:var(--space-sm); font-size:0.9rem; color:var(--color-text-secondary)">Dieser Stammbaum wurde aus folgenden Schl&uuml;sselstellen zusammengestellt (SCH2000):</p>
+      <ul style="font-size:0.9rem; margin-bottom:0">
+        <li><a href="https://www.biblegateway.com/passage/?search=1.+Mose+5&version=SCH2000">1. Mose 5</a> &ndash; Adam bis Noah (Erzvl&auml;ter vor der Sintflut)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=1.+Mose+11&version=SCH2000">1. Mose 11</a> &ndash; Sem bis Abram (Erzvl&auml;ter nach der Sintflut)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Rut+4%3A18-22&version=SCH2000">Rut 4:18-22</a> &ndash; Perez bis David</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Matth%C3%A4us+1&version=SCH2000">Matth&auml;us 1</a> &ndash; Abraham bis Jesus durch Joseph (k&ouml;nigliche/rechtliche Linie)</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Lukas+3%3A23-38&version=SCH2000">Lukas 3:23-38</a> &ndash; Jesus bis Adam durch Maria (biologische Linie)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TIMELINE: PRE-FLOOD -->
+  <div class="gen-timeline">
+    <div class="tl-era">
+      <span class="tl-era-label bg-preflood">Erzvl&auml;ter vor der Sintflut &ndash; 1. Mose 5</span>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">1. Generation</div>
+        <h3>Adam</h3>
+        <div class="tl-lifespan">Lebte 930 Jahre</div>
+        <p class="tl-detail">Der erste Mensch, von Gott aus dem Staub der Erde geschaffen. Zeugte Set im Alter von 130 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:3-5</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">2. Generation</div>
+        <h3>Set</h3>
+        <div class="tl-lifespan">Lebte 912 Jahre</div>
+        <p class="tl-detail">Wurde Adam und Eva nach Abels Tod geboren. Zeugte Enosch im Alter von 105 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:6-8</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">3. Generation</div>
+        <h3>Enosch</h3>
+        <div class="tl-lifespan">Lebte 905 Jahre</div>
+        <p class="tl-detail">Zu seiner Zeit begannen die Menschen, den Namen des Herrn anzurufen. Zeugte Kenan im Alter von 90 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:9-11</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">4. Generation</div>
+        <h3>Kenan</h3>
+        <div class="tl-lifespan">Lebte 910 Jahre</div>
+        <p class="tl-detail">Zeugte Mahalalel im Alter von 70 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:12-14</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">5. Generation</div>
+        <h3>Mahalalel</h3>
+        <div class="tl-lifespan">Lebte 895 Jahre</div>
+        <p class="tl-detail">Zeugte Jared im Alter von 65 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:15-17</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">6. Generation</div>
+        <h3>Jared</h3>
+        <div class="tl-lifespan">Lebte 962 Jahre</div>
+        <p class="tl-detail">Zeugte Henoch im Alter von 162 Jahren.</p>
+        <span class="tl-ref">1. Mose 5:18-20</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">7. Generation</div>
+        <h3>Henoch</h3>
+        <div class="tl-lifespan">Lebte 365 Jahre</div>
+        <p class="tl-detail">Wandelte treu mit Gott, dann nahm Gott ihn zu sich; er sah den Tod nicht. Zeugte Methusalem im Alter von 65 Jahren.</p>
+        <span class="tl-event-badge">Von Gott entruckt</span>
+        <br><span class="tl-ref">1. Mose 5:21-24</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">8. Generation</div>
+        <h3>Methusalem</h3>
+        <div class="tl-lifespan">Lebte 969 Jahre &ndash; der am l&auml;ngsten lebende Mensch in der Schrift</div>
+        <p class="tl-detail">Zeugte Lamech im Alter von 187 Jahren. Starb im Jahr der gro&szlig;en Sintflut.</p>
+        <span class="tl-ref">1. Mose 5:25-27</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">9. Generation</div>
+        <h3>Lamech</h3>
+        <div class="tl-lifespan">Lebte 777 Jahre</div>
+        <p class="tl-detail">Zeugte Noah im Alter von 182 Jahren. Sagte &uuml;ber Noah: &bdquo;Dieser wird uns tr&ouml;sten.&ldquo;</p>
+        <span class="tl-ref">1. Mose 5:28-31</span>
+      </div>
+    </div>
+
+    <div class="tl-node">
+      <span class="tl-dot dot-preflood"></span>
+      <span class="tl-connector"></span>
+      <div class="tl-card" data-era="preflood">
+        <div class="tl-number era-preflood">10. Generation</div>
+        <h3>Noah</h3>
+        <div class="tl-lifespan">Lebte 950 Jahre</div>
+        <p class="tl-detail">Zeugte Sem, Ham und Jafet im Alter von 500 Jahren. Baute die Arche und &uuml;berlebte die gro&szlig;e Sintflut im Alter von 600 Jahren.</p>
+        <span class="tl-event-badge">Die gro&szlig;e Sintflut</span>
+        <br><span class="tl-ref">1. Mose 5:32, 7:6, 9:29</span>
+      </div>
+    </div>
+
+    <!-- POST-FLOOD -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-postflood">Erzvl&auml;ter nach der Sintflut &ndash; 1. Mose 11</span>
+    </div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">11. Generation</div><h3>Sem</h3><div class="tl-lifespan">Lebte 600 Jahre</div><p class="tl-detail">Zeugte Arpachschad im Alter von 100 Jahren, zwei Jahre nach der Sintflut. Stammvater aller semitischen V&ouml;lker.</p><span class="tl-ref">1. Mose 11:10-11</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">12. Generation</div><h3>Arpachschad</h3><div class="tl-lifespan">Lebte 438 Jahre</div><p class="tl-detail">Zeugte Schelach im Alter von 35 Jahren.</p><span class="tl-ref">1. Mose 11:12-13</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">13. Generation</div><h3>Schelach</h3><div class="tl-lifespan">Lebte 433 Jahre</div><p class="tl-detail">Zeugte Eber im Alter von 30 Jahren.</p><span class="tl-ref">1. Mose 11:14-15</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">14. Generation</div><h3>Eber</h3><div class="tl-lifespan">Lebte 464 Jahre</div><p class="tl-detail">Zeugte Peleg im Alter von 34 Jahren. Wurzel des Namens &bdquo;Hebr&auml;er&ldquo;.</p><span class="tl-ref">1. Mose 11:16-17</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">15. Generation</div><h3>Peleg</h3><div class="tl-lifespan">Lebte 239 Jahre</div><p class="tl-detail">Zeugte Regu im Alter von 30 Jahren. &bdquo;Zu seiner Zeit wurde die Erde geteilt.&ldquo;</p><span class="tl-event-badge">Turmbau zu Babel / Erde geteilt</span><br><span class="tl-ref">1. Mose 10:25, 11:18-19</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">16. Generation</div><h3>Regu</h3><div class="tl-lifespan">Lebte 239 Jahre</div><p class="tl-detail">Zeugte Serug im Alter von 32 Jahren.</p><span class="tl-ref">1. Mose 11:20-21</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">17. Generation</div><h3>Serug</h3><div class="tl-lifespan">Lebte 230 Jahre</div><p class="tl-detail">Zeugte Nahor im Alter von 30 Jahren.</p><span class="tl-ref">1. Mose 11:22-23</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">18. Generation</div><h3>Nahor</h3><div class="tl-lifespan">Lebte 148 Jahre</div><p class="tl-detail">Zeugte Terach im Alter von 29 Jahren.</p><span class="tl-ref">1. Mose 11:24-25</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-postflood"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="postflood"><div class="tl-number era-postflood">19. Generation</div><h3>Terach</h3><div class="tl-lifespan">Lebte 205 Jahre</div><p class="tl-detail">Zeugte Abram, Nahor und Haran im Alter von 70 Jahren. Verlie&szlig; Ur in Chald&auml;a.</p><span class="tl-ref">1. Mose 11:26-32</span></div></div>
+
+    <!-- PATRIARCHS -->
+    <div class="tl-era">
+      <span class="tl-era-label bg-patriarchs">Die Erzvl&auml;ter</span>
+    </div>
+
+    <div class="tl-node"><span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs"><div class="tl-number era-patriarchs">20. Generation</div><h3>Abraham</h3><div class="tl-lifespan">Lebte 175 Jahre</div><p class="tl-detail">Urspr&uuml;nglich Abram. Von Gott aus Ur berufen. Vater vieler V&ouml;lker. Zeugte Isaak im Alter von 100 Jahren mit seiner Frau Sara.</p><span class="tl-ref">1. Mose 12:1-4, 21:5, 25:7</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs"><div class="tl-number era-patriarchs">21. Generation</div><h3>Isaak</h3><div class="tl-lifespan">Lebte 180 Jahre</div><p class="tl-detail">Das Kind der Verhei&szlig;ung. Zeugte die Zwillinge Jakob und Esau im Alter von 60 Jahren mit seiner Frau Rebekka.</p><span class="tl-ref">1. Mose 25:26, 35:28</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs"><div class="tl-number era-patriarchs">22. Generation</div><h3>Jakob / Israel</h3><div class="tl-lifespan">Lebte 147 Jahre</div><p class="tl-detail">Rang mit Gott und erhielt den Namen Israel. Vater der 12 St&auml;mme. Frauen: Lea und Rahel.</p><span class="tl-ref">1. Mose 32:29, 47:28</span></div></div>
+
+  </div>
+
+  <!-- 12 TRIBES -->
+  <div class="tl-tribes-card">
+    <h3>Die zw&ouml;lf St&auml;mme Israels</h3>
+    <p class="tl-detail" style="max-width:100%; margin: 0 auto var(--space-md);">Die S&ouml;hne Jakobs, die zu den zw&ouml;lf St&auml;mmen wurden. Die Linie zu Jesus f&uuml;hrt durch <strong>Juda</strong> weiter.</p>
+    <div class="tribes-grid">
+      <span class="tribe-chip">Ruben</span>
+      <span class="tribe-chip">Simeon</span>
+      <span class="tribe-chip">Levi</span>
+      <span class="tribe-chip tribe-highlight">Juda</span>
+      <span class="tribe-chip">Dan</span>
+      <span class="tribe-chip">Naftali</span>
+      <span class="tribe-chip">Gad</span>
+      <span class="tribe-chip">Asser</span>
+      <span class="tribe-chip">Issachar</span>
+      <span class="tribe-chip">Sebulon</span>
+      <span class="tribe-chip">Joseph</span>
+      <span class="tribe-chip">Benjamin</span>
+    </div>
+    <img src="../../Genealogy/Tribes.webp" alt="Die zwolf Stamme Israels" class="tribes-img" loading="lazy">
+  </div>
+
+  <!-- JUDAH TO DAVID -->
+  <div class="gen-timeline">
+    <div class="tl-era"><span class="tl-era-label bg-patriarchs">Juda &ndash; Der k&ouml;nigliche Stamm</span></div>
+
+    <div class="tl-node"><span class="tl-dot dot-patriarchs"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="patriarchs"><div class="tl-number era-patriarchs">23. Generation</div><h3>Juda</h3><p class="tl-detail">Sohn von Jakob und Lea. Vater von Perez durch Tamar. Der Stamm des K&ouml;nigtums und des Messias.</p><span class="tl-ref">1. Mose 38, 49:10</span></div></div>
+
+    <div class="tl-era"><span class="tl-era-label bg-judges">Perez bis David &ndash; Rut 4:18-22</span></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">24. Generation</div><h3>Perez</h3><p class="tl-detail">Sohn von Juda und Tamar. Zwillingsbruder von Serach.</p><span class="tl-ref">1. Mose 38:29, Rut 4:18</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">25. Generation</div><h3>Hezron</h3><p class="tl-detail">Sohn von Perez.</p><span class="tl-ref">Rut 4:18</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">26. Generation</div><h3>Ram</h3><p class="tl-detail">Sohn von Hezron.</p><span class="tl-ref">Rut 4:19</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">27. Generation</div><h3>Amminadab</h3><p class="tl-detail">Sohn von Ram. Lebte zur Zeit des Auszugs aus &Auml;gypten.</p><span class="tl-event-badge">Zeit des Auszugs</span><br><span class="tl-ref">Rut 4:19, 4. Mose 1:7</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">28. Generation</div><h3>Nachschon</h3><p class="tl-detail">Sohn von Amminadab. F&uuml;hrer des Stammes Juda w&auml;hrend der W&uuml;stenwanderung.</p><span class="tl-ref">Rut 4:20, 4. Mose 2:3</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">29. Generation</div><h3>Salmon</h3><p class="tl-detail">Sohn von Nachschon. Heiratete Rahab von Jericho.</p><span class="tl-ref">Rut 4:20, Matth&auml;us 1:5</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">30. Generation</div><h3>Boas</h3><p class="tl-detail">Sohn von Salmon und Rahab. Der L&ouml;ser, der Rut die Moabiterin heiratete.</p><span class="tl-ref">Rut 4:21</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">31. Generation</div><h3>Obed</h3><p class="tl-detail">Sohn von Boas und Rut.</p><span class="tl-ref">Rut 4:21</span></div></div>
+
+    <div class="tl-node"><span class="tl-dot dot-judges"></span><span class="tl-connector"></span><div class="tl-card" data-era="judges"><div class="tl-number era-judges">32. Generation</div><h3>Isai</h3><p class="tl-detail">Sohn von Obed. Vater von acht S&ouml;hnen, der j&uuml;ngste war David.</p><span class="tl-ref">Rut 4:22, 1. Samuel 16:10-11</span></div></div>
+
+    <!-- THE KINGS -->
+    <div class="tl-era"><span class="tl-era-label bg-kingdom">Das vereinigte K&ouml;nigreich</span></div>
+
+    <div class="tl-node"><span class="tl-dot dot-kingdom"></span><span class="tl-connector"></span>
+      <div class="tl-card" data-era="kingdom"><div class="tl-number era-kingdom">33. Generation</div><h3>K&ouml;nig David</h3><div class="tl-lifespan">Lebte ~70 Jahre &bull; Regierte 40 Jahre</div><p class="tl-detail">Hirte, Krieger, Psalmist, K&ouml;nig von ganz Israel. Gott schloss einen ewigen Bund mit seinem Haus. Vater von Salomo durch Batseba und auch Vater von Nathan.</p><span class="tl-ref">2. Samuel 5:4, 7:12-16</span></div></div>
+
+  </div>
+
+  <!-- THE SPLIT -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem;">
+    <div class="card" style="text-align:center; border-left:3px solid #7c3aed; border-right:3px solid #7c3aed; margin-bottom:var(--space-xl);">
+      <h3 style="margin-top:0; color:var(--color-accent);">Die Linie teilt sich nach David</h3>
+      <p style="font-size:0.9rem; max-width:100%;">Nach K&ouml;nig David verzeichnet die Schrift zwei Stammb&auml;ume zu Jesus. <strong>Das Matth&auml;us-Evangelium</strong> verfolgt die <em>k&ouml;nigliche/rechtliche</em> Linie durch Salomo zu Joseph und macht Jesus zum rechtlichen Erben des Thrones Davids. <strong>Das Lukas-Evangelium</strong> verfolgt die <em>biologische</em> Linie durch Nathan zu Maria und macht Jesus zum physischen Nachkommen Davids.</p>
+    </div>
+  </div>
+
+  <div class="tl-split-section">
+    <div class="tl-split-header">
+      <div>
+        <h3 style="color:#7c3aed;">Matth&auml;us-Linie</h3>
+        <small>K&ouml;nigliche/Rechtliche Linie durch <strong>Salomo</strong> zu <strong>Joseph</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Matth%C3%A4us+1%3A6-16&version=SCH2000">Matth&auml;us 1:6-16</a></small>
+      </div>
+      <div>
+        <h3 style="color:#dc2626;">Lukas-Linie</h3>
+        <small>Biologische Linie durch <strong>Nathan</strong> zu <strong>Maria</strong></small>
+        <br><small><a href="https://www.biblegateway.com/passage/?search=Lukas+3%3A23-31&version=SCH2000">Lukas 3:23-38</a></small>
+      </div>
+    </div>
+
+    <div class="tl-dual-track">
+      <div class="tl-track tl-track-left">
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #7c3aed;"><strong>Salomo</strong><small>Sohn Davids und Batsebas. Weisester K&ouml;nig. Baute den Tempel.</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Rehabeam</strong><small>Unter seiner Herrschaft wurde das Reich geteilt</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Abija</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Asa</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joschafat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joram</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Usija</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jotam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Ahas</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Hiskia</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Manasse</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Amon</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josia</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #dc2626;"><strong>Jojachin</strong><small>Nach Babylon verschleppt</small><br><span class="tl-event-badge">Babylonisches Exil</span></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Schealthiel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Serubbabel</strong><small>F&uuml;hrte die R&uuml;ckkehr aus dem Exil; baute den Tempel wieder auf</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Abiud</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eljakim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Azor</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Zadok</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Achim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eliud</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eleasar</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthan</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jakob</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Joseph</strong><small>Ehemann Marias, rechtlicher Vater Jesu</small></div></div>
+      </div>
+
+      <div class="tl-track tl-track-right">
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #dc2626;"><strong>Nathan</strong><small>Sohn Davids. Nicht der Prophet Nathan.</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattatha</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Menna</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melea</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Eljakim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jonam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joseph</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Juda</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Simeon</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Levi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jorim</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Elieser</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josua</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Er</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Elmadam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Kosam</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Addi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melchi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Neri</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Schealthiel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Serubbabel</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Resa</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joanan</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joda</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Josech</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Semein</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattathias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Maath</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Naggai</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Esli</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Nahum</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Amos</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Mattathias</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Joseph</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Jannai</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Melchi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Levi</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card"><strong>Matthat</strong></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Eli</strong><small>Vater von Maria</small></div></div>
+        <div class="tl-track-node"><div class="tl-mini-card" style="border-left:3px solid #ca8a04; background:#fffbeb;"><strong>Maria</strong><small>Mutter Jesu, Jungfrauengeburt</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONVERGENCE -->
+  <div class="tl-converge">
+    <div class="tl-converge-arrows">&#9660; &#9660;</div>
+    <div class="tl-jesus-card">
+      <h2>Jesus Christus</h2>
+      <p>&bdquo;Der Sohn Davids, der Sohn Abrahams&ldquo;</p>
+      <p style="font-size:0.85rem;">Geboren in Bethlehem in Jud&auml;a. Rechtlicher Erbe des Thrones Davids durch Joseph. Biologischer Nachkomme Davids durch Maria. Der verhei&szlig;ene Messias.</p>
+      <p><small><a href="https://www.biblegateway.com/passage/?search=Matth%C3%A4us+1%3A1&version=SCH2000">Matth&auml;us 1:1</a> &bull; <a href="https://www.biblegateway.com/passage/?search=Lukas+3%3A23-38&version=SCH2000">Lukas 3:23-38</a></small></p>
+      <img src="../../Genealogy/cross.jpg" alt="Das Kreuz Jesu Christi" loading="lazy">
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div style="max-width:860px; margin:0 auto; padding:0 1.5rem var(--space-3xl);">
+    <div class="notes-section">
+      <h3>Warum zwei verschiedene Stammb&auml;ume?</h3>
+      <p style="max-width:100%">Matth&auml;us und Lukas verzeichnen verschiedene Stammb&auml;ume f&uuml;r Jesus. Die weithin vertretene Erkl&auml;rung ist, dass <strong>Matth&auml;us die rechtliche/k&ouml;nigliche Linie durch Joseph</strong> verfolgt und Jesus zum rechtlichen Erben des Thrones Davids macht, w&auml;hrend <strong>Lukas die biologische Linie durch Maria</strong> verfolgt und Jesus zum physischen Nachkommen Davids macht. In der j&uuml;dischen Kultur konnte ein Stammbaum unter dem Namen des Ehemannes aufgef&uuml;hrt werden, auch wenn er die Abstammung der Ehefrau nachzeichnete. Lukas 3:23 merkt sorgf&auml;ltig an, dass Jesus &bdquo;der Sohn, wie man meinte, Josephs&ldquo; war.</p>
+      <p style="max-width:100%">Beide Linien treffen sich bei David und fr&uuml;her bei Abraham, was best&auml;tigt, dass Jesus die messianischen Prophezeiungen erf&uuml;llte, die verlangten, dass der Messias sowohl ein Sohn Abrahams (1. Mose 22:18) als auch ein Sohn Davids (2. Samuel 7:12-16) sein musste.</p>
+      <img src="../../Genealogy/explaination.png" alt="Diagramm der zwei Stammbaum-Linien" style="max-width:100%; margin-top:var(--space-md); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);" loading="lazy">
+    </div>
+
+    <blockquote class="scripture" style="margin-top:var(--space-xl);">
+      Buch des Stammbaums Jesu Christi, des Sohnes Davids, des Sohnes Abrahams.
+      <cite class="verse-ref">&ndash; Matth&auml;us 1:1 (SCH2000)</cite>
+    </blockquote>
+  </div>
+
+  <!-- Related Topics -->
+  <div class="content">
+    <h3>Verwandte Themen</h3>
+    <div class="comparison-grid">
+      <a href="../bible-order/index.html" class="related-card">
+        <strong>Bibelf&uuml;hrer</strong>
+        <p>In welcher Reihenfolge sollte ich die Bibel lesen?</p>
+      </a>
+      <a href="../trinity/index.html" class="related-card">
+        <strong>Dreifaltigkeit</strong>
+        <p>Ist Gott die Dreifaltigkeit? Und wer ist die Dreifaltigkeit?</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-nav">
+    <a href="../bible-order/index.html" class="page-nav-link page-nav-prev">
+      <small>Vorherige</small>
+      <span>Bibelf&uuml;hrer</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Das Heilige Buch</span>
+      <ul class="footer-links">
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="../trinity/index.html">Dreifaltigkeit</a></li>
+        <li><a href="../apocalypse/index.html">Endzeit</a></li>
+        <li><a href="../Afterdeath/index.html">Nach dem Tod</a></li>
+        <li><a href="../sins/index.html">S&uuml;nden</a></li>
+        <li><a href="../Religions/index.html">Religionen</a></li>
+        <li><a href="../bible-order/index.html">Bibelf&uuml;hrer</a></li>
+        <li><a href="index.html">Stammbaum</a></li>
+      </ul>
+      <p class="footer-credits">Erstellt von Pascal | Bearbeitet von <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link kopiert!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
+</body>
+
+</html>
