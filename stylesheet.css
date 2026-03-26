@@ -333,51 +333,44 @@ mark {
   font-weight: 500;
 }
 
-mark[style*="orangered"],
-mark[style*="background-color: orangered"] {
-  background-color: rgba(255, 69, 0, 0.15) !important;
+mark.hl-requirement {
+  background-color: rgba(255, 69, 0, 0.15);
   color: #c52700;
   border: 1px solid rgba(255, 69, 0, 0.25);
 }
 
-mark[style*="DarkSalmon"],
-mark[style*="background-color: DarkSalmon"] {
-  background-color: rgba(233, 150, 122, 0.2) !important;
+mark.hl-second-cmd {
+  background-color: rgba(233, 150, 122, 0.2);
   color: #a34a2e;
   border: 1px solid rgba(233, 150, 122, 0.3);
 }
 
-mark[style*="lime"],
-mark[style*="background-color: lime"] {
-  background-color: rgba(50, 205, 50, 0.15) !important;
+mark.hl-given {
+  background-color: rgba(50, 205, 50, 0.15);
   color: #1a7a1a;
   border: 1px solid rgba(50, 205, 50, 0.25);
 }
 
-mark[style*="yellow"],
-mark[style*="background-color: yellow"] {
-  background-color: rgba(250, 204, 21, 0.2) !important;
+mark.hl-reborn {
+  background-color: rgba(250, 204, 21, 0.2);
   color: #7a5f00;
   border: 1px solid rgba(250, 204, 21, 0.35);
 }
 
-mark[style*="cyan"],
-mark[style*="background-color: cyan"] {
-  background-color: rgba(34, 211, 238, 0.15) !important;
+mark.hl-goal {
+  background-color: rgba(34, 211, 238, 0.15);
   color: #0e6e7a;
   border: 1px solid rgba(34, 211, 238, 0.3);
 }
 
-mark[style*="lightsteelblue"],
-mark[style*="background-color: lightsteelblue"] {
-  background-color: rgba(176, 196, 222, 0.25) !important;
+mark.hl-works {
+  background-color: rgba(176, 196, 222, 0.25);
   color: #3a5070;
   border: 1px solid rgba(176, 196, 222, 0.4);
 }
 
-mark[style*="mediumpurple"],
-mark[style*="background-color: mediumpurple"] {
-  background-color: rgba(147, 112, 219, 0.15) !important;
+mark.hl-faith {
+  background-color: rgba(147, 112, 219, 0.15);
   color: #5a3a8a;
   border: 1px solid rgba(147, 112, 219, 0.3);
 }
@@ -424,6 +417,14 @@ mark[style*="background-color: mediumpurple"] {
   border-radius: 50%;
   flex-shrink: 0;
 }
+
+.dot-requirement { background: var(--hl-requirement); }
+.dot-second-cmd { background: var(--hl-second-cmd); }
+.dot-given { background: var(--hl-given); }
+.dot-reborn { background: var(--hl-reborn); }
+.dot-goal { background: var(--hl-goal); }
+.dot-works { background: var(--hl-works); }
+.dot-faith { background: var(--hl-faith); }
 
 /* --- Scripture Blockquote --- */
 .scripture {
@@ -613,7 +614,32 @@ mark[style*="background-color: mediumpurple"] {
   margin-bottom: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 601px) {
+  .event-grid {
+    grid-template-columns: auto 1fr;
+  }
+
+  .event-grid .grid-header {
+    display: none;
+  }
+
+  .event-grid .grid-number {
+    grid-row: span 3;
+    background: #1e293b;
+    color: white;
+    font-size: 1.1rem;
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .event-grid .grid-cell {
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 600px) {
   .event-grid {
     grid-template-columns: 1fr;
   }
@@ -1406,6 +1432,356 @@ mark[style*="background-color: mediumpurple"] {
   .tribes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* --- Skip to Content Link --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: var(--space-md);
+  background: var(--color-accent);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  z-index: 200;
+  font-weight: 600;
+  border-bottom: none;
+}
+.skip-link:focus {
+  left: var(--space-md);
+}
+
+/* --- Dark Mode --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-surface: #1e1e1e;
+    --color-text: #e4e4e4;
+    --color-text-secondary: #a0a0a0;
+    --color-border: #333333;
+    --color-link: #60a5fa;
+    --color-link-hover: #93bbfd;
+    --color-accent: #a78bfa;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.3);
+  }
+
+  /* Nav bar -- dark frosted glass */
+  .site-nav {
+    background: rgba(18, 18, 18, 0.92);
+  }
+
+  .site-nav .nav-links a:hover,
+  .site-nav .nav-links a.active {
+    background: #2a2a2a;
+  }
+
+  .nav-toggle span {
+    background: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .site-nav .nav-links {
+      background: rgba(18, 18, 18, 0.98);
+    }
+  }
+
+  /* Scripture blockquote */
+  .scripture {
+    background: #1a1625;
+  }
+
+  /* Theological highlight tags -- dark mode */
+  mark.hl-requirement {
+    background-color: rgba(255, 69, 0, 0.25);
+    color: #ff8a65;
+    border-color: rgba(255, 69, 0, 0.4);
+  }
+
+  mark.hl-second-cmd {
+    background-color: rgba(233, 150, 122, 0.25);
+    color: #f0aa92;
+    border-color: rgba(233, 150, 122, 0.4);
+  }
+
+  mark.hl-given {
+    background-color: rgba(50, 205, 50, 0.2);
+    color: #66dd66;
+    border-color: rgba(50, 205, 50, 0.35);
+  }
+
+  mark.hl-reborn {
+    background-color: rgba(250, 204, 21, 0.2);
+    color: #fde047;
+    border-color: rgba(250, 204, 21, 0.4);
+  }
+
+  mark.hl-goal {
+    background-color: rgba(34, 211, 238, 0.2);
+    color: #67e8f9;
+    border-color: rgba(34, 211, 238, 0.35);
+  }
+
+  mark.hl-works {
+    background-color: rgba(176, 196, 222, 0.2);
+    color: #c8d8e8;
+    border-color: rgba(176, 196, 222, 0.35);
+  }
+
+  mark.hl-faith {
+    background-color: rgba(147, 112, 219, 0.25);
+    color: #c4a8f0;
+    border-color: rgba(147, 112, 219, 0.4);
+  }
+
+  /* Sin verdict badges */
+  .sin-verdict {
+    background: #3b1515;
+    color: #fca5a5;
+    border-color: #7f1d1d;
+  }
+
+  /* Unforgivable card */
+  .unforgivable-card {
+    background: #2a1010;
+    border-color: #7f1d1d;
+    border-left-color: #ef4444;
+  }
+
+  .unforgivable-card h2 {
+    color: #fca5a5;
+  }
+
+  /* Hope card */
+  .hope-card {
+    background: #0a2015;
+    border-color: #166534;
+    border-left-color: #22c55e;
+  }
+
+  .hope-card h2 {
+    color: #86efac;
+  }
+
+  /* Notes section */
+  .notes-section {
+    background: #1e1a0e;
+    border-color: #78600a;
+  }
+
+  .notes-section h3 {
+    color: #fbbf24;
+  }
+
+  /* Event grid */
+  .event-grid .grid-header {
+    background: #0f172a;
+  }
+
+  .event-grid .grid-number {
+    background: #1e293b;
+    color: #e4e4e4;
+  }
+
+  @media (max-width: 900px) and (min-width: 601px) {
+    .event-grid .grid-number {
+      background: #0f172a;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .event-grid .grid-number {
+      background: #0f172a;
+    }
+  }
+
+  /* Comparison cards */
+  .comparison-card.highlight-warning {
+    border-left-color: #f87171;
+  }
+
+  .comparison-card.highlight-positive {
+    border-left-color: #4ade80;
+  }
+
+  .comparison-card.highlight-info {
+    border-left-color: #60a5fa;
+  }
+
+  .comparison-card.highlight-amber {
+    border-left-color: #fbbf24;
+  }
+
+  /* Lane arrow */
+  .lane-arrow {
+    color: #fbbf24;
+  }
+
+  /* Trinity cards */
+  .trinity-card.card-son {
+    border-top-color: #f87171;
+  }
+
+  .trinity-card.card-spirit {
+    border-top-color: #fbbf24;
+  }
+
+  .trinity-card.card-father {
+    border-top-color: #60a5fa;
+  }
+
+  /* Genealogy timeline */
+  .tl-dot {
+    border-color: #1e1e1e;
+  }
+
+  .tl-track-node::before {
+    border-color: #1e1e1e;
+  }
+
+  /* Era backgrounds - slightly muted for dark */
+  .bg-preflood { background: #0d7a70; }
+  .bg-postflood { background: #b86306; }
+  .bg-patriarchs { background: #047857; }
+  .bg-judges { background: #4b5563; }
+  .bg-kingdom { background: #6d28d9; }
+  .bg-exile { background: #b91c1c; }
+  .bg-inter { background: #4b5563; }
+  .bg-jesus { background: #a16207; }
+
+  /* Tribe chips */
+  .tribe-chip {
+    background: #0a2015;
+    color: #86efac;
+    border-color: #166534;
+  }
+
+  .tribe-chip.tribe-highlight {
+    background: #1e1a0e;
+    color: #fde68a;
+    border-color: #78600a;
+  }
+
+  /* Event badge */
+  .tl-event-badge {
+    background: #1e1a0e;
+    color: #fbbf24;
+    border-color: #78600a;
+  }
+
+  /* Jesus card */
+  .tl-jesus-card {
+    background: linear-gradient(135deg, #1e1a0e, #2a2010, #1e1a0e);
+    border-color: #a16207;
+    box-shadow: 0 8px 25px rgba(161, 98, 7, 0.25);
+  }
+
+  .tl-jesus-card h2 {
+    color: #fbbf24;
+  }
+
+  .tl-jesus-card p {
+    color: #fde68a;
+  }
+
+  /* Bible category header colors are white-on-colored so they stay fine */
+
+  /* Topic cards */
+  .topic-card h3 {
+    color: var(--color-link);
+  }
+}
+
+/* --- Page Navigation (Next/Previous) --- */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--content-width-wide);
+  margin: var(--space-2xl) auto var(--space-xl);
+  padding: 0 var(--space-lg);
+  gap: var(--space-lg);
+}
+.page-nav-link {
+  display: block;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  border-bottom: none;
+  transition: box-shadow 0.2s ease;
+}
+.page-nav-link:hover {
+  box-shadow: var(--shadow-md);
+  border-bottom: none;
+}
+.page-nav-link small {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+.page-nav-next {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* --- Related Topic Cards --- */
+.related-card {
+  display: block;
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  border-bottom: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.related-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-bottom: none;
+}
+.related-card strong {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+.related-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* --- Table of Contents Card --- */
+.toc-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+.toc-card h4 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+.toc-card ul {
+  columns: 2;
+  column-gap: var(--space-xl);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-card li {
+  padding: var(--space-xs) 0;
+}
+.toc-card a {
+  border-bottom: none;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .toc-card ul { columns: 1; }
 }
 
 /* --- Print --- */
