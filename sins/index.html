@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <meta name="description" content="What are sins according to the Bible? Lying, stealing, pride, and more. Why every person needs Jesus Christ as their only hope for salvation.">
   <meta property="og:title" content="What are sins?" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="What are sins, why are you guilty, and why do you need Jesus?" />
   <meta property="og:url" content="https://theholybook.github.io/sins/" />
   <meta property="og:image"
-    content="https://github.com/theholybook/theholybook.github.io/blob/main/sins/guilty.jpg?raw=true" />
+    content="https://theholybook.github.io/sins/guilty.jpg" />
   <title>Sins</title>
 </head>
 
@@ -37,6 +47,7 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
@@ -48,7 +59,7 @@
   </header>
 
   <div class="content">
-    <h2>Guilty List</h2>
+    <h2 id="guilty-list">Guilty List <a href="#guilty-list" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
 
     <div class="toc-card">
       <h4>Quick Navigation</h4>
@@ -242,7 +253,7 @@
 
     <!-- Unforgivable Sin -->
     <div class="unforgivable-card" id="unforgivable-sin">
-      <h2>Unforgivable Sin</h2>
+      <h2>Unforgivable Sin <a href="#unforgivable-sin" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <h4>Denying God/Blasphemy Against the Holy Spirit</h4>
       <p>The unforgivable sin isn't a quick and accidental sin, its a <strong>LONG AND WILLFUL</strong> one</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Matthew+12%3A31&version=MEV"
@@ -256,7 +267,7 @@
 
     <!-- External Factors -->
     <div class="card">
-      <h2>External Factors</h2>
+      <h2 id="external-factors">External Factors <a href="#external-factors" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20corinthians%2010:13&version=mev"
           title="13 No temptation has taken you except what is common to man. God is faithful, and He will not permit you to be tempted above what you can endure, but will with the temptation also make a way to escape, that you may be able to bear it.">1 corinthians 10:13</a> tells us that God does not allow temptation beyond of what you can bear, he will protect you against it, if it goes too far, but God does not tempt people as in <a
           href="https://www.biblegateway.com/passage/?search=James%201:13-15&version=mev"
@@ -266,7 +277,7 @@
 
     <!-- The Only Hope -->
     <div class="hope-card" id="the-only-hope">
-      <h2>THE ONLY HOPE</h2>
+      <h2>THE ONLY HOPE <a href="#the-only-hope" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>Everyone is a sinner, and no one deserves heaven, but <strong>Jesus gave his Life for US all.</strong><br>So that
         we can be forgiven and through his <strong>GRACE</strong> only, will we get eternal LIFE.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=John+5%3A24&version=mev"
@@ -329,10 +340,51 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

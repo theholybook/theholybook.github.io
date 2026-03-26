@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="stylesheet.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <meta name="description" content="God's intended way to live through Scripture. Salvation, faith, the Kingdom of God, and how to be truly saved through Jesus Christ.">
   <meta property="og:title" content="How to get truly saved" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Understanding salvation, faith, and the Kingdom of God through Scripture." />
   <meta property="og:url" content="https://theholybook.github.io/" />
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/theholybook/theholybook.github.io/main/heaven.jpg" />
+    content="https://theholybook.github.io/heaven.jpg" />
   <title>God's intended way to live</title>
 </head>
 
@@ -37,6 +47,7 @@
         <li><a href="bible%20order/index.html">Bible Guide</a></li>
         <li><a href="Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
@@ -46,20 +57,21 @@
     <p class="subtitle">Salvation, faith, and the Kingdom of God through Scripture</p>
   </header>
 
-  <!-- Color Legend -->
-  <div class="content">
-    <div class="color-legend">
-      <h4>Scripture Highlight Colors</h4>
-      <div class="legend-items">
-        <span class="legend-item"><span class="legend-dot dot-requirement"></span> Requirement</span>
-        <span class="legend-item"><span class="legend-dot dot-second-cmd"></span> Second Commandment</span>
-        <span class="legend-item"><span class="legend-dot dot-given"></span> Given by God</span>
-        <span class="legend-item"><span class="legend-dot dot-reborn"></span> Reborn</span>
-        <span class="legend-item"><span class="legend-dot dot-goal"></span> Goal: Kingdom of God</span>
-        <span class="legend-item"><span class="legend-dot dot-works"></span> Works</span>
-        <span class="legend-item"><span class="legend-dot dot-faith"></span> Faith</span>
-      </div>
+  <!-- Sticky Color Legend (sidebar) -->
+  <div class="color-legend-sticky">
+    <h4>Highlight Colors</h4>
+    <div class="legend-items">
+      <span class="legend-item"><span class="legend-dot dot-requirement"></span> Requirement</span>
+      <span class="legend-item"><span class="legend-dot dot-second-cmd"></span> 2nd Commandment</span>
+      <span class="legend-item"><span class="legend-dot dot-given"></span> Given by God</span>
+      <span class="legend-item"><span class="legend-dot dot-reborn"></span> Reborn</span>
+      <span class="legend-item"><span class="legend-dot dot-goal"></span> Kingdom of God</span>
+      <span class="legend-item"><span class="legend-dot dot-works"></span> Works</span>
+      <span class="legend-item"><span class="legend-dot dot-faith"></span> Faith</span>
     </div>
+  </div>
+
+  <div class="content">
 
     <!-- The Great Commandment -->
     <div class="card">
@@ -226,7 +238,7 @@
     <hr>
 
     <!-- Other Topics -->
-    <h2 class="text-center">Other Biblical Topics</h2>
+    <h2 id="other-biblical-topics" class="text-center">Other Biblical Topics <a href="#other-biblical-topics" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="topic-grid">
       <a href="trinity/index.html" class="topic-card">
         <h3>The Trinity</h3>
@@ -281,10 +293,51 @@
         <li><a href="bible%20order/index.html">Bible Guide</a></li>
         <li><a href="Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

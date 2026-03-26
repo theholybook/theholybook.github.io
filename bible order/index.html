@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <meta name="description" content="A categorized guide to all 66 books of the Bible, organized by genre -- Gospels, Letters, Prophecy, History, and more.">
   <meta property="og:title" content="Categorized Guide To The Books of The Bible" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Which order should you read the Bible? A categorized guide to all 66 books." />
   <meta property="og:url" content="https://theholybook.github.io/bible%20order/" />
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/theholybook/theholybook.github.io/main/bible%20order/biblebook.jpg" />
+    content="https://theholybook.github.io/bible%20order/biblebook.jpg" />
   <title>Categorized Guide To The Books of The Bible</title>
 </head>
 
@@ -37,6 +47,7 @@
         <li><a href="index.html" class="active">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
@@ -79,7 +90,7 @@
     </div>
 
 
-    <h2 id="creation-story" style="color: darkgreen; margin-top: var(--space-2xl);">1 <strong>Creation Story/The Fall</strong></h2>
+    <h2 id="creation-story" style="color: darkgreen; margin-top: var(--space-2xl);">1 <strong>Creation Story/The Fall</strong> <a href="#creation-story" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>1. Genesis</h2>
       <p><strong>The Book of Genesis</strong> is a foundational text in both Christian faith and theology. It speaks of
@@ -88,7 +99,7 @@
         Jesus Christ. It is a rich and complex text, full of symbolism and theological truths that continue to guide us
         in our understanding of God's plan for salvation.</p>
     </div>
-    <h2 id="the-gospels" style="color: darkblue; margin-top: var(--space-2xl);">2-5 <strong>The Gospels</strong></h2>
+    <h2 id="the-gospels" style="color: darkblue; margin-top: var(--space-2xl);">2-5 <strong>The Gospels</strong> <a href="#the-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>2. Matthew</h2>
       <p><strong>The Gospel of Matthew</strong> is a true treasure among the four gospels, as it presents a
@@ -117,7 +128,7 @@
         and the raising of Lazarus, which reveal the divinity of our Lord. The gospel of John also emphasizes the role
         of faith, love, and eternal life, providing a powerful reminder of our ultimate hope in Christ.</p>
     </div>
-    <h2 id="acts-of-apostles" style="color: darkmagenta; margin-top: var(--space-2xl);">6 <strong>The Acts of The Apostles</strong></h2>
+    <h2 id="acts-of-apostles" style="color: darkmagenta; margin-top: var(--space-2xl);">6 <strong>The Acts of The Apostles</strong> <a href="#acts-of-apostles" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>6. The Acts</h2>
       <p><strong>The Acts of The Apostles</strong> is a historical account of the early church and the spread of the
@@ -126,7 +137,7 @@
         people. The book of Acts is a reminder of the power of the Holy Spirit and the unstoppable love and message of
         Jesus Christ.</p>
     </div>
-    <h2 id="letters-epistles" style="color: darkgoldenrod; margin-top: var(--space-2xl);">7-27 <strong>Letters/Epistles</strong></h2>
+    <h2 id="letters-epistles" style="color: darkgoldenrod; margin-top: var(--space-2xl);">7-27 <strong>Letters/Epistles</strong> <a href="#letters-epistles" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>7. Romans</h2>
       <p><strong>The Epistle of Paul to the Romans</strong> is a powerful theological treatise written by the apostle
@@ -209,8 +220,9 @@
         transformative power of Christ's love and the importance of forgiveness and reconciliation within the body of
         Christ.</p>
       <h2>20. Hebrews</h2>
-      <p><strong>The Epistle of Paul to the Hebrews</strong> is a powerful and theological work believed to be written
-        by Luke or Paul although authorship is debated. It contains rich teachings on the superiority of Christ and the
+      <p><strong>The Epistle to the Hebrews</strong> is a powerful and theological work whose authorship remains
+        anonymous and debated among scholars, though various candidates such as Paul, Barnabas, Apollos, and others
+        have been suggested over the centuries. It contains rich teachings on the superiority of Christ and the
         new covenant He has ushered in. The author also reveals the fulfillment of Old Testament prophecies and the
         ultimate sacrifice of Christ for the forgiveness of sins. The letter of Hebrews serves as a powerful reminder of
         the centrality and supremacy of Christ in our faith.</p>
@@ -258,7 +270,7 @@
         remember the teachings of the apostles and fight for the faith. The letter of Jude serves as a reminder to
         remain vigilant and protect the truth of the Gospel.</p>
     </div>
-    <h2 id="poetry-wisdom" style="color: black; margin-top: var(--space-2xl);">28-33 <strong>Poetry/Wisdom Books</strong></h2>
+    <h2 id="poetry-wisdom" style="color: black; margin-top: var(--space-2xl);">28-33 <strong>Poetry/Wisdom Books</strong> <a href="#poetry-wisdom" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>28. Job</h2>
       <p><strong>The Book of Job</strong> is a powerful and complex story of suffering and faith. I’m struck by its
@@ -306,7 +318,7 @@
         expression of sorrow and repentance in the face of tragedy. The poetic structure and emotional intensity
         contribute to its significance in the context of biblical literature.</p>
     </div>
-    <h2 id="mosaic-law" style="color: #b33c00; margin-top: var(--space-2xl);">34-49 <strong>Mosaic Law/History</strong></h2>
+    <h2 id="mosaic-law" style="color: #b33c00; margin-top: var(--space-2xl);">34-49 <strong>Mosaic Law/History</strong> <a href="#mosaic-law" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>34. Exodus</h2>
       <p><strong>The Book of Exodus</strong> is a part of the Pentateuch, the first five books of the Bible, and tells
@@ -343,8 +355,8 @@
         "second law" or a repetition of the Law given in Exodus and Leviticus. It serves as a reminder of God's covenant
         with Israel and the laws and commandments they must follow in order to experience the blessings of God's
         promises. It is a powerful reminder that obedience to God's law is not a burden, but a pathway to true freedom
-        and life. One interesting fact about Moses' farewell speech in Deuteronomy is that it is the longest recorded
-        speech in the Bible, spanning over three chapters. It serves as a powerful reminder of the importance of passing
+        and life. One interesting fact about Moses' farewell speeches in Deuteronomy is that they make up the longest
+        recorded address in the Bible, spanning the vast majority of the book. They serve as a powerful reminder of the importance of passing
         down God's teachings to future generations and living in obedience to His commandments. Moses' words continue to
         inspire and guide believers to this very day.
       </p>
@@ -417,16 +429,16 @@
         from the land. It also covers the fall of Israel and Judah to foreign powers and the eventual exile of the
         Israelites. This book serves as a reminder of the consequences of turning away from God and the importance of
         staying faithful to His commandments. One interesting fact about the second book of Kings is that it contains a
-        record of the reign of Manasseh, who was one of the most wicked kings in the history of Judah. However, towards
-        the end of his life, he repented and returned to God, emphasizing the power of God's forgiveness and the
-        potential for transformation in our lives.</p>
+        record of the reign of Manasseh, who was one of the most wicked kings in the history of Judah. However, as
+        recorded in 2nd Chronicles 33, towards the end of his life he repented and returned to God, emphasizing the
+        power of God's forgiveness and the potential for transformation in our lives.</p>
       <h2>45. 1st Chronicles</h2>
       <p><strong>The First Book of The Chronicles</strong> in the Old Testament is a history of Israel, tracing the
-        genealogy of Adam to King David. It also covers the reign of King David and his son, King Solomon, in greater
-        detail compared to the books of Samuel and Kings. This book serves as a reminder of God's faithfulness to His
+        genealogy of Adam to King David. It also covers the reign of King David in greater
+        detail, ending with David's death and Solomon's ascension to the throne. This book serves as a reminder of God's faithfulness to His
         promises and His continued guidance and protection over His people. One interesting detail about the first book
-        of Chronicles is that it includes a list of the kings of Israel and Judah, along with their specific reigns and
-        accounts of their actions and accomplishments, showing that God holds all leaders accountable for their actions
+        of Chronicles is that it opens with extensive genealogies stretching from Adam through the tribes of Israel,
+        showing that God holds all leaders accountable for their actions
         and that ultimately, His will and plans will prevail.</p>
       <h2>46. 2nd Chronicles</h2>
       <p><strong>The Second Book of The Chronicles</strong> continues the narrative of the reign of the kings of Israel
@@ -466,7 +478,7 @@
         world.</p>
     </div>
 
-    <h2 id="major-prophets" style="color: #7a00cc; margin-top: var(--space-2xl);">50-53 <strong>Major Prophets</strong></h2>
+    <h2 id="major-prophets" style="color: #7a00cc; margin-top: var(--space-2xl);">50-53 <strong>Major Prophets</strong> <a href="#major-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>50. Isaiah</h2>
       <p><strong>The Book of The Prophet Isaiah</strong> is a long prophetic book in the Old Testament, attributed to
@@ -484,8 +496,8 @@
         corruption and idolatry, warning them of the impending judgment from God. However, he also offers hope for
         restoration and redemption if they turn back to God. The book also contains personal and emotional accounts of
         Jeremiah's struggles and relationship with God. It is a powerful reminder of the consequences of disobedience
-        and the importance of staying faithful to God. It is also one of the most quoted books in the New Testament,
-        with over 250 references to its verses. Personally, I admire Jeremiah's unwavering dedication to God's message,
+        and the importance of staying faithful to God. It is also frequently referenced in the New Testament,
+        with numerous allusions to its verses throughout. Personally, I admire Jeremiah's unwavering dedication to God's message,
         even in the face of persecution and rejection from his own people.</p>
       <h2>52. Ezekiel</h2>
       <p><strong>The Book of The Prophet Ezekiel</strong> is a prophetic book attributed to the prophet Ezekiel, who
@@ -507,11 +519,11 @@
         Daniel serves as a reminder of God's sovereignty and His ultimate plan for redemption and restoration. One
         interesting fact about the book of Daniel is that it contains the famous "70 weeks" prophecy, which many
         scholars see as a foreshadowing of the coming of Jesus Christ as the Messiah. This prophecy, given to Daniel by
-        the archangel Gabriel, accurately predicts the timeline of Jesus' birth and death, bringing to light the divine
+        the archangel Gabriel, is widely understood to point to the coming and sacrifice of the Messiah, bringing to light the divine
         inspiration and accuracy of the book of Daniel.</p>
     </div>
 
-    <h2 id="minor-prophets" style="color: #5c8a8a; margin-top: var(--space-2xl);">54-65 <strong>Minor Prophet</strong></h2>
+    <h2 id="minor-prophets" style="color: #5c8a8a; margin-top: var(--space-2xl);">54-65 <strong>Minor Prophets</strong> <a href="#minor-prophets" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>54. Hosea</h2>
       <p><strong>The Book of The Prophet Hosea</strong> is a prophetic book in the Old Testament, written by the prophet
@@ -544,8 +556,8 @@
         powerful message from God to the nation of Edom. Through this book, we see the consequences of pride and
         arrogance, as well as the faithfulness of God to His people. It also speaks of the restoration and judgment that
         will come in the future. Overall, it serves as a call for all nations to humble themselves before God and seek
-        His will. Another interesting fact is that the book of Obadiah is also quoted in the New Testament in the book
-        of Romans, showing the significance of this prophetic message even in the time of Jesus and the early church.
+        His will. Another interesting fact is that the book of Obadiah shares themes with other prophetic books, and
+        its message of God's judgment against the prideful echoes throughout Scripture across the ages.
       </p>
       <h2>58. Jonah</h2>
       <p><strong>The Book of The Prophet Jonah</strong> tells the story of a reluctant prophet who initially resists
@@ -554,7 +566,7 @@
         for all people, even those who may be considered enemies. Throughout the book, it teaches us about obedience to
         God and trusting in His plan for our lives. There is a parallel between Jonah's experience in the belly of the
         great fish and Jesus' death and resurrection. Just as Jonah was in the belly of the fish for three days and
-        three nights before being brought back to life, Jesus was in the tomb for three days before His resurrection.
+        three nights before being delivered onto dry land, Jesus was in the tomb for three days before His resurrection.
         This further emphasizes the significance of Jesus' sacrifice and triumph over death for our salvation.
         (Sidenote: Jonah was a hilariously disobedient prophet).</p>
       <h2>59. Micah</h2>
@@ -580,10 +592,11 @@
         between the prophet Habakkuk and God, with Habakkuk questioning the evil and injustice in the world and God
         answering with His plan for judgement and salvation. It serves as a reminder to trust in God's sovereignty and
         to have faith in His ultimate plan for redemption and justice. One interesting fact about Habakkuk is that it is
-        the only book in the Bible that consists entirely of a conversation between a prophet and God. This unique
+        one of the few prophetic books structured around a direct dialogue between a prophet and God, culminating in
+        a beautiful psalm of faith in chapter 3. This unique
         structure emphasizes the personal relationship between God and His people, and shows the importance of seeking
         and listening to His guidance in our lives. It also serves as a reminder that God hears and answers our doubts
-        and questions, and He is always faithful to His promises even when we may not understand God's plans and ways,
+        and questions, and He is always faithful to His promises. Even when we may not understand God's plans and ways,
         we can trust in His goodness and purpose for our lives. As it says in Habakkuk 3:17-18, "Though the fig tree may
         not blossom, nor fruit be on the vines; though the labor of the olive may fail, and the fields yield no food;
         though the flock may be cut off from the fold, and there be no herd in the stalls- yet I will rejoice in the
@@ -631,7 +644,7 @@
         faithfulness, even when we fall short of His glory (Romans 3:23).</p>
     </div>
 
-    <h2 id="apocalyptic" style="color: darkred; margin-top: var(--space-2xl);">66 <strong>Apocalyptic/Final Judgement</strong></h2>
+    <h2 id="apocalyptic" style="color: darkred; margin-top: var(--space-2xl);">66 <strong>Apocalyptic/Final Judgement</strong> <a href="#apocalyptic" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <div class="card">
       <h2>66. Revelation</h2>
       <p><strong>The Book of Revelation</strong> is a powerful and enigmatic book that reveals the end times and the
@@ -654,7 +667,7 @@
         together showcasing God’s perfect plan from the beginning to the end, in Lord Jesus’ name. Amen.</p>
     </div>
 
-    <p class="text-center text-muted">Content made by Connor. Website made by Pascal.</p>
+    <p class="text-center text-muted">Content by Pascal. Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
   </div>
 
   <!-- Related Topics -->
@@ -698,10 +711,51 @@
         <li><a href="index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>

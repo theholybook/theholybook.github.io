@@ -376,6 +376,7 @@ mark.hl-faith {
 }
 
 /* --- Color Legend --- */
+/* Inline legend (non-sticky fallback) */
 .color-legend {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -397,6 +398,73 @@ mark.hl-faith {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
+}
+
+/* Sticky sidebar legend */
+.color-legend-sticky {
+  position: fixed;
+  top: 80px;
+  right: var(--space-lg);
+  width: 170px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-md);
+  z-index: 90;
+}
+
+.color-legend-sticky h4 {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.color-legend-sticky .legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.color-legend-sticky .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+/* Hide sticky legend on narrow screens, show compact top bar instead */
+@media (max-width: 1200px) {
+  .color-legend-sticky {
+    position: sticky;
+    top: 56px;
+    right: auto;
+    width: 100%;
+    border-radius: 0;
+    padding: var(--space-sm) var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    z-index: 95;
+  }
+  .color-legend-sticky h4 {
+    display: none;
+  }
+  .color-legend-sticky .legend-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+  }
+  .color-legend-sticky .legend-item {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
 }
 
 .color-legend .legend-item {
@@ -1451,9 +1519,155 @@ mark.hl-faith {
   left: var(--space-md);
 }
 
+/* --- Theme Toggle Button --- */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-text);
+  margin-left: var(--space-sm);
+  transition: background 0.2s ease;
+}
+.theme-toggle:hover {
+  background: var(--color-border);
+}
+
 /* --- Dark Mode --- */
+html.dark {
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-text: #e4e4e4;
+  --color-text-secondary: #a0a0a0;
+  --color-border: #333333;
+  --color-link: #60a5fa;
+  --color-link-hover: #93bbfd;
+  --color-accent: #a78bfa;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.3);
+}
+
+html.dark .site-nav {
+  background: rgba(18, 18, 18, 0.92);
+}
+
+html.dark .site-nav .nav-links a:hover,
+html.dark .site-nav .nav-links a.active {
+  background: #2a2a2a;
+}
+
+html.dark .nav-toggle span {
+  background: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  html.dark .site-nav .nav-links {
+    background: rgba(18, 18, 18, 0.98);
+  }
+}
+
+html.dark .scripture {
+  background: #1a1625;
+}
+
+html.dark mark.hl-requirement {
+  background-color: rgba(255, 69, 0, 0.25);
+  color: #ff8a65;
+  border-color: rgba(255, 69, 0, 0.4);
+}
+html.dark mark.hl-second-cmd {
+  background-color: rgba(233, 150, 122, 0.25);
+  color: #f0aa92;
+  border-color: rgba(233, 150, 122, 0.4);
+}
+html.dark mark.hl-given {
+  background-color: rgba(50, 205, 50, 0.2);
+  color: #66dd66;
+  border-color: rgba(50, 205, 50, 0.35);
+}
+html.dark mark.hl-reborn {
+  background-color: rgba(250, 204, 21, 0.2);
+  color: #fde047;
+  border-color: rgba(250, 204, 21, 0.4);
+}
+html.dark mark.hl-goal {
+  background-color: rgba(34, 211, 238, 0.2);
+  color: #67e8f9;
+  border-color: rgba(34, 211, 238, 0.35);
+}
+html.dark mark.hl-works {
+  background-color: rgba(176, 196, 222, 0.2);
+  color: #c8d8e8;
+  border-color: rgba(176, 196, 222, 0.35);
+}
+html.dark mark.hl-faith {
+  background-color: rgba(147, 112, 219, 0.25);
+  color: #c4a8f0;
+  border-color: rgba(147, 112, 219, 0.4);
+}
+html.dark .sin-verdict {
+  background: #3b1515;
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+html.dark .unforgivable-card {
+  background: #2a1010;
+  border-color: #7f1d1d;
+  border-left-color: #ef4444;
+}
+html.dark .unforgivable-card h2 { color: #fca5a5; }
+html.dark .hope-card {
+  background: #0a2015;
+  border-color: #166534;
+  border-left-color: #22c55e;
+}
+html.dark .hope-card h2 { color: #86efac; }
+html.dark .notes-section {
+  background: #1e1a0e;
+  border-color: #78600a;
+}
+html.dark .notes-section h3 { color: #fbbf24; }
+html.dark .event-grid .grid-header { background: #0f172a; }
+html.dark .event-grid .grid-number { background: #1e293b; color: #e4e4e4; }
+html.dark .comparison-card.highlight-warning { border-left-color: #f87171; }
+html.dark .comparison-card.highlight-positive { border-left-color: #4ade80; }
+html.dark .comparison-card.highlight-info { border-left-color: #60a5fa; }
+html.dark .comparison-card.highlight-amber { border-left-color: #fbbf24; }
+html.dark .lane-arrow { color: #fbbf24; }
+html.dark .trinity-card.card-son { border-top-color: #f87171; }
+html.dark .trinity-card.card-spirit { border-top-color: #fbbf24; }
+html.dark .trinity-card.card-father { border-top-color: #60a5fa; }
+html.dark .tl-dot { border-color: #1e1e1e; }
+html.dark .tl-track-node::before { border-color: #1e1e1e; }
+html.dark .bg-preflood { background: #0d7a70; }
+html.dark .bg-postflood { background: #b86306; }
+html.dark .bg-patriarchs { background: #047857; }
+html.dark .bg-judges { background: #4b5563; }
+html.dark .bg-kingdom { background: #6d28d9; }
+html.dark .bg-exile { background: #b91c1c; }
+html.dark .bg-inter { background: #4b5563; }
+html.dark .bg-jesus { background: #a16207; }
+html.dark .tribe-chip { background: #0a2015; color: #86efac; border-color: #166534; }
+html.dark .tribe-chip.tribe-highlight { background: #1e1a0e; color: #fde68a; border-color: #78600a; }
+html.dark .tl-event-badge { background: #1e1a0e; color: #fbbf24; border-color: #78600a; }
+html.dark .tl-jesus-card {
+  background: linear-gradient(135deg, #1e1a0e, #2a2010, #1e1a0e);
+  border-color: #a16207;
+  box-shadow: 0 8px 25px rgba(161, 98, 7, 0.25);
+}
+html.dark .tl-jesus-card h2 { color: #fbbf24; }
+html.dark .tl-jesus-card p { color: #fde68a; }
+html.dark .topic-card h3 { color: var(--color-link); }
+html.dark .theme-toggle { border-color: #444; }
+
+/* Auto dark mode for users without manual preference saved */
 @media (prefers-color-scheme: dark) {
-  :root {
+  html:not(.light) {
     --color-bg: #121212;
     --color-surface: #1e1e1e;
     --color-text: #e4e4e4;
@@ -1462,235 +1676,9 @@ mark.hl-faith {
     --color-link: #60a5fa;
     --color-link-hover: #93bbfd;
     --color-accent: #a78bfa;
-
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.3);
-  }
-
-  /* Nav bar -- dark frosted glass */
-  .site-nav {
-    background: rgba(18, 18, 18, 0.92);
-  }
-
-  .site-nav .nav-links a:hover,
-  .site-nav .nav-links a.active {
-    background: #2a2a2a;
-  }
-
-  .nav-toggle span {
-    background: var(--color-text);
-  }
-
-  @media (max-width: 768px) {
-    .site-nav .nav-links {
-      background: rgba(18, 18, 18, 0.98);
-    }
-  }
-
-  /* Scripture blockquote */
-  .scripture {
-    background: #1a1625;
-  }
-
-  /* Theological highlight tags -- dark mode */
-  mark.hl-requirement {
-    background-color: rgba(255, 69, 0, 0.25);
-    color: #ff8a65;
-    border-color: rgba(255, 69, 0, 0.4);
-  }
-
-  mark.hl-second-cmd {
-    background-color: rgba(233, 150, 122, 0.25);
-    color: #f0aa92;
-    border-color: rgba(233, 150, 122, 0.4);
-  }
-
-  mark.hl-given {
-    background-color: rgba(50, 205, 50, 0.2);
-    color: #66dd66;
-    border-color: rgba(50, 205, 50, 0.35);
-  }
-
-  mark.hl-reborn {
-    background-color: rgba(250, 204, 21, 0.2);
-    color: #fde047;
-    border-color: rgba(250, 204, 21, 0.4);
-  }
-
-  mark.hl-goal {
-    background-color: rgba(34, 211, 238, 0.2);
-    color: #67e8f9;
-    border-color: rgba(34, 211, 238, 0.35);
-  }
-
-  mark.hl-works {
-    background-color: rgba(176, 196, 222, 0.2);
-    color: #c8d8e8;
-    border-color: rgba(176, 196, 222, 0.35);
-  }
-
-  mark.hl-faith {
-    background-color: rgba(147, 112, 219, 0.25);
-    color: #c4a8f0;
-    border-color: rgba(147, 112, 219, 0.4);
-  }
-
-  /* Sin verdict badges */
-  .sin-verdict {
-    background: #3b1515;
-    color: #fca5a5;
-    border-color: #7f1d1d;
-  }
-
-  /* Unforgivable card */
-  .unforgivable-card {
-    background: #2a1010;
-    border-color: #7f1d1d;
-    border-left-color: #ef4444;
-  }
-
-  .unforgivable-card h2 {
-    color: #fca5a5;
-  }
-
-  /* Hope card */
-  .hope-card {
-    background: #0a2015;
-    border-color: #166534;
-    border-left-color: #22c55e;
-  }
-
-  .hope-card h2 {
-    color: #86efac;
-  }
-
-  /* Notes section */
-  .notes-section {
-    background: #1e1a0e;
-    border-color: #78600a;
-  }
-
-  .notes-section h3 {
-    color: #fbbf24;
-  }
-
-  /* Event grid */
-  .event-grid .grid-header {
-    background: #0f172a;
-  }
-
-  .event-grid .grid-number {
-    background: #1e293b;
-    color: #e4e4e4;
-  }
-
-  @media (max-width: 900px) and (min-width: 601px) {
-    .event-grid .grid-number {
-      background: #0f172a;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .event-grid .grid-number {
-      background: #0f172a;
-    }
-  }
-
-  /* Comparison cards */
-  .comparison-card.highlight-warning {
-    border-left-color: #f87171;
-  }
-
-  .comparison-card.highlight-positive {
-    border-left-color: #4ade80;
-  }
-
-  .comparison-card.highlight-info {
-    border-left-color: #60a5fa;
-  }
-
-  .comparison-card.highlight-amber {
-    border-left-color: #fbbf24;
-  }
-
-  /* Lane arrow */
-  .lane-arrow {
-    color: #fbbf24;
-  }
-
-  /* Trinity cards */
-  .trinity-card.card-son {
-    border-top-color: #f87171;
-  }
-
-  .trinity-card.card-spirit {
-    border-top-color: #fbbf24;
-  }
-
-  .trinity-card.card-father {
-    border-top-color: #60a5fa;
-  }
-
-  /* Genealogy timeline */
-  .tl-dot {
-    border-color: #1e1e1e;
-  }
-
-  .tl-track-node::before {
-    border-color: #1e1e1e;
-  }
-
-  /* Era backgrounds - slightly muted for dark */
-  .bg-preflood { background: #0d7a70; }
-  .bg-postflood { background: #b86306; }
-  .bg-patriarchs { background: #047857; }
-  .bg-judges { background: #4b5563; }
-  .bg-kingdom { background: #6d28d9; }
-  .bg-exile { background: #b91c1c; }
-  .bg-inter { background: #4b5563; }
-  .bg-jesus { background: #a16207; }
-
-  /* Tribe chips */
-  .tribe-chip {
-    background: #0a2015;
-    color: #86efac;
-    border-color: #166534;
-  }
-
-  .tribe-chip.tribe-highlight {
-    background: #1e1a0e;
-    color: #fde68a;
-    border-color: #78600a;
-  }
-
-  /* Event badge */
-  .tl-event-badge {
-    background: #1e1a0e;
-    color: #fbbf24;
-    border-color: #78600a;
-  }
-
-  /* Jesus card */
-  .tl-jesus-card {
-    background: linear-gradient(135deg, #1e1a0e, #2a2010, #1e1a0e);
-    border-color: #a16207;
-    box-shadow: 0 8px 25px rgba(161, 98, 7, 0.25);
-  }
-
-  .tl-jesus-card h2 {
-    color: #fbbf24;
-  }
-
-  .tl-jesus-card p {
-    color: #fde68a;
-  }
-
-  /* Bible category header colors are white-on-colored so they stay fine */
-
-  /* Topic cards */
-  .topic-card h3 {
-    color: var(--color-link);
   }
 }
 
@@ -1782,6 +1770,44 @@ mark.hl-faith {
 }
 @media (max-width: 600px) {
   .toc-card ul { columns: 1; }
+}
+
+/* --- Anchor Links --- */
+.anchor-link {
+  font-size: 0.65em;
+  opacity: 0;
+  margin-left: var(--space-xs);
+  text-decoration: none;
+  border-bottom: none;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  vertical-align: middle;
+}
+h2:hover .anchor-link,
+.anchor-link:focus {
+  opacity: 0.6;
+}
+.anchor-link:hover {
+  opacity: 1 !important;
+}
+.toast-notification {
+  position: fixed;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  z-index: 1000;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+.toast-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 /* --- Print --- */

@@ -6,13 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
   <meta name="description" content="What religion is true and what even is religion? Compare religion vs. relationship with God, Catholic vs. Protestant, and examine other world religions biblically.">
   <meta property="og:title" content="Religion vs relationship" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Religion vs. relationship -- what the Bible says about true faith." />
   <meta property="og:url" content="https://theholybook.github.io/Religions/" />
   <meta property="og:image"
-    content="https://github.com/theholybook/theholybook.github.io/blob/main/Religions/image.png?raw=true" />
+    content="https://theholybook.github.io/Religions/image.png" />
   <title>Religions</title>
 </head>
 
@@ -37,6 +47,7 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
     </div>
   </nav>
 
@@ -75,7 +86,7 @@
   <!-- Religion vs Relationship -->
   <div class="comparison-grid" id="religion-vs-relationship">
     <div class="comparison-card highlight-amber">
-      <h2>Religion</h2>
+      <h2 id="religion">Religion <a href="#religion" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <h4>Main difference</h4>
       <p>Religion requires steps and preparations, religion is always man made</p>
       <h4>Prayer</h4>
@@ -96,7 +107,7 @@
     </div>
 
     <div class="comparison-card highlight-positive">
-      <h2>Relationship</h2>
+      <h2 id="relationship">Relationship <a href="#relationship" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <h4>Main difference</h4>
       <p>Relationship is having God and the law in the heart, its accepting him in our lives and relying on him</p>
       <h4>Prayer</h4>
@@ -124,14 +135,14 @@
   </div>
 
   <div class="content">
-    <h2 class="text-center">How Does That Impact Other Religions?</h2>
+    <h2 id="impact-other-religions" class="text-center">How Does That Impact Other Religions? <a href="#impact-other-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
     <p class="text-center">We will start with those religions that are part of Christianity. In Christianity there are 2 main branches:</p>
   </div>
 
   <!-- Catholic vs Protestant -->
   <div class="comparison-grid" id="catholicism">
     <div class="comparison-card highlight-info">
-      <h2>Catholicism</h2>
+      <h2>Catholicism <a href="#catholicism" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <ul>
         <li><p>Roman catholic</p></li>
         <li><p>Orthodox</p></li>
@@ -156,7 +167,7 @@
     </div>
 
     <div class="comparison-card highlight-positive" id="protestantism">
-      <h2>Protestant</h2>
+      <h2>Protestant <a href="#protestantism" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <ul>
         <li><p>Baptism</p></li>
         <li><p>Calvinism</p></li>
@@ -183,7 +194,7 @@
   <div class="content">
     <!-- False Gospels -->
     <div class="unforgivable-card" id="false-gospels">
-      <h2>False Gospels/Doctrines</h2>
+      <h2>False Gospels/Doctrines <a href="#false-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><strong>Arianism:</strong> Denies the full divinity of Jesus Christ, claiming He was a created being rather than eternally coexistent with the Father.</p>
       <hr>
       <p><strong>Docetism:</strong> Teaches that Jesus only seemed to have a physical body and did not truly suffer on the cross, emphasizing His divinity over His humanity.</p>
@@ -205,7 +216,7 @@
 
     <!-- Protestant Denominations -->
     <div class="card">
-      <h2>Protestant Denominations</h2>
+      <h2 id="protestant-denominations">Protestant Denominations <a href="#protestant-denominations" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <hr>
       <h3>Baptist</h3>
       <h4>NIFB</h4>
@@ -273,7 +284,7 @@
 
     <!-- Other Religions -->
     <div class="card" id="other-religions">
-      <h2>Other Religions</h2>
+      <h2>Other Religions <a href="#other-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>The bible warns us about the story of satan and how satan is a deceiver</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation%2012%3A7-17&version=mev"
           title="9 The great dragon was cast out, that ancient serpent called the Devil and Satan, who deceives the whole world.">Revelation 12:7-17</a> tells us that satan got thrown down into earth and now hes trying to devour who he can with his lies</p>
@@ -303,7 +314,7 @@
 
     <!-- Bookless Religions -->
     <div class="card">
-      <h2>Bookless Religions</h2>
+      <h2 id="bookless-religions">Bookless Religions <a href="#bookless-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>The bookless religion are usually always spiritual rules and opening yourself to the spiritual world</p>
       <p>As said, the world is full of demons, so youre opening yourself to demons to enter you and cause demon possessions</p>
       <p>Almost every spirit is a demon in this world</p>
@@ -354,10 +365,51 @@
         <li><a href="../bible%20order/index.html">Bible Guide</a></li>
         <li><a href="../Genealogy/index.html">Genealogy</a></li>
       </ul>
-      <p class="footer-credits">Created by Pascal | Edited by @BilbroSwagginzX</p>
+      <p class="footer-credits">Created by Pascal | Edited by <a href="https://x.com/BilbroSwagginzX" target="_blank">@BilbroSwagginzX</a></p>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      }
+      updateToggleIcon();
+    })();
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      document.documentElement.classList.remove('light');
+      if (!isDark) document.documentElement.classList.add('light');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateToggleIcon();
+    }
+    function updateToggleIcon() {
+      var btn = document.querySelector('.theme-toggle');
+      if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    function copyAnchor(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + e.currentTarget.getAttribute('href');
+      navigator.clipboard.writeText(url).then(function() {
+        showToast('Link copied!');
+      });
+    }
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.id = 'toast';
+        t.className = 'toast-notification';
+        document.body.appendChild(t);
+      }
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2000);
+    }
+  </script>
 </body>
 
 </html>
