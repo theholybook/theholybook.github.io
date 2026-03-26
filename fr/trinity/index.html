@@ -62,7 +62,7 @@
   </header>
 
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <ol>
         <li>
           <p>La trinite ne signifie <strong style="color:Red">pas</strong> 3 Dieux
@@ -88,8 +88,8 @@
 
   <!-- Trinity Cards -->
   <div class="content-wide">
-    <div class="trinity-grid">
-      <div class="trinity-card card-son">
+    <div class="trinity-grid reveal">
+      <div class="trinity-card reveal card-son">
         <h2 id="jesus">Jesus <a href="#jesus" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
 
         <p>Le Fils est dans les versets avec les 3 entites comme un seul <a
@@ -132,7 +132,7 @@
         <img src="../../trinity/theson.jpg" alt="Jesus le Fils" loading="lazy">
       </div>
 
-      <div class="trinity-card card-spirit">
+      <div class="trinity-card reveal card-spirit">
         <h2 id="holy-spirit">Saint-Esprit <a href="#holy-spirit" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
         <p>Le Saint-Esprit est aussi dans les versets avec les 3 entites comme un seul <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=LSG"
@@ -164,7 +164,7 @@
         <img src="../../trinity/holyspirit.jpg" alt="Le Saint-Esprit" loading="lazy">
       </div>
 
-      <div class="trinity-card card-father">
+      <div class="trinity-card reveal card-father">
         <h2 id="the-father">Le Pere <a href="#the-father" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
         <p>Le Pere est aussi dans les versets avec les 3 entites comme un seul <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=LSG"
@@ -196,7 +196,7 @@
 
   <!-- Binding Verses and Arguments -->
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <h2 id="binding-verses">Versets Cles <a href="#binding-verses" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20John%205:7-9&version=LSG"
           title="7 Car il y en a trois qui rendent temoignage dans le ciel : le Pere, la Parole et le Saint-Esprit, et ces trois sont un.">1
@@ -208,7 +208,7 @@
           title="13 Je suis l'Alpha et l'Omega, le premier et le dernier, le commencement et la fin.">Apocalypse 22:13</a></p>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <h2 id="arguments-against-trinity">Arguments Utilises Contre la Trinite <a href="#arguments-against-trinity" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
 
       <p>Dans <a href="https://www.biblegateway.com/passage/?search=John+14%3A28&version=LSG"
@@ -266,7 +266,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Sujets Connexes</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../Religions/index.html" class="related-card">
         <strong>Religions</strong>
         <p>Quelle religion est vraie et qu'est-ce que la religion ?</p>
@@ -348,6 +348,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

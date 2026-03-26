@@ -62,7 +62,7 @@
   </header>
 
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <p>Starting off what the bible says about religion, <a
           href="https://www.biblegateway.com/passage/?search=James%201:26-27&version=mev"
           title="26 If anyone among you seems to be religious and does not bridle his tongue, but deceives his own heart, this man's religion is vain. 27 Religion that is pure and undefiled before God, the Father, is this: to visit the fatherless and widows in their affliction and to keep oneself unstained by the world.">James
@@ -76,7 +76,7 @@
       <p><strong>True Christianity isn't a religion, its a relationship instead</strong></p>
     </div>
 
-    <div class="toc-card">
+    <div class="toc-card reveal">
       <h4>Quick Navigation</h4>
       <ul>
         <li><a href="#religion-vs-relationship">Religion vs Relationship</a></li>
@@ -89,8 +89,8 @@
   </div>
 
   <!-- Religion vs Relationship -->
-  <div class="comparison-grid" id="religion-vs-relationship">
-    <div class="comparison-card highlight-amber">
+  <div class="comparison-grid reveal" id="religion-vs-relationship">
+    <div class="comparison-card reveal highlight-amber">
       <h2 id="religion">Religion <a href="#religion" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <h4>Main difference</h4>
       <p>Religion requires steps and preparations, religion is always man made</p>
@@ -111,7 +111,7 @@
       <p>Also objectifying God is what drives religion</p>
     </div>
 
-    <div class="comparison-card highlight-positive">
+    <div class="comparison-card reveal highlight-positive">
       <h2 id="relationship">Relationship <a href="#relationship" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <h4>Main difference</h4>
       <p>Relationship is having God and the law in the heart, its accepting him in our lives and relying on him</p>
@@ -145,8 +145,8 @@
   </div>
 
   <!-- Catholic vs Protestant -->
-  <div class="comparison-grid" id="catholicism">
-    <div class="comparison-card highlight-info">
+  <div class="comparison-grid reveal" id="catholicism">
+    <div class="comparison-card reveal highlight-info">
       <h2>Catholicism <a href="#catholicism" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <ul>
         <li><p>Roman catholic</p></li>
@@ -171,7 +171,7 @@
       <p>Catholics also tend to worship objects like the crucifix and believe it holds power.</p>
     </div>
 
-    <div class="comparison-card highlight-positive" id="protestantism">
+    <div class="comparison-card reveal highlight-positive" id="protestantism">
       <h2>Protestant <a href="#protestantism" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <ul>
         <li><p>Baptism</p></li>
@@ -198,7 +198,7 @@
 
   <div class="content">
     <!-- False Gospels -->
-    <div class="unforgivable-card" id="false-gospels">
+    <div class="unforgivable-card reveal" id="false-gospels">
       <h2>False Gospels/Doctrines <a href="#false-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><strong>Arianism:</strong> Denies the full divinity of Jesus Christ, claiming He was a created being rather than eternally coexistent with the Father.</p>
       <hr>
@@ -220,7 +220,7 @@
     </div>
 
     <!-- Protestant Denominations -->
-    <div class="card">
+    <div class="card reveal">
       <h2 id="protestant-denominations">Protestant Denominations <a href="#protestant-denominations" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <hr>
       <h3>Baptist</h3>
@@ -288,7 +288,7 @@
     </div>
 
     <!-- Other Religions -->
-    <div class="card" id="other-religions">
+    <div class="card reveal" id="other-religions">
       <h2>Other Religions <a href="#other-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>The bible warns us about the story of satan and how satan is a deceiver</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation%2012%3A7-17&version=mev"
@@ -318,7 +318,7 @@
     </div>
 
     <!-- Bookless Religions -->
-    <div class="card">
+    <div class="card reveal">
       <h2 id="bookless-religions">Bookless Religions <a href="#bookless-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p>The bookless religion are usually always spiritual rules and opening yourself to the spiritual world</p>
       <p>As said, the world is full of demons, so youre opening yourself to demons to enter you and cause demon possessions</p>
@@ -332,7 +332,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Related Topics</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../trinity/index.html" class="related-card">
         <strong>Trinity</strong>
         <p>Is God the Trinity? And who is the Trinity?</p>
@@ -414,6 +414,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

@@ -62,7 +62,7 @@
   </header>
 
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <p>Zun&auml;chst, was die Bibel &uuml;ber Religion sagt: <a
           href="https://www.biblegateway.com/passage/?search=Jakobus+1%3A26-27&version=SCH2000"
           title="26 Wenn jemand unter euch meint, er diene Gott, und h&auml;lt seine Zunge nicht im Zaum, sondern betr&uuml;gt sein Herz, so ist sein Gottesdienst wertlos. 27 Ein reiner und unbefleckter Gottesdienst vor Gott dem Vater ist der: die Waisen und Witwen in ihrer Tr&uuml;bsal besuchen und sich von der Welt unbefleckt halten.">Jakobus
@@ -75,7 +75,7 @@
       <p><strong>Wahres Christentum ist keine Religion, sondern eine Beziehung</strong></p>
     </div>
 
-    <div class="toc-card">
+    <div class="toc-card reveal">
       <h4>Schnellnavigation</h4>
       <ul>
         <li><a href="#religion-vs-relationship">Religion vs. Beziehung</a></li>
@@ -88,8 +88,8 @@
   </div>
 
   <!-- Religion vs Relationship -->
-  <div class="comparison-grid" id="religion-vs-relationship">
-    <div class="comparison-card highlight-amber">
+  <div class="comparison-grid reveal" id="religion-vs-relationship">
+    <div class="comparison-card reveal highlight-amber">
       <h2 id="religion">Religion <a href="#religion" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <h4>Hauptunterschied</h4>
       <p>Religion erfordert Schritte und Vorbereitungen, Religion ist immer menschengemacht</p>
@@ -110,7 +110,7 @@
       <p>Auch Gott zu objektivieren treibt Religion an</p>
     </div>
 
-    <div class="comparison-card highlight-positive">
+    <div class="comparison-card reveal highlight-positive">
       <h2 id="relationship">Beziehung <a href="#relationship" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <h4>Hauptunterschied</h4>
       <p>Beziehung bedeutet, Gott und das Gesetz im Herzen zu haben, ihn in unser Leben aufzunehmen und auf ihn zu vertrauen</p>
@@ -144,8 +144,8 @@
   </div>
 
   <!-- Catholic vs Protestant -->
-  <div class="comparison-grid" id="catholicism">
-    <div class="comparison-card highlight-info">
+  <div class="comparison-grid reveal" id="catholicism">
+    <div class="comparison-card reveal highlight-info">
       <h2>Katholizismus <a href="#catholicism" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <ul>
         <li><p>R&ouml;misch-katholisch</p></li>
@@ -170,7 +170,7 @@
       <p>Katholiken neigen auch dazu, Objekte wie das Kruzifix anzubeten und zu glauben, es h&auml;tte Macht.</p>
     </div>
 
-    <div class="comparison-card highlight-positive" id="protestantism">
+    <div class="comparison-card reveal highlight-positive" id="protestantism">
       <h2>Protestantismus <a href="#protestantism" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <ul>
         <li><p>Baptismus</p></li>
@@ -197,7 +197,7 @@
 
   <div class="content">
     <!-- False Gospels -->
-    <div class="unforgivable-card" id="false-gospels">
+    <div class="unforgivable-card reveal" id="false-gospels">
       <h2>Falsche Evangelien/Lehren <a href="#false-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <p><strong>Arianismus:</strong> Leugnet die volle Gottheit Jesu Christi und behauptet, er sei ein geschaffenes Wesen und nicht ewig mit dem Vater koexistent.</p>
       <hr>
@@ -219,7 +219,7 @@
     </div>
 
     <!-- Other Religions -->
-    <div class="card" id="other-religions">
+    <div class="card reveal" id="other-religions">
       <h2>Andere Religionen <a href="#other-religions" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <p>Die Bibel warnt uns vor der Geschichte Satans und wie Satan ein Betr&uuml;ger ist</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Offenbarung+12%3A7-17&version=SCH2000"
@@ -249,7 +249,7 @@
     </div>
 
     <!-- Bookless Religions -->
-    <div class="card">
+    <div class="card reveal">
       <h2 id="bookless-religions">Religionen ohne Buch <a href="#bookless-religions" class="anchor-link" onclick="copyAnchor(event)" title="Link zum Abschnitt kopieren">&#x1F517;</a></h2>
       <p>Religionen ohne Buch sind in der Regel immer spirituelle Regeln und das &Ouml;ffnen f&uuml;r die geistliche Welt</p>
       <p>Wie gesagt, die Welt ist voller D&auml;monen, also &ouml;ffnest du dich f&uuml;r D&auml;monen, die in dich eindringen und D&auml;monenbesitz verursachen</p>
@@ -263,7 +263,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Verwandte Themen</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../trinity/index.html" class="related-card">
         <strong>Dreifaltigkeit</strong>
         <p>Ist Gott die Dreifaltigkeit? Und wer ist die Dreifaltigkeit?</p>
@@ -345,6 +345,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

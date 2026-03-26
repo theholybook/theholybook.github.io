@@ -62,7 +62,7 @@
   </header>
 
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <ol>
         <li>
           <p>The trinity does <strong style="color:Red">not</strong> mean 3 Gods
@@ -88,8 +88,8 @@
 
   <!-- Trinity Cards -->
   <div class="content-wide">
-    <div class="trinity-grid">
-      <div class="trinity-card card-son">
+    <div class="trinity-grid reveal">
+      <div class="trinity-card reveal card-son">
         <h2 id="jesus">Jesus <a href="#jesus" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
 
         <p>The son is in the verses with all 3 entities meant as one <a
@@ -132,7 +132,7 @@
         <img src="theson.jpg" alt="Jesus the Son" loading="lazy">
       </div>
 
-      <div class="trinity-card card-spirit">
+      <div class="trinity-card reveal card-spirit">
         <h2 id="holy-spirit">Holy Spirit <a href="#holy-spirit" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
         <p>The Holy Spirit is also in the verses with all 3 entities meant as one <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=Mev"
@@ -164,7 +164,7 @@
         <img src="holyspirit.jpg" alt="The Holy Spirit" loading="lazy">
       </div>
 
-      <div class="trinity-card card-father">
+      <div class="trinity-card reveal card-father">
         <h2 id="the-father">The Father <a href="#the-father" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
         <p>The Father is also in the verses with all 3 entities meant as one <a
             href="https://www.biblegateway.com/passage/?search=Matthew%2028&version=Mev"
@@ -196,7 +196,7 @@
 
   <!-- Binding Verses and Arguments -->
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <h2 id="binding-verses">Binding Verses <a href="#binding-verses" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
       <p><a href="https://www.biblegateway.com/passage/?search=1%20John%205:7-9&version=mev"
           title="7 There are three who testify in heaven: the Father, the Word, and the Holy Spirit, and the three are one.">1
@@ -208,7 +208,7 @@
           title="13 I am the Alpha and the Omega, the Beginning and the End, the First and the Last.">Revelation 22:13</a></p>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <h2 id="arguments-against-trinity">Arguments Used Against the Trinity <a href="#arguments-against-trinity" class="anchor-link" onclick="copyAnchor(event)" title="Copy link to section">&#x1F517;</a></h2>
 
       <p>In <a href="https://www.biblegateway.com/passage/?search=John+14%3A28&version=MEV"
@@ -266,7 +266,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Related Topics</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../Religions/index.html" class="related-card">
         <strong>Religions</strong>
         <p>What religion is true and what even is religion?</p>
@@ -348,6 +348,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 

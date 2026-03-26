@@ -62,7 +62,7 @@
   </header>
 
   <div class="content">
-    <div class="card">
+    <div class="card reveal">
       <p>Pour commencer, voici ce que la Bible dit sur la religion. <a
           href="https://www.biblegateway.com/passage/?search=James%201:26-27&version=LSG"
           title="26 Si quelqu'un croit etre religieux, sans tenir sa langue en bride, mais en trompant son coeur, la religion de cet homme est vaine. 27 La religion pure et sans tache, devant Dieu notre Pere, consiste a visiter les orphelins et les veuves dans leurs afflictions, et a se preserver des souillures du monde.">Jacques
@@ -76,7 +76,7 @@
       <p><strong>Le vrai christianisme n'est pas une religion, c'est une relation</strong></p>
     </div>
 
-    <div class="toc-card">
+    <div class="toc-card reveal">
       <h4>Navigation Rapide</h4>
       <ul>
         <li><a href="#religion-vs-relationship">Religion vs Relation</a></li>
@@ -89,8 +89,8 @@
   </div>
 
   <!-- Religion vs Relationship -->
-  <div class="comparison-grid" id="religion-vs-relationship">
-    <div class="comparison-card highlight-amber">
+  <div class="comparison-grid reveal" id="religion-vs-relationship">
+    <div class="comparison-card reveal highlight-amber">
       <h2 id="religion">Religion <a href="#religion" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <h4>Difference principale</h4>
       <p>La religion exige des etapes et des preparations, la religion est toujours faite par l'homme</p>
@@ -111,7 +111,7 @@
       <p>Aussi objectifier Dieu est ce qui alimente la religion</p>
     </div>
 
-    <div class="comparison-card highlight-positive">
+    <div class="comparison-card reveal highlight-positive">
       <h2 id="relationship">Relation <a href="#relationship" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <h4>Difference principale</h4>
       <p>La relation c'est avoir Dieu et la loi dans le coeur, c'est l'accepter dans nos vies et compter sur lui</p>
@@ -145,8 +145,8 @@
   </div>
 
   <!-- Catholic vs Protestant -->
-  <div class="comparison-grid" id="catholicism">
-    <div class="comparison-card highlight-info">
+  <div class="comparison-grid reveal" id="catholicism">
+    <div class="comparison-card reveal highlight-info">
       <h2>Catholicisme <a href="#catholicism" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <ul>
         <li><p>Catholique romain</p></li>
@@ -171,7 +171,7 @@
       <p>Les catholiques tendent aussi a adorer des objets comme le crucifix et croient qu'il detient un pouvoir.</p>
     </div>
 
-    <div class="comparison-card highlight-positive" id="protestantism">
+    <div class="comparison-card reveal highlight-positive" id="protestantism">
       <h2>Protestantisme <a href="#protestantism" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <ul>
         <li><p>Baptisme</p></li>
@@ -198,7 +198,7 @@
 
   <div class="content">
     <!-- False Gospels -->
-    <div class="unforgivable-card" id="false-gospels">
+    <div class="unforgivable-card reveal" id="false-gospels">
       <h2>Faux Evangiles/Doctrines <a href="#false-gospels" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <p><strong>Arianisme :</strong> Nie la pleine divinite de Jesus-Christ, pretendant qu'il etait un etre cree plutot qu'eternellement coexistant avec le Pere.</p>
       <hr>
@@ -220,7 +220,7 @@
     </div>
 
     <!-- Protestant Denominations -->
-    <div class="card">
+    <div class="card reveal">
       <h2 id="protestant-denominations">Denominations Protestantes <a href="#protestant-denominations" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <hr>
       <h3>Baptiste</h3>
@@ -288,7 +288,7 @@
     </div>
 
     <!-- Other Religions -->
-    <div class="card" id="other-religions">
+    <div class="card reveal" id="other-religions">
       <h2>Autres Religions <a href="#other-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <p>La Bible nous met en garde contre l'histoire de Satan et comment Satan est un trompeur</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Revelation%2012%3A7-17&version=LSG"
@@ -318,7 +318,7 @@
     </div>
 
     <!-- Bookless Religions -->
-    <div class="card">
+    <div class="card reveal">
       <h2 id="bookless-religions">Religions Sans Livre <a href="#bookless-religions" class="anchor-link" onclick="copyAnchor(event)" title="Copier le lien vers la section">&#x1F517;</a></h2>
       <p>Les religions sans livre sont generalement toujours des regles spirituelles et une ouverture au monde spirituel</p>
       <p>Comme dit, le monde est plein de demons, donc tu t'ouvres aux demons pour qu'ils entrent en toi et causent des possessions demoniaques</p>
@@ -332,7 +332,7 @@
   <!-- Related Topics -->
   <div class="content">
     <h3>Sujets Connexes</h3>
-    <div class="comparison-grid">
+    <div class="comparison-grid reveal">
       <a href="../trinity/index.html" class="related-card">
         <strong>Trinite</strong>
         <p>Dieu est-il la Trinite ? Et qui est la Trinite ?</p>
@@ -414,6 +414,30 @@
       t.classList.add('show');
       setTimeout(function() { t.classList.remove('show'); }, 2000);
     }
+  
+    // Scroll reveal with IntersectionObserver
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+    // Nav scroll effect
+    (function() {
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }, { passive: true });
+    })();
   </script>
 </body>
 
